@@ -1,0 +1,4 @@
+export function equipmentIcon(key){
+ const paths={saw:'<circle r="12"/><circle r="4"/><path d="M0-18v5M13-13l-4 4M18 0h-5M13 13l-4-4M0 18v-5M-13 13l4-4M-18 0h5M-13-13l4 4"/>',arc:'<path d="M-10 14h20M-6 9h12M-8 4h16M-6-1h12M0-1v-8M-3-9l6-7M-3-9h7l-5 8"/>',drone:'<rect x="-5" y="-6" width="10" height="12" rx="3"/><path d="M-5-4l-7-7M5-4l7-7M-5 4l-7 7M5 4l7 7"/><circle cx="-12" cy="-12" r="5"/><circle cx="12" cy="-12" r="5"/><circle cx="-12" cy="12" r="5"/><circle cx="12" cy="12" r="5"/>',boost:'<path d="M-8 8V-8L0-17 8-8V8ZM-5 12v6M0 11v10M5 12v6"/>',repulsor:'<path d="M-12-12h24l5 5v14l-5 5h-24l-5-5V-7z"/><circle r="8"/><circle r="3"/><path d="M0-16v5M0 11v5M-16 0h5M11 0h5"/>'};
+ return `<svg viewBox="-24 -24 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">${paths[key]||paths.boost}</svg>`;
+}

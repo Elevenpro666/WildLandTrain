@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="车头和车厢四格车顶底座与贴边推进挂座规划">
+ <rect width="1000" height="650" fill="#f0eee7"/>
+ <g font-family="Microsoft YaHei,sans-serif">
+  <text x="40" y="49" font-size="27" font-weight="700" fill="#25333a">四块等大车顶底座 · 推进器贴边固定</text>
+  <text x="40" y="77" font-size="15" fill="#59666a">候选安装结构／正俯视／示意不等于正式装备规则；头、厢外观图须原生画出接口</text>
+  <text x="260" y="133" text-anchor="middle" font-size="24" font-weight="700" fill="#25333a">车头</text>
+  <text x="733" y="133" text-anchor="middle" font-size="24" font-weight="700" fill="#25333a">车厢</text>
+  <text x="260" y="163" text-anchor="middle" font-size="17" fill="#53717b">↑ 行驶方向</text>
+  <text x="733" y="163" text-anchor="middle" font-size="17" fill="#53717b">↑ 行驶方向</text>
+ </g>
+ <g fill="#667a89" stroke="#27363d" stroke-width="4">
+  <path d="M211 204H309L335 239V522H185V239Z"/>
+  <rect x="659" y="239" width="148" height="283" rx="12"/>
+ </g>
+ <g fill="#a4a7a2" stroke="#344047" stroke-width="2">
+  <path d="M211 204H309L335 239V274H185V239Z"/>
+  <rect x="200" y="490" width="120" height="32"/>
+  <rect x="659" y="239" width="148" height="30"/>
+  <rect x="659" y="490" width="148" height="32"/>
+ </g>
+ <g font-family="Microsoft YaHei,sans-serif" text-anchor="middle" font-size="14" fill="#243238">
+  <text x="260" y="254">铲刀禁区</text><text x="260" y="511">车钩禁区</text>
+  <text x="733" y="258">前联接禁区</text><text x="733" y="510">后联接禁区</text>
+ </g>
+ <g fill="#344a57" stroke="#1d343d" stroke-width="3">
+  <rect x="208" y="285" width="104" height="150" rx="8"/>
+  <rect x="681" y="285" width="104" height="150" rx="8"/>
+ </g>
+ <g fill="#609db6" stroke="#173a4b" stroke-width="3">
+  <rect x="214" y="291" width="44" height="65" rx="6"/><rect x="262" y="291" width="44" height="65" rx="6"/>
+  <rect x="214" y="364" width="44" height="65" rx="6"/><rect x="262" y="364" width="44" height="65" rx="6"/>
+  <rect x="687" y="291" width="44" height="65" rx="6"/><rect x="735" y="291" width="44" height="65" rx="6"/>
+  <rect x="687" y="364" width="44" height="65" rx="6"/><rect x="735" y="364" width="44" height="65" rx="6"/>
+ </g>
+ <g fill="#dce6e2" stroke="#213b45" stroke-width="1.5">
+  <circle cx="220" cy="297" r="3"/><circle cx="252" cy="297" r="3"/><circle cx="220" cy="350" r="3"/><circle cx="252" cy="350" r="3"/>
+  <circle cx="268" cy="297" r="3"/><circle cx="300" cy="297" r="3"/><circle cx="268" cy="350" r="3"/><circle cx="300" cy="350" r="3"/>
+  <circle cx="220" cy="370" r="3"/><circle cx="252" cy="370" r="3"/><circle cx="220" cy="423" r="3"/><circle cx="252" cy="423" r="3"/>
+  <circle cx="268" cy="370" r="3"/><circle cx="300" cy="370" r="3"/><circle cx="268" cy="423" r="3"/><circle cx="300" cy="423" r="3"/>
+  <circle cx="693" cy="297" r="3"/><circle cx="725" cy="297" r="3"/><circle cx="693" cy="350" r="3"/><circle cx="725" cy="350" r="3"/>
+  <circle cx="741" cy="297" r="3"/><circle cx="773" cy="297" r="3"/><circle cx="741" cy="350" r="3"/><circle cx="773" cy="350" r="3"/>
+  <circle cx="693" cy="370" r="3"/><circle cx="725" cy="370" r="3"/><circle cx="693" cy="423" r="3"/><circle cx="725" cy="423" r="3"/>
+  <circle cx="741" cy="370" r="3"/><circle cx="773" cy="370" r="3"/><circle cx="741" cy="423" r="3"/><circle cx="773" cy="423" r="3"/>
+ </g>
+ <g font-family="Arial,sans-serif" font-weight="700" font-size="18" text-anchor="middle" fill="white">
+  <text x="236" y="330">T1</text><text x="284" y="330">T2</text><text x="236" y="403">T3</text><text x="284" y="403">T4</text>
+  <text x="709" y="330">T1</text><text x="757" y="330">T2</text><text x="709" y="403">T3</text><text x="757" y="403">T4</text>
+ </g>
+ <g fill="#d7955e" stroke="#704525" stroke-width="3">
+  <rect x="158" y="308" width="25" height="35" rx="5"/><rect x="337" y="308" width="25" height="35" rx="5"/>
+  <rect x="158" y="381" width="25" height="35" rx="5"/><rect x="337" y="381" width="25" height="35" rx="5"/>
+  <rect x="632" y="308" width="25" height="35" rx="5"/><rect x="809" y="308" width="25" height="35" rx="5"/>
+  <rect x="632" y="381" width="25" height="35" rx="5"/><rect x="809" y="381" width="25" height="35" rx="5"/>
+ </g>
+ <g stroke="#465861" stroke-width="7"><path d="M183 325H208M312 325H337M183 398H208M312 398H337M657 325H681M785 325H809M657 398H681M785 398H809"/></g>
+ <g fill="#7eaf78" stroke="#315d40" stroke-width="3">
+  <rect x="649" y="345" width="24" height="32" rx="5"/><rect x="793" y="345" width="24" height="32" rx="5"/>
+  <rect x="649" y="425" width="24" height="32" rx="5"/><rect x="793" y="425" width="24" height="32" rx="5"/>
+ </g>
+ <g fill="#dce6e2" stroke="#254331" stroke-width="1.5">
+  <circle cx="668" cy="352" r="3"/><circle cx="668" cy="370" r="3"/><circle cx="798" cy="352" r="3"/><circle cx="798" cy="370" r="3"/>
+  <circle cx="668" cy="432" r="3"/><circle cx="668" cy="450" r="3"/><circle cx="798" cy="432" r="3"/><circle cx="798" cy="450" r="3"/>
+ </g>
+ <g font-family="Microsoft YaHei,sans-serif" font-size="15" fill="#273b31" font-weight="700">
+  <text x="609" y="366">P</text><text x="839" y="366">P</text><text x="609" y="446">P</text><text x="839" y="446">P</text>
+ </g>
+ <path d="M550 350H648M818 350H915" stroke="#4f7256" stroke-width="2" stroke-dasharray="5 5"/>
+ <g font-family="Microsoft YaHei,sans-serif" font-size="14" fill="#42644a"><text x="540" y="339">P座压住边梁</text><text x="840" y="339">边梁内固定螺栓</text></g>
+ <rect x="39" y="554" width="922" height="72" rx="7" fill="#e2e0d7"/>
+ <g font-family="Microsoft YaHei,sans-serif" fill="#293d45">
+  <text x="53" y="579" font-size="17">蓝色四块：同一辆车上等大、空载可见；初级到高级可改变启用/材质状态，规则尚未定。</text>
+  <text x="53" y="605" font-size="16">绿色P座与车厢边梁重叠固定；大型武器可跨多块T，四块底座不等于四件任意武器。</text>
+ </g>
+</svg>

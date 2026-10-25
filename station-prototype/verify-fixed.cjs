@@ -1,0 +1,10 @@
+const {chromium}=require('C:/Users/11/.codex/skills/develop-web-game/node_modules/playwright');const assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch();const p=await b.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));for(const [width,height] of [[320,568],[390,844],[1280,720]]){await p.setViewportSize({width,height});await p.goto('http://127.0.0.1:4186');
+const state=async()=>JSON.parse(await p.evaluate(()=>render_game_to_text()));
+await p.locator('.equipped-zone [data-id=e3]').click();await p.locator('[data-action=move]').click();assert.equal((await state()).equipment.find(e=>e.id==='e3').carrier,null);
+await p.locator('.turnover-zone [data-id=e3]').click();await p.locator('[data-action=move]').click();assert.equal((await state()).equipment.find(e=>e.id==='e3').carrier,'c1');
+await p.locator('[data-action=select][data-id=head]').click();await p.locator('[data-key=boost]').click();assert.equal((await state()).cash,70);
+const boxes=await p.locator('.station-header,.equipped-zone,.station-dock,.supply-zone,.turnover-zone,.station-bottom').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {top:r.top,bottom:r.bottom};}));for(let i=1;i<boxes.length;i++)assert.ok(boxes[i].top>=boxes[i-1].bottom-1);assert.ok(boxes.at(-1).bottom<=height);
+assert.equal(await p.locator('.station-scroll').count(),0);await p.screenshot({path:`output/fixed-${width}.png`});
+await p.locator('[data-action=depart]').click();assert.equal((await state()).mode,'battle');await p.locator('[data-action=returnStation]').click();assert.equal((await state()).cash,70);
+}assert.deepEqual(errors,[]);await b.close();console.log('PASS fixed zones, paging, unload/reinstall, buy, battle/return at three sizes');})().catch(e=>{console.error(e);process.exit(1)});

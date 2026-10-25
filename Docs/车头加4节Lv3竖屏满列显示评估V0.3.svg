@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1080" viewBox="0 0 1240 1080" role="img" aria-labelledby="title desc">
+  <title id="title">1个Lv.3车头加4节Lv.3车厢在390×844手机竖屏的比例示意</title>
+  <desc id="desc">车头和车厢按正俯视比例绘制，车厢沿用70×109 B紧凑L3规格，接口包络20×20 B。示意HUD贴边，列车完整放入竖屏。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}
+      .title{font-size:30px;font-weight:700}.subtitle{font-size:15px;fill:#52636b}.panelTitle{font-size:20px;font-weight:700}
+      .label{font-size:14px;font-weight:700}.body{font-size:15px}.small{font-size:13px;fill:#52636b}.tiny{font-size:11px;fill:#52636b}
+      .phone{fill:#fffefa;stroke:#26343a;stroke-width:3}.card{fill:#fffefa;stroke:#ccd4d0;stroke-width:2}
+      .bodyShell{fill:#f0eee6;stroke:#34444b;stroke-width:1.8}.blue{fill:#397fb7;stroke:#26343a;stroke-width:1.5}
+      .rail{stroke:#85877d;stroke-width:3}.sleeper{stroke:#b5ad9a;stroke-width:5;stroke-linecap:round}
+      .slot{fill:#fffefa;stroke:#34444b;stroke-width:1.4}.bolt{fill:#82908e}
+      .tire{fill:#465154;stroke:#26343a;stroke-width:1.4}.tread{stroke:#b4bbb3;stroke-width:1;stroke-linecap:round}
+      .coupler{fill:#d7dad3;stroke:#34444b;stroke-width:1.3}.button{fill:#30392e;stroke:#273128;stroke-width:2}
+      .buttonText{fill:#fffefa;font-size:16px;font-weight:700}.buttonHint{fill:#dfe8dc;font-size:10px}
+      .enemy{fill:#8c7155;stroke:#40372e;stroke-width:1.5}.enemyLine{stroke:#40372e;stroke-width:1.7;stroke-linecap:round}
+      .measure{stroke:#548c8b;stroke-width:2;fill:none}.guide{stroke:#b2c3bc;stroke-width:1.5;stroke-dasharray:5 5}
+      .chip{fill:#fffefa;fill-opacity:.95;stroke:#647168;stroke-width:1.2}.accent{fill:#e7efec;stroke:#aabdb6;stroke-width:1.5}
+    </style>
+    <g id="wheelPair">
+      <rect class="tire" x="-43" y="-7" width="8" height="14" rx="2"/><rect class="tire" x="35" y="-7" width="8" height="14" rx="2"/>
+      <path class="tread" d="M-41-3h4m-4 6h4m34-6h4m-4 6h4"/>
+    </g>
+    <g id="slot20">
+      <rect class="slot" x="-10" y="-10" width="20" height="20" rx="2.3"/>
+      <circle class="bolt" cx="-7.1" cy="-7.1" r=".85"/><circle class="bolt" cx="7.1" cy="-7.1" r=".85"/>
+      <circle class="bolt" cx="-7.1" cy="7.1" r=".85"/><circle class="bolt" cx="7.1" cy="7.1" r=".85"/>
+    </g>
+    <g id="headL3">
+      <path class="bodyShell" d="M-26 0H26L35 10V119L28 131H-28L-35 119V10Z"/>
+      <path class="blue" d="M-25 4H25L30 12H-30Z"/><path d="M-22 14H22" stroke="#34444b" stroke-width="2"/>
+      <use href="#wheelPair" transform="translate(0 28)"/><use href="#wheelPair" transform="translate(0 65.5)"/><use href="#wheelPair" transform="translate(0 103)"/>
+      <use href="#slot20" transform="translate(-12 32.5)"/><use href="#slot20" transform="translate(12 32.5)"/>
+      <use href="#slot20" transform="translate(-12 55.5)"/><use href="#slot20" transform="translate(12 55.5)"/>
+      <use href="#slot20" transform="translate(-12 78.5)"/><use href="#slot20" transform="translate(12 78.5)"/>
+      <path class="blue" d="M-14 124H14L10 131H-10Z"/>
+    </g>
+    <g id="carL3">
+      <path class="bodyShell" d="M-29 0-35 8v93l6 8h58l6-8V8l-6-8h-58Z"/>
+      <path class="blue" d="M-28 3H28L31 8H-31Z"/><path d="M-27 8v93M27 8v93" fill="none" stroke="#82908e" stroke-width="1.2"/>
+      <use href="#wheelPair" transform="translate(0 27.25)"/><use href="#wheelPair" transform="translate(0 81.75)"/>
+      <use href="#slot20" transform="translate(-12 20)"/><use href="#slot20" transform="translate(12 20)"/>
+      <use href="#slot20" transform="translate(-12 43)"/><use href="#slot20" transform="translate(12 43)"/>
+      <use href="#slot20" transform="translate(-12 66)"/><use href="#slot20" transform="translate(12 66)"/>
+      <use href="#slot20" transform="translate(-12 89)"/><use href="#slot20" transform="translate(12 89)"/>
+      <path class="blue" d="M-14 105H14L10 109H-10Z"/>
+    </g>
+    <g id="scorpion">
+      <ellipse cx="0" cy="4" rx="12" ry="7" class="enemy"/><path class="enemyLine" fill="none" d="M-8 1l-6-5m7 11l-7 5m22-10l6-5M8 7l7 5M-4-2l-3-7m10 7l4-7M0-3q9-8 5-13"/>
+      <circle cx="-3" cy="3" r="1.2" fill="#dba368"/><circle cx="3" cy="3" r="1.2" fill="#dba368"/>
+    </g>
+  </defs>
+  <rect width="1440" height="1080" fill="#f4f2eb"/>
+  <text x="54" y="54" class="title">1个LV3车头 + 4节LV3车厢｜竖屏满列比例</text>
+  <text x="56" y="84" class="subtitle">按最新紧凑L3尺寸与20×20B武器槽包络，放进390×844手机画面；HUD沿用贴边呈现，不切上下整条区域。</text>
+
+  <rect x="54" y="112" width="430" height="870" rx="24" fill="#263136"/>
+  <rect x="74" y="125" width="390" height="844" rx="14" class="phone"/>
+  <rect x="76" y="127" width="386" height="840" rx="12" fill="#e7e1d2"/>
+  <g opacity=".58"><path class="rail" d="M248 128v838M292 128v838"/><path class="sleeper" d="M237 156h66M237 202h66M237 248h66M237 294h66M237 340h66M237 386h66M237 432h66M237 478h66M237 524h66M237 570h66M237 616h66M237 662h66M237 708h66M237 754h66M237 800h66M237 846h66M237 892h66M237 938h66"/></g>
+  <g fill="#b7ad99" opacity=".7"><circle cx="111" cy="278" r="5"/><circle cx="426" cy="318" r="4"/><circle cx="103" cy="530" r="3"/><circle cx="429" cy="592" r="5"/><circle cx="110" cy="781" r="4"/><circle cx="421" cy="875" r="3"/></g>
+  <!-- Current minimal HUD as light corner/edge overlays -->
+  <rect x="88" y="137" width="143" height="35" rx="8" class="chip"/><text x="97" y="151" class="tiny" font-weight="700">列车耐久 228 / 300</text><rect x="97" y="158" width="125" height="6" rx="3" fill="#d2d3c5"/><rect x="97" y="158" width="91" height="6" rx="3" fill="#728b64"/>
+  <rect x="237" y="137" width="43" height="35" rx="8" class="chip"/><text x="245" y="159" class="tiny" font-weight="700">LV3</text>
+  <g class="tiny" text-anchor="middle"><text x="115" y="187">小怪</text><text x="194" y="187">小怪</text><text x="273" y="187">精英</text><text x="352" y="187">小怪</text><text x="430" y="187">BOSS</text></g>
+  <path d="M115 196H430" stroke="#8b9285" stroke-width="1.5"/><path d="M115 196H194" stroke="#344037" stroke-width="3"/>
+  <g stroke="#344037" stroke-width="1.5"><circle cx="115" cy="196" r="5" fill="#344037"/><circle cx="194" cy="196" r="5" fill="#fffefa"/><circle cx="273" cy="196" r="5" fill="#fffefa"/><circle cx="352" cy="196" r="5" fill="#fffefa"/><circle cx="430" cy="196" r="5" fill="#fffefa"/></g>
+  <!-- Total: 131B head + 4*109B cars + 4*6B visual coupler allowance = 591B. Scale 1.2px/B. -->
+  <g transform="translate(269 205) scale(1.2)">
+    <use href="#headL3"/>
+    <rect class="coupler" x="-5" y="131" width="10" height="6" rx="1.5"/>
+    <use href="#carL3" transform="translate(0 137)"/>
+    <rect class="coupler" x="-5" y="246" width="10" height="6" rx="1.5"/>
+    <use href="#carL3" transform="translate(0 252)"/>
+    <rect class="coupler" x="-5" y="361" width="10" height="6" rx="1.5"/>
+    <use href="#carL3" transform="translate(0 367)"/>
+    <rect class="coupler" x="-5" y="476" width="10" height="6" rx="1.5"/>
+    <use href="#carL3" transform="translate(0 482)"/>
+  </g>
+  <use href="#scorpion" transform="translate(151 346) scale(1.15)"/><use href="#scorpion" transform="translate(387 412) scale(1.1)"/><use href="#scorpion" transform="translate(143 650) scale(1.1)"/><use href="#scorpion" transform="translate(390 708) scale(1.15)"/>
+  <rect x="326" y="846" width="124" height="80" rx="12" class="button"/><text x="388" y="881" text-anchor="middle" class="buttonText">冲刺 ↑</text><rect x="338" y="896" width="100" height="7" rx="3.5" fill="#9ca693"/><rect x="338" y="896" width="61" height="7" rx="3.5" fill="#b9d5b9"/>
+
+  <rect x="520" y="112" width="700" height="870" rx="20" class="card"/>
+  <text x="558" y="162" class="panelTitle">这列车放进屏幕后，大约是这个量级</text>
+  <text x="558" y="194" class="body">口径：390 × 844 px竖屏；列车居中，HUD叠在边缘，不另扣顶部/底部整条空间。</text>
+  <path d="M558 218h624" stroke="#d9dfda" stroke-width="2"/>
+  <text x="558" y="258" class="label">尺寸与缩放</text>
+  <rect x="558" y="278" width="624" height="206" rx="14" class="accent"/>
+  <text x="582" y="316" class="body">L3车头：70 × 131 B（按当前车头裁切长宽比估算）</text>
+  <text x="582" y="350" class="body">每节L3车厢：70 × 109 B；共4节；车头6槽 + 车厢32槽 = 38槽</text>
+  <text x="582" y="384" class="body">车厢接口：20 × 20 B；手机上约显示为24 × 24 px</text>
+  <text x="582" y="418" class="body">连接余量：暂按每处6 B × 4处；整列估长约591 B</text>
+  <text x="582" y="456" class="small">示意缩放1.20 px/B → 列车约709 px高，占844px屏高约84%；上/下余量约80/55px。</text>
+  <text x="558" y="526" class="label">画面里还能留多少空间</text>
+  <text x="582" y="565" class="body">车体宽约84px，含外置轮组约103px；列车左右各剩约143px战斗走廊。</text>
+  <text x="582" y="599" class="body">右下冲刺按钮放在车体外侧，不压住车厢和轮组；顶部状态与遭遇进度贴边。</text>
+  <text x="582" y="633" class="body">38个槽都能在同一全列画面中看见，但单槽约24px见方，适合辨认装配变化，</text>
+  <text x="582" y="663" class="body">不宜期待看清槽内小型武器的细节；战斗特效仍要在列车两侧展开。</text>
+  <rect x="558" y="705" width="624" height="143" rx="14" fill="#fff2df" stroke="#d7a24c" stroke-width="1.5"/>
+  <text x="582" y="744" class="label" fill="#805438">结论：按这版紧凑L3尺寸，1头+4厢可以完整放进390×844竖屏。</text>
+  <text x="582" y="780" class="body">车长约占屏高84%，保留上下约80/55px边缘空间，整列没有超出画面。</text>
+  <text x="582" y="814" class="small">这是按统一比例绘制的尺寸演示，不等于运行相机/微信真机已经通过。</text>
+  <text x="558" y="888" class="small">注意：运行相机、真实车钩间隔、敌人与特效遮挡、手机安全区均未在本图验证。</text>
+  <text x="558" y="916" class="small">B按车体70B宽度定标；头长按approved裁切比例推算；连接余量是构图假设。</text>
+  <path d="M74 1007H464" class="measure"/><path d="M74 997v20M464 997v20" class="measure"/>
+  <text x="269" y="1033" text-anchor="middle" class="small">手机视口 390×844px｜全列：70×131B头车 + 4×70×109B车厢 + 4×6B连接余量</text>
+</svg>

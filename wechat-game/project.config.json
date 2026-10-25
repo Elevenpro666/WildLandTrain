@@ -1,0 +1,43 @@
+{
+  "appid": "touristappid",
+  "projectname": "荒野列车-微信验证版",
+  "compileType": "game",
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "node_modules"
+      },
+      {
+        "type": "folder",
+        "value": "src"
+      },
+      {
+        "type": "folder",
+        "value": "output"
+      },
+      {
+        "type": "file",
+        "value": "dev-preview.html"
+      },
+      {
+        "type": "file",
+        "value": "build.mjs"
+      },
+      {
+        "type": "file",
+        "value": "verify-session.mjs"
+      },
+      {
+        "type": "file",
+        "value": "verify-canvas.mjs"
+      }
+    ]
+  },
+  "setting": {
+    "es6": true,
+    "minified": false,
+    "urlCheck": false,
+    "minifyWXML": true
+  }
+}

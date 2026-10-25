@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1010" role="img" aria-labelledby="title desc">
+  <title id="title">荒野列车车厢接口纵横扩展与供能总线方案 V0.2</title>
+  <desc id="desc">规整矩阵的车厢成长：Lv1为2列2排4接口，Lv2为2列3排6接口，Lv3为4列3排12接口。车头供能档位控制整列最高兼容接口档位。右侧390乘844竖屏显示1车头和5节Lv3车厢。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f1eee5}.panel{fill:#fbfaf6;stroke:#c9c4b7;stroke-width:2}.phone{fill:#e8e4d9;stroke:#27343a;stroke-width:3}.safe{fill:none;stroke:#aca697;stroke-width:1.4;stroke-dasharray:6 5}
+      .track{fill:none;stroke:#817969;stroke-width:4}.tie{stroke:#9c927f;stroke-width:9;stroke-linecap:round;opacity:.58}
+      .hull{fill:#526a7b;stroke:#1e2930;stroke-width:1.8;stroke-linejoin:round}.armor{fill:#397eae;stroke:#1e2930;stroke-width:1.4;stroke-linejoin:round}.trim{fill:#c5c3b9;stroke:#29353a;stroke-width:1.2}
+      .wheel{fill:#333c40;stroke:#111a1f;stroke-width:1.2}.joint{fill:#aab0a7;stroke:#27343a;stroke-width:1.2}.slot{fill:#dfe3dc;stroke:#26363d;stroke-width:1.2}.slot-in{fill:none;stroke:#71868a;stroke-width:.7;stroke-dasharray:2 1.5}.powered{fill:#41dadd;stroke:#155460;stroke-width:1}.powered-core{fill:#efffff}
+      .title{font:700 28px 'Microsoft YaHei',sans-serif;fill:#233139}.section{font:700 21px 'Microsoft YaHei',sans-serif;fill:#26343a}.label{font:600 18px 'Microsoft YaHei',sans-serif;fill:#29383e}.small{font:400 15px 'Microsoft YaHei',sans-serif;fill:#4a585e}.tiny{font:400 12px 'Microsoft YaHei',sans-serif;fill:#5c686d}.badge{fill:#223238}.badgeText{font:600 14px 'Microsoft YaHei',sans-serif;fill:#eff7f2}.cyanText{fill:#137f86;font:600 14px 'Microsoft YaHei',sans-serif}.arrow{stroke:#177f85;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3 0 6" fill="none" stroke="#177f85" stroke-width="1.5"/></marker>
+    <g id="slot">
+      <rect class="slot" x="-10" y="-10" width="20" height="20" rx="2.4"/>
+      <rect class="slot-in" x="-7" y="-7" width="14" height="14" rx="1.5"/>
+      <circle class="powered" cx="-6.3" cy="-6.3" r="1.1"/><circle class="powered" cx="6.3" cy="6.3" r="1.1"/>
+      <path d="M-3 0h6" stroke="#45b8bc" stroke-width=".9" opacity=".8"/>
+    </g>
+    <g id="head">
+      <path class="hull" d="M-52-36-42-40H42L52-36V30L44 40H-44L-52 30z"/>
+      <path class="armor" d="M-52-29-42-37H-35V34H-45L-52 27zM52-29 42-37H35V34H45L52 27z"/>
+      <path class="trim" d="M-18-40H18V-35H-18zM-11 38H11V43H-11z"/>
+      <rect class="wheel" x="-56" y="-28" width="5" height="16" rx="2.5"/><rect class="wheel" x="51" y="-28" width="5" height="16" rx="2.5"/>
+      <rect class="wheel" x="-56" y="13" width="5" height="16" rx="2.5"/><rect class="wheel" x="51" y="13" width="5" height="16" rx="2.5"/>
+      <use href="#slot" x="-12.5" y="-10"/><use href="#slot" x="12.5" y="-10"/><use href="#slot" x="-12.5" y="13"/><use href="#slot" x="12.5" y="13"/>
+      <path d="M-8-30H8M-6-27H6" stroke="#d7e9e9" stroke-width="1.4"/>
+      <rect class="joint" x="-7" y="39" width="14" height="7" rx="2"/>
+    </g>
+    <g id="car2x2">
+      <path class="hull" d="M-27-33H27L27.5-26V26L24 33H-24L-27.5 26V-26z"/>
+      <path class="armor" d="M-27-25H-23V25H-27M23-25H27V25H23"/>
+      <path class="trim" d="M-17-32H17V-29H-17M-17 29H17V32H-17"/>
+      <rect class="wheel" x="-31" y="-25" width="4" height="11" rx="2"/><rect class="wheel" x="27" y="-25" width="4" height="11" rx="2"/>
+      <rect class="wheel" x="-31" y="14" width="4" height="11" rx="2"/><rect class="wheel" x="27" y="14" width="4" height="11" rx="2"/>
+      <use href="#slot" x="-12.5" y="-11.5"/><use href="#slot" x="12.5" y="-11.5"/><use href="#slot" x="-12.5" y="11.5"/><use href="#slot" x="12.5" y="11.5"/>
+      <rect class="joint" x="-7" y="27" width="14" height="7" rx="2"/>
+    </g>
+    <g id="car2x3">
+      <path class="hull" d="M-27-43H27L27.5-36V36L24 43H-24L-27.5 36V-36z"/>
+      <path class="armor" d="M-27-35H-23V35H-27M23-35H27V35H23"/>
+      <path class="trim" d="M-17-42H17V-39H-17M-17 39H17V42H-17"/>
+      <rect class="wheel" x="-31" y="-33" width="4" height="11" rx="2"/><rect class="wheel" x="27" y="-33" width="4" height="11" rx="2"/>
+      <rect class="wheel" x="-31" y="22" width="4" height="11" rx="2"/><rect class="wheel" x="27" y="22" width="4" height="11" rx="2"/>
+      <use href="#slot" x="-12.5" y="-23"/><use href="#slot" x="12.5" y="-23"/><use href="#slot" x="-12.5" y="0"/><use href="#slot" x="12.5" y="0"/><use href="#slot" x="-12.5" y="23"/><use href="#slot" x="12.5" y="23"/>
+      <rect class="joint" x="-7" y="37" width="14" height="7" rx="2"/>
+    </g>
+    <g id="car4x3">
+      <path class="hull" d="M-52-43H52L52.5-36V36L49 43H-49L-52.5 36V-36z"/>
+      <path class="armor" d="M-52-35H-48V35H-52M48-35H52V35H48"/>
+      <path class="trim" d="M-40-42H40V-39H-40M-40 39H40V42H-40"/>
+      <rect class="wheel" x="-57" y="-33" width="5" height="11" rx="2.5"/><rect class="wheel" x="52" y="-33" width="5" height="11" rx="2.5"/>
+      <rect class="wheel" x="-57" y="22" width="5" height="11" rx="2.5"/><rect class="wheel" x="52" y="22" width="5" height="11" rx="2.5"/>
+      <use href="#slot" x="-37.5" y="-23"/><use href="#slot" x="-12.5" y="-23"/><use href="#slot" x="12.5" y="-23"/><use href="#slot" x="37.5" y="-23"/>
+      <use href="#slot" x="-37.5" y="0"/><use href="#slot" x="-12.5" y="0"/><use href="#slot" x="12.5" y="0"/><use href="#slot" x="37.5" y="0"/>
+      <use href="#slot" x="-37.5" y="23"/><use href="#slot" x="-12.5" y="23"/><use href="#slot" x="12.5" y="23"/><use href="#slot" x="37.5" y="23"/>
+      <rect class="joint" x="-7" y="37" width="14" height="7" rx="2"/>
+    </g>
+  </defs>
+  <rect class="bg" width="1500" height="1010"/>
+  <text class="title" x="42" y="52">车厢接口成长：先纵向加排，再横向扩列</text>
+  <text class="small" x="44" y="82">规整矩阵；接口是车头主供能总线的标准插接点，不是贴在车顶的装饰格。</text>
+
+  <rect class="panel" x="30" y="108" width="895" height="505" rx="18"/>
+  <text class="section" x="54" y="145">车厢等级变化</text>
+  <text class="tiny" x="54" y="170">俯视线稿 · 示意比例依据20×20 B接口与固定中心距绘制</text>
+  <g transform="translate(185 350) scale(1.4)"><use href="#car2x2"/></g>
+  <text class="label" x="130" y="443" text-anchor="middle">Lv.1　2列×2排</text><text class="cyanText" x="130" y="468" text-anchor="middle">4个供能接口</text>
+  <path class="arrow" d="M245 350H315"/><text class="tiny" x="280" y="336" text-anchor="middle">纵向加一排</text>
+  <g transform="translate(390 350) scale(1.4)"><use href="#car2x3"/></g>
+  <text class="label" x="390" y="443" text-anchor="middle">Lv.2　2列×3排</text><text class="cyanText" x="390" y="468" text-anchor="middle">6个供能接口</text>
+  <path class="arrow" d="M490 350H585"/><text class="tiny" x="538" y="336" text-anchor="middle">横向扩成四列</text>
+  <g transform="translate(745 350) scale(1.4)"><use href="#car4x3"/></g>
+  <text class="label" x="745" y="443" text-anchor="middle">Lv.3　4列×3排</text><text class="cyanText" x="745" y="468" text-anchor="middle">12个供能接口</text>
+  <rect class="badge" x="54" y="510" width="843" height="74" rx="12"/>
+  <text class="badgeText" x="76" y="540">尺寸候选</text><text class="badgeText" x="76" y="563">Lv.1 55×66 B　→　Lv.2 55×86 B　→　Lv.3 105×86 B</text>
+  <text class="badgeText" x="602" y="540">车厢宽度变化</text><text class="badgeText" x="602" y="563">55 B → 55 B → 105 B</text>
+
+  <rect class="panel" x="945" y="108" width="525" height="505" rx="18"/>
+  <text class="section" x="970" y="145">整列供能关系</text>
+  <g transform="translate(988 185) scale(.9)"><use href="#head"/></g>
+  <rect class="badge" x="1075" y="160" width="350" height="64" rx="12"/>
+  <text class="badgeText" x="1094" y="187">车头主供能总线 · 供能III档</text><text class="badgeText" x="1094" y="209">兼容Lv.1 / Lv.2 / Lv.3接口阵列</text>
+  <path class="arrow" d="M1190 230V267"/>
+  <text class="small" x="970" y="285">五节车厢共用车头供能档位</text>
+  <g transform="translate(1210 307) scale(.45)"><use href="#car4x3"/></g>
+  <g transform="translate(1210 350) scale(.45)"><use href="#car4x3"/></g>
+  <g transform="translate(1210 393) scale(.45)"><use href="#car4x3"/></g>
+  <g transform="translate(1210 436) scale(.45)"><use href="#car4x3"/></g>
+  <g transform="translate(1210 479) scale(.45)"><use href="#car4x3"/></g>
+  <text class="cyanText" x="970" y="530">车头定可兼容的最高接口档；车厢等级定实际接口数</text>
+  <text class="tiny" x="970" y="557">不另加逐槽电量条；不足档位时先升车头，不显示假通电接口。</text>
+
+  <rect class="panel" x="30" y="635" width="1440" height="340" rx="18"/>
+  <text class="section" x="54" y="674">390×844 竖屏 · 1车头＋5节Lv.3车厢</text>
+  <text class="tiny" x="54" y="697">全列同屏比例示意；左侧供能总线标记对应整列共同供能档位</text>
+  <g transform="translate(62 715) scale(.29)">
+    <rect class="phone" x="0" y="0" width="390" height="844" rx="24"/>
+    <rect class="safe" x="18" y="18" width="354" height="808" rx="14"/>
+    <path class="track" d="M185 0V844M205 0V844"/><path class="tie" d="M181 52H209M181 111H209M181 170H209M181 229H209M181 288H209M181 347H209M181 406H209M181 465H209M181 524H209M181 583H209M181 642H209M181 701H209M181 760H209M181 819H209"/>
+    <path d="M104 6V785" stroke="#22bfc5" stroke-width="3" opacity=".8"/><path d="M104 58h13M104 187h13M104 321h13M104 455h13M104 589h13M104 723h13" stroke="#22bfc5" stroke-width="3"/>
+    <g transform="translate(195 58) scale(1.45)"><use href="#head"/></g>
+    <g transform="translate(195 187.5) scale(1.45)"><use href="#car4x3"/></g>
+    <g transform="translate(195 321.3) scale(1.45)"><use href="#car4x3"/></g>
+    <g transform="translate(195 455.1) scale(1.45)"><use href="#car4x3"/></g>
+    <g transform="translate(195 588.9) scale(1.45)"><use href="#car4x3"/></g>
+    <g transform="translate(195 722.7) scale(1.45)"><use href="#car4x3"/></g>
+    <rect class="badge" x="18" y="18" width="120" height="32" rx="8"/><text class="badgeText" x="29" y="39">供能III档</text>
+    <rect class="badge" x="216" y="793" width="151" height="39" rx="8"/><text class="badgeText" x="226" y="810">整列≈541.5 B</text><text class="badgeText" x="226" y="826">接口约24–30 px</text>
+  </g>
+  <text class="small" x="258" y="756">在800 px整列高度预算下，车体外宽约155 px，单个20 B接口约30 px。</text>
+  <text class="small" x="258" y="786">在650 px HUD预算下，车体约126 px宽，接口约24 px；完整成长仍可呈现。</text>
+  <text class="small" x="258" y="832">全列物理接口：车头4＋五节车厢×12＝64个；不代表必须全部装满。</text>
+  <text class="small" x="258" y="878">注意：现行Lv.3容量是10；若接口数和容量点仍一一对应，建议同步改为12。</text>
+  <text class="tiny" x="258" y="920">当前是结构比例候选；实际HUD遮挡、战场横向净空、车轮与武器运行包络尚未验证。</text>
+</svg>

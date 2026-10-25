@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="570" viewBox="0 0 900 570">
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}
+      .title{font-size:28px;font-weight:700}.sub{font-size:14px;fill:#52636b}.head{font-size:20px;font-weight:700}
+      .small{font-size:13px;fill:#52636b}.label{font-size:14px;font-weight:700}.card{fill:#fffefa;stroke:#ccd4d0;stroke-width:2}
+      .body{fill:#f3f1e9;stroke:#34444b;stroke-width:3}.seam{fill:none;stroke:#82908e;stroke-width:1.4}
+      .slot{fill:#fffefa;stroke:#34444b;stroke-width:2}.bolt{fill:#82908e}.bracket{fill:#8c9898;stroke:#34444b;stroke-width:1.5}
+      .wheel{fill:#465154;stroke:#26343a;stroke-width:2}.tread{stroke:#a9b0aa;stroke-width:1.2;stroke-linecap:round}
+    </style>
+    <g id="slot"><rect class="slot" x="-9.85" y="-6.4" width="19.7" height="12.8" rx="2.2"/><circle class="bolt" cx="-6.8" cy="-3.5" r=".8"/><circle class="bolt" cx="6.8" cy="-3.5" r=".8"/><circle class="bolt" cx="-6.8" cy="3.5" r=".8"/><circle class="bolt" cx="6.8" cy="3.5" r=".8"/></g>
+    <g id="wheel-pair">
+      <rect class="bracket" x="-38" y="-4.5" width="4" height="9" rx="1.2"/><rect class="bracket" x="34" y="-4.5" width="4" height="9" rx="1.2"/>
+      <rect class="wheel" x="-43" y="-5.5" width="8" height="11" rx="3"/><rect class="wheel" x="35" y="-5.5" width="8" height="11" rx="3"/>
+      <path class="tread" d="M-41 -2.5h4m-4 5h4M37 -2.5h4m-4 5h4"/>
+    </g>
+  </defs>
+  <rect width="900" height="570" fill="#f8f7f2"/>
+  <text x="36" y="43" class="title">车厢L1—L3｜车轮外置，T面槽列无遮挡</text>
+  <text x="36" y="69" class="sub">正俯视 · 车头朝上 · 车体宽度、接口尺寸沿用当前基准 · L2/L3仅纵向扩展</text>
+
+  <g transform="translate(150 310)">
+    <rect x="-132" y="-220" width="264" height="440" rx="14" class="card"/>
+    <text y="-190" text-anchor="middle" class="head">L1｜当前</text><text y="-168" text-anchor="middle" class="small">4槽 · 2列×2排</text>
+    <g transform="translate(0 -47) scale(2.2)">
+      <path class="body" d="M-29 0-35 8v78l6 8h58l6-8V8l-6-8h-58z"/>
+      <path class="seam" d="M-27 10v74M27 10v74M-25 4h50M-25 90h50"/>
+      <use href="#wheel-pair" transform="translate(0 23.5)"/><use href="#wheel-pair" transform="translate(0 70.5)"/>
+      <use href="#slot" transform="translate(-12.3 31.5)"/><use href="#slot" transform="translate(12.3 31.5)"/><use href="#slot" transform="translate(-12.3 54.5)"/><use href="#slot" transform="translate(12.3 54.5)"/>
+    </g>
+    <text y="173" text-anchor="middle" class="label">70×94 B</text><text y="194" text-anchor="middle" class="small">外置轮组不侵入T面</text>
+  </g>
+
+  <g transform="translate(450 310)">
+    <rect x="-132" y="-220" width="264" height="440" rx="14" class="card"/>
+    <text y="-190" text-anchor="middle" class="head">L2｜加长一排</text><text y="-168" text-anchor="middle" class="small">6槽 · 2列×3排</text>
+    <g transform="translate(0 -58.5) scale(2.2)">
+      <path class="body" d="M-35 8v101l6 8h58l6-8V8l-6-8h-58z"/><path class="seam" d="M-27 10v97M27 10v97M-25 4h50M-25 113h50"/>
+      <use href="#wheel-pair" transform="translate(0 29.25)"/><use href="#wheel-pair" transform="translate(0 87.75)"/>
+      <use href="#slot" transform="translate(-12.3 31.5)"/><use href="#slot" transform="translate(12.3 31.5)"/><use href="#slot" transform="translate(-12.3 54.5)"/><use href="#slot" transform="translate(12.3 54.5)"/><use href="#slot" transform="translate(-12.3 77.5)"/><use href="#slot" transform="translate(12.3 77.5)"/>
+    </g>
+    <text y="173" text-anchor="middle" class="label">70×117 B</text><text y="194" text-anchor="middle" class="small">轮组与槽列横向分离</text>
+  </g>
+
+  <g transform="translate(750 310)">
+    <rect x="-132" y="-220" width="264" height="440" rx="14" class="card"/>
+    <text y="-190" text-anchor="middle" class="head">L3｜再加一排</text><text y="-168" text-anchor="middle" class="small">8槽 · 2列×4排</text>
+    <g transform="translate(0 -70) scale(2.2)">
+      <path class="body" d="M-35 8v124l6 8h58l6-8V8l-6-8h-58z"/><path class="seam" d="M-27 10v120M27 10v120M-25 4h50M-25 137h50"/>
+      <use href="#wheel-pair" transform="translate(0 35)"/><use href="#wheel-pair" transform="translate(0 105)"/>
+      <use href="#slot" transform="translate(-12.3 31.5)"/><use href="#slot" transform="translate(12.3 31.5)"/><use href="#slot" transform="translate(-12.3 54.5)"/><use href="#slot" transform="translate(12.3 54.5)"/><use href="#slot" transform="translate(-12.3 77.5)"/><use href="#slot" transform="translate(12.3 77.5)"/><use href="#slot" transform="translate(-12.3 100.5)"/><use href="#slot" transform="translate(12.3 100.5)"/>
+    </g>
+    <text y="173" text-anchor="middle" class="label">70×140 B</text><text y="194" text-anchor="middle" class="small">轮组轴距随车长增加</text>
+  </g>
+  <path d="M32 548h836" stroke="#d3d8d3" stroke-width="2"/>
+  <text x="450" y="559" text-anchor="middle" class="small">车体美术宽70 B；装配避让边界74 B；轮组外缘包络约86 B。轮组内缘贴车身，槽列外缘至轮组内缘净距12.85 B。</text>
+</svg>

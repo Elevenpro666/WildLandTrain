@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+<title id="title">统一T槽：切割轮与防御模块包络登记</title>
+<desc id="desc">正俯视设计审查图。四个T槽以车厢甲板中心线对称排布；显示双槽切割、拒止器和地雷投射器。投影重叠不等于实体碰撞，需按物理高度层、持续遮挡和特效层级分别审查。</desc>
+<defs>
+  <pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="8" stroke="#859096" stroke-width="2" opacity=".45"/></pattern>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#45545b"/></marker>
+  <marker id="redArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#c5483f"/></marker>
+  <style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26363d}
+    .title{font-size:30px;font-weight:700}.sub{font-size:15px;fill:#5c6d73}.section{font-size:20px;font-weight:700}.label{font-size:14px}.small{font-size:12px;fill:#52636a}.tiny{font-size:11px;fill:#56676d}
+    .card{fill:#fffefa;stroke:#cbd2cf;stroke-width:2}.body{fill:#e9e8df;stroke:#2d3b40;stroke-width:5}.beam{stroke:#30434c;stroke-width:8;stroke-linecap:round}.slot{fill:#faf9f3;stroke:#33454d;stroke-width:3}.wheel{fill:url(#hatch);stroke:#596970;stroke-width:2;stroke-dasharray:5 4}.warn{fill:#f7ded9;stroke:#c5483f;stroke-width:2}.ok{fill:#e6f0e9;stroke:#5c8a6b;stroke-width:2}.pending{fill:#f4ebd3;stroke:#b38a38;stroke-width:2}
+  </style>
+</defs>
+<rect width="1400" height="900" fill="#f4f2ec"/>
+<text x="48" y="55" class="title">统一T槽｜切割轮 × 拒止器 × 地雷投射器</text>
+<text x="48" y="83" class="sub">正俯视空间登记 · 统一槽20×20 B · 车厢L1 70×70 B · 投影交叠与真实碰撞分开审查</text>
+<rect x="48" y="108" width="815" height="720" rx="16" class="card"/>
+<rect x="884" y="108" width="468" height="720" rx="16" class="card"/>
+
+<!-- LEFT: layout on single L1 carriage, scale 3px/B -->
+<text x="76" y="147" class="section">A｜静态装配：4个同规格槽均有对应硬件</text>
+<text x="76" y="173" class="small">示例编组：上排双槽切割系统；下排分别装拒止器与地雷投射器；四槽组以甲板中心线对称</text>
+<!-- swept bands behind train -->
+<rect x="160" y="252" width="195" height="135" fill="#d45d55" opacity=".13"/>
+<rect x="505" y="252" width="195" height="135" fill="#d45d55" opacity=".13"/>
+<text x="77" y="225" class="tiny" fill="#a33d36">红色半透明：横向联动刀盘的最大运行扫掠带（当前原型参数投影）</text>
+<!-- wheel keepout lane, dimensions intentionally unknown -->
+<rect x="298" y="249" width="27" height="210" class="wheel"/>
+<rect x="535" y="249" width="27" height="210" class="wheel"/>
+<text x="83" y="484" class="small">灰色虚线：外置轮组/轮侧净空带</text>
+<text x="83" y="503" class="tiny">轮组最终尺寸与轴位未定，图中只标区域，不作为轮距定稿。</text>
+<!-- body -->
+<rect x="325" y="249" width="210" height="210" rx="20" class="body"/>
+<path d="M350 267H510M350 441H510" stroke="#7c8988" stroke-width="2"/>
+<line x1="430" y1="249" x2="430" y2="459" stroke="#278a91" stroke-width="2" stroke-dasharray="5 5" opacity=".72"/>
+<text x="433" y="244" class="tiny" fill="#278a91">甲板中心线</text>
+<!-- slots: centers +/-12 and rows +/-11.5, scaled 3 -->
+<rect x="364" y="289.5" width="60" height="60" rx="7" class="slot"/>
+<rect x="436" y="289.5" width="60" height="60" rx="7" class="slot"/>
+<rect x="364" y="358.5" width="60" height="60" rx="7" class="slot"/>
+<rect x="436" y="358.5" width="60" height="60" rx="7" class="slot"/>
+<!-- saw anchor points and linked mechanism -->
+<circle cx="394" cy="319.5" r="9" fill="#526c7a" stroke="#182831" stroke-width="3"/>
+<circle cx="466" cy="319.5" r="9" fill="#526c7a" stroke="#182831" stroke-width="3"/>
+<path d="M394 319.5L355 319.5M466 319.5L505 319.5" class="beam"/>
+<path d="M355 313H278M355 326H278M505 313H582M505 326H582" stroke="#657f8c" stroke-width="4"/>
+<!-- blade centers for min and max travel -->
+<circle cx="287.5" cy="319.5" r="67.5" fill="none" stroke="#bc5149" stroke-width="3" stroke-dasharray="8 6" opacity=".8"/>
+<circle cx="572.5" cy="319.5" r="67.5" fill="none" stroke="#bc5149" stroke-width="3" stroke-dasharray="8 6" opacity=".8"/>
+<circle cx="287.5" cy="319.5" r="25" fill="#d5d8d3" stroke="#303c41" stroke-width="4"/>
+<circle cx="572.5" cy="319.5" r="25" fill="#d5d8d3" stroke="#303c41" stroke-width="4"/>
+<circle cx="287.5" cy="319.5" r="9" fill="#6d8591" stroke="#253841" stroke-width="3"/>
+<circle cx="572.5" cy="319.5" r="9" fill="#6d8591" stroke="#253841" stroke-width="3"/>
+<circle cx="227.5" cy="319.5" r="67.5" fill="none" stroke="#c5483f" stroke-width="2" stroke-dasharray="5 7" opacity=".55"/>
+<circle cx="632.5" cy="319.5" r="67.5" fill="none" stroke="#c5483f" stroke-width="2" stroke-dasharray="5 7" opacity=".55"/>
+<text x="111" y="405" class="tiny">刀盘中心横移：±47.5→±67.5 B</text>
+<text x="111" y="423" class="tiny">最大盘缘：|x|=90 B</text>
+<!-- rejector and mine on second row -->
+<circle cx="394" cy="388.5" r="19" fill="#4a8290" stroke="#263d44" stroke-width="4"/>
+<circle cx="394" cy="388.5" r="8" fill="#d8f1e7" stroke="#305e68" stroke-width="2"/>
+<path d="M394 366V348M394 411V429" stroke="#56a4a4" stroke-width="3" stroke-dasharray="4 4"/>
+<text x="389" y="393" class="tiny" fill="#fff">拒</text>
+<rect x="451" y="373.5" width="30" height="30" rx="6" fill="#b47543" stroke="#3f3430" stroke-width="3"/>
+<circle cx="466" cy="388.5" r="7" fill="#d0ecbb" stroke="#513f2e" stroke-width="2"/>
+<path d="M447 388.5H430" stroke="#4c7559" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="368" y="430" class="tiny">拒止器 1槽</text>
+<text x="468" y="430" class="tiny">地雷投射器 1槽</text>
+<!-- dimension arrows -->
+<line x1="325" y1="475" x2="535" y2="475" stroke="#45545b" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="400" y="496" class="label">车宽70 B</text>
+<line x1="570" y1="289.5" x2="570" y2="349.5" stroke="#45545b" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="578" y="318" class="tiny">20 B</text>
+<!-- left status callouts -->
+<rect x="78" y="540" width="755" height="52" rx="10" class="ok"/>
+<text x="98" y="572" class="label" font-weight="700">接口算术：2槽切割 + 1槽拒止 + 1槽投雷 = L1的4槽，静态安装位可排下。</text>
+<rect x="78" y="604" width="755" height="92" rx="10" class="warn"/>
+<text x="98" y="634" class="label" font-weight="700">正俯视投影：刀盘扫掠与车体侧缘、轮组带可能交叠；这本身不等于实体冲突。</text>
+<text x="98" y="660" class="small">须核对真实高度层/体积；禁止实体相交与重要武器被完全、持续遮挡。</text>
+<text x="98" y="682" class="small">攻击特效另设渲染层与遮挡规则；刀盘数据沿用旧原型投影，不是新车厢运行规格。</text>
+<text x="78" y="730" class="small">结论：槽组居中、静态占槽：PASS（规划几何）　·　3D实体净空/持续遮挡/特效层级：待验证</text>
+<text x="78" y="759" class="tiny">图中比例按3 px/B绘制；车体/槽位尺寸来自用户确认方案。刀盘数据来自现有浏览器原型，仅作冲突预警。</text>
+<text x="78" y="780" class="tiny">轮组轮廓仅示意外置区域；未定实体尺寸、高度和遮挡顺序，也未调整刀盘行程。</text>
+
+<!-- RIGHT: clearance calculation and mine candidate -->
+<text x="914" y="147" class="section">B｜横向最大边界与地雷落点</text>
+<text x="914" y="173" class="small">以列车中心线 x=0；仅展示边界，非攻击伤害半径</text>
+<!-- horizontal axis graphic -->
+<line x1="932" y1="252" x2="1305" y2="252" stroke="#435159" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1294" y="240" class="tiny">+x</text>
+<!-- car half-width zone -->
+<rect x="1064" y="220" width="109" height="62" rx="10" fill="#dfe3df" stroke="#47565d" stroke-width="2"/>
+<text x="1087" y="256" class="small">车体±35</text>
+<!-- slot body -->
+<rect x="1083" y="225" width="31" height="52" fill="#d8e5e8" stroke="#4a6874" stroke-width="2"/>
+<rect x="1123" y="225" width="31" height="52" fill="#d8e5e8" stroke="#4a6874" stroke-width="2"/>
+<text x="1079" y="302" class="tiny">单槽本体外缘±21</text>
+<!-- saw dynamic extent both sides -->
+<rect x="1157" y="210" width="101" height="84" fill="#d45d55" opacity=".27" stroke="#b7443c" stroke-width="2"/>
+<rect x="979" y="210" width="101" height="84" fill="#d45d55" opacity=".27" stroke="#b7443c" stroke-width="2"/>
+<text x="1159" y="205" class="tiny" fill="#a33d36">切割扫掠：25…90</text>
+<text x="986" y="205" class="tiny" fill="#a33d36">-90…-25</text>
+<!-- mine safe center at +/-100 -->
+<line x1="1273" y1="194" x2="1273" y2="316" stroke="#7f493d" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="1273" cy="252" r="11" fill="#d5e9bf" stroke="#567350" stroke-width="3"/>
+<line x1="1261" y1="333" x2="1273" y2="333" stroke="#45545b" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="1131" y="356" class="tiny">候选地雷实体直径≤16 B；中心≥±100 B</text>
+<text x="1131" y="375" class="tiny">相对刀盘最大外缘90 B留2 B实体净距</text>
+<line x1="1137" y1="394" x2="1273" y2="394" stroke="#48765c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1131" y="417" class="tiny">从槽中心±12 B到落点中心，至少需横移88 B</text>
+
+<rect x="914" y="450" width="408" height="85" rx="10" class="pending"/>
+<text x="934" y="480" class="label" font-weight="700">地雷规则边界</text>
+<text x="934" y="505" class="small">16 B、±100 B为避开刀盘的几何候选，不是已批准尺寸或射程。</text>
+<text x="934" y="525" class="small">发射轨迹、屏幕内落点与敌线须另按战斗坐标确认。</text>
+
+<rect x="914" y="550" width="408" height="102" rx="10" class="ok"/>
+<text x="934" y="580" class="label" font-weight="700">拒止作用区可与刀轮攻击区交叠</text>
+<text x="934" y="605" class="small">拒止器静态本体仍需≤18×18 B；力场属于效果域。</text>
+<text x="934" y="628" class="small">若有伸缩/摆动实体，须另画入运动包络，不能按“力场”豁免。</text>
+
+<rect x="914" y="667" width="408" height="120" rx="10" class="warn"/>
+<text x="934" y="697" class="label" font-weight="700">本图的验收状态</text>
+<text x="934" y="723" class="small">T槽静态占用：PASS（按尺寸预算）</text>
+<text x="934" y="746" class="small">拒止/地雷活动与轮组/新车体：待定义，未验证</text>
+<text x="934" y="769" class="small">投影交叠可接受；真实体积与分层表现仍未验证。</text>
+</svg>

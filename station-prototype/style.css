@@ -1,0 +1,114 @@
+*{box-sizing:border-box}body{margin:0;background:#242520;color:#252720;font:14px/1.6 "Microsoft YaHei",sans-serif}#app{max-width:480px;min-height:100vh;margin:auto;background:#eeebdf;padding:22px 16px 32px}h1{font-size:27px;margin:8px 0}h1 span{float:right;font-size:25px}h1 span small{display:block;font-size:11px;text-align:right}header p{margin:0;color:#65745f}small{font-size:11px;font-weight:normal}h2{font-size:17px;margin:0 0 12px}h2 small{float:right}section{border-top:2px solid #34362c;padding:16px 0;margin-top:15px}button{min-height:42px;padding:8px 10px;background:#faf8ef;border:1px solid #414338;color:inherit;cursor:pointer;font:inherit;border-radius:4px}button:hover{background:#e0dfd1}button:disabled{opacity:.35;cursor:default}.rail{display:flex;justify-content:flex-end;gap:7px;border-bottom:5px double #333;padding:22px 0 10px}.car{width:72px;display:grid;text-align:center;line-height:1.5}.car.selected{background:#363b2f;color:#fff}.notice{padding:10px;background:#dddccc;min-height:45px;font-size:12px}.item{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid #ceccbe}.item small{display:block}.item button{font-size:12px;padding:6px 8px}.item div{display:flex;gap:4px}.operations{display:flex;gap:8px;margin-top:14px}.operations button{flex:1}.shop{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.shop article{display:grid;text-align:center;gap:5px}.shop strong{font-size:32px}.shop button{font-size:12px}p{font-size:12px}.empty{color:#878878}footer{margin-top:22px;text-align:center}footer>button:first-child{background:#30372a;color:white;width:100%;font-size:17px;min-height:50px}.shade{position:fixed;inset:0;display:grid;place-items:center;background:#0009;padding:20px}.shade section{background:#eeebdf;padding:24px;max-width:400px;border:2px solid #30372a}.shade p{font-size:15px}button:focus-visible{outline:3px solid #ae7140;outline-offset:2px}
+/* 战斗固定一屏；整备站继续使用文档滚动。逻辑战场等比完整显示。 */
+body.battle-mode,body.station-mode{overflow:hidden;overscroll-behavior:none;height:100vh;height:100dvh;display:grid;place-items:center}
+/* 桌面采用9:16设备外框，390为参考宽度，高度不足时等比缩小。 */
+#app.battle-mode,#app.station-mode{width:min(390px,100vw,56.25vh);width:min(390px,100vw,56.25dvh);height:auto;aspect-ratio:9/16;min-height:0;max-width:none;margin:0;padding:0;overflow:hidden}
+/* 战斗使用整块可用视口，不再嵌在固定 9:16 演示外框里。 */
+#app.battle-mode{width:min(390px,100vw);height:100vh;height:100dvh;aspect-ratio:auto}
+/* 手机触控视口使用真实可用区域，不套桌面预览外框。 */
+@media (hover:none) and (pointer:coarse){
+ #app.battle-mode,#app.station-mode{width:100vw;height:100vh;height:100dvh;aspect-ratio:auto}
+}
+.battle-screen{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:max(8px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));gap:8px}
+.battle-hud{border-bottom:2px solid #34362c;padding-bottom:6px}
+.hud-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;line-height:1.6}
+.hud-row strong{font-size:14px}
+.battle-screen progress{display:block;width:100%;height:7px;margin-top:5px;accent-color:#34362c}
+.battle-field{min-height:0;overflow:hidden;display:flex;justify-content:center;background:#e7e5d7}
+.battle-field>svg{display:block;width:100%;height:100%;min-height:0}
+.battle-controls{border-top:2px solid #34362c;padding-top:8px}
+.battle-controls .operations{margin-top:8px;display:grid;grid-template-columns:1fr .8fr 1.7fr;gap:6px}
+.battle-controls button{min-height:48px;padding:8px 4px;font-size:14px;touch-action:manipulation}
+.battle-controls .sprint-button{background:#30372a;color:#fff;font-weight:700;font-size:16px}
+.battle-controls .sprint-button:disabled{opacity:1;background:#d8d7cc;color:#63665b;border-color:#999b8e}
+.battle-controls button:active:not(:disabled){transform:scale(.97)}
+.station-screen{position:relative;height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:max(8px,env(safe-area-inset-top)) 10px max(10px,env(safe-area-inset-bottom));gap:8px}
+.station-header{display:grid;grid-template-columns:1fr auto;border-bottom:2px solid #34362c;padding-bottom:6px}.station-header strong{font-size:18px}.station-header small{grid-column:1/-1;color:#65745f}
+.station-scroll{overflow:auto;min-height:0;overscroll-behavior:contain;scrollbar-width:thin;padding-right:4px}
+.station-scroll section{margin-top:0;padding:10px 0}.station-scroll h2{font-size:15px;margin-bottom:8px}.station-scroll .shop{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.station-scroll .shop strong{font-size:22px}.station-scroll button{min-height:44px}.station-scroll .item{flex-wrap:wrap}.station-scroll details{margin:12px 0}.station-scroll summary{cursor:pointer;min-height:44px}
+.station-dock{border-top:2px solid #34362c}.station-crowd{height:42px;overflow:hidden}.station-crowd svg{display:block;width:100%;height:42px}.dock-target{font-size:12px;display:flex;justify-content:space-between;margin-top:4px}
+.station-dock .rail{gap:4px;padding:6px 0;border-bottom:3px double #34362c}.station-dock .car{width:calc((100% - 20px)/6);max-width:68px;min-width:44px;min-height:58px;padding:3px;font-size:12px}
+.station-dock .notice{margin:4px 0;padding:4px 6px;min-height:30px;max-height:44px;overflow:auto;font-size:11px}.station-dock .operations{margin-top:4px;gap:6px}.station-dock .operations button{min-height:46px;padding:6px;font-size:13px}.station-dock [data-action=depart]{background:#30372a;color:#fff}
+.station-screen .shade{position:absolute;z-index:2;padding:12px}.station-screen .shade section{max-height:100%;overflow:auto}.station-screen .shade button{min-height:44px}
+.station-fixed{grid-template-rows:auto minmax(116px,1fr) auto auto minmax(104px,1fr) auto;gap:4px;overflow:hidden}
+.station-fixed section{margin:0;padding:4px 0;border-top:1px solid #34362c;min-height:0}
+.station-fixed h2{font-size:14px;margin:0;line-height:20px}.station-fixed h2 small{font-size:11px}
+.station-fixed .page-heading{display:flex;align-items:center;justify-content:space-between;height:44px}.page-heading button{min-width:44px;min-height:44px;padding:2px 8px}.page-heading>div{display:flex;gap:4px}
+.station-fixed .item{padding:2px 0;gap:2px;border:0;flex-wrap:nowrap}.station-fixed .item b{font-size:12px}.station-fixed .item button{min-width:44px;min-height:44px;padding:2px;font-size:12px}.station-fixed .item small{font-size:10px}
+.station-fixed .rail{padding:3px 0}.station-fixed .car{min-height:52px}.station-fixed .dock-target{margin:0}.station-fixed .dock-target small{display:none}
+.compact-shop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin-top:4px}.compact-shop button{min-height:44px;padding:3px;font-size:12px;line-height:17px}.compact-shop small{display:block;font-size:10px}
+.station-bottom .notice{margin:0;min-height:18px;padding:2px;font-size:10px;line-height:14px;background:transparent}
+.station-bottom .operations{margin:2px 0 0;gap:4px}.station-bottom button{min-height:44px;padding:4px;font-size:12px}.station-bottom [data-action=depart]{background:#30372a;color:#fff}
+.station-fixed .test-settings{position:absolute;right:10px;top:25px;font-size:10px}.test-settings summary{cursor:pointer}.test-settings details[open]{position:absolute;right:0;top:0;width:260px;z-index:3;background:#eeebdf;border:2px solid #34362c;padding:10px}.test-settings button{min-height:44px}
+.station-fixed .supply-zone{min-height:118px}
+.station-screen.station-fixed{grid-template-rows:auto minmax(110px,1fr) auto 118px minmax(100px,1fr) auto;gap:2px}
+.capacity-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:6px 0}.slot{height:44px;min-width:0;padding:3px;border-radius:5px;display:grid;place-items:center}.slot svg{width:36px;height:36px}.occupied{background:#d6d7c9;border:2px solid #545b49;box-shadow:inset 0 -3px #b7bba7}.empty-slot{border:1px dashed #989d8b;color:#a0a494;background:#e5e4d9}.occupied-link{font-size:24px;color:#8c937c}
+.icon-shop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:5px}.equipment-tile{padding:3px 0;background:transparent;border:0;display:grid;justify-items:center;gap:0;border-radius:0;line-height:16px}.equipment-tile svg{width:42px;height:42px;background:#dddecf;border:1px solid #a5aa97;border-radius:9px;padding:4px}.equipment-tile span{font-size:10px}.equipment-tile small{font-size:10px;color:#616a52}.equipment-tile:active svg{transform:scale(.92)}
+.turnover-icons{display:flex;align-items:center;gap:4px;margin-top:8px;min-height:44px}.turnover-icons .slot{width:44px}.turnover-icons button{min-height:44px}.station-fixed .car{position:relative;border-radius:5px 5px 10px 10px;border-bottom:5px solid #454b3c;background:#d2d5c5}.station-fixed .car.selected{background:#404c37;box-shadow:0 0 0 2px #a7b397;color:white}.station-fixed .car:last-child{border-radius:5px 16px 5px 5px}.station-screen.station-fixed{grid-template-rows:auto minmax(142px,1fr) auto 104px 78px auto}.station-fixed .supply-zone{min-height:104px}
+.equipment-tile,.slot.occupied,.rail .car{touch-action:none;user-select:none;-webkit-user-select:none}
+.drag-ghost{position:fixed;pointer-events:none;z-index:20;width:70px;padding:6px;background:#eeebdfeb;border:2px solid #454f38;border-radius:8px;box-shadow:0 6px 16px #0005}.drag-ghost svg{width:46px;height:46px}.drag-ghost small{display:block;font-size:10px;line-height:13px}
+.drop-target{outline:3px dashed #899b68;outline-offset:-3px;background-color:#cdd7bd!important}
+.capacity-grid .slot{height:58px}.equipment-block{position:relative;display:flex;align-items:center;justify-content:center;padding-bottom:12px}.equipment-block svg{width:34px;max-width:100%;height:34px}.size-label{position:absolute;bottom:0;right:4px;font-size:10px}.drag-ghost{display:flex;justify-content:center;align-items:center;padding:2px}.drag-ghost small{display:none}.drag-ghost svg{max-width:100%;height:38px}
+.distance-hud{text-align:right;min-width:110px;line-height:1.1}.distance-hud small{display:block;font-size:11px}.distance-hud b{display:block;font-size:28px;font-variant-numeric:tabular-nums;letter-spacing:-1px}.distance-hud em{font-size:12px;font-style:normal;letter-spacing:0}
+.battle-screen{position:relative}.upgrade-shade{position:absolute;inset:0;background:#20251cbb;z-index:5;display:grid;place-items:center;padding:16px}.upgrade-panel{width:100%;background:#eeebdf;border:3px solid #343c2c;padding:16px;box-shadow:0 8px 0 #13170d80}.upgrade-panel h2{font-size:23px;margin:8px 0 14px}.upgrade-panel button{width:100%;display:grid;text-align:left;gap:6px;margin:8px 0;padding:14px;border:2px solid #4c5940}.upgrade-panel button b{font-size:17px}.upgrade-panel button span{font-size:12px;line-height:1.5}
+.upgrade-panel .upgrade-equipment{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:bold;color:#46513d;line-height:22px}
+.upgrade-equipment svg{width:22px;height:22px;flex:none}
+@media(max-height:650px){.upgrade-panel{padding:10px}.upgrade-panel button{padding:8px;gap:3px}.upgrade-panel h2{margin:4px 0;font-size:20px}}
+
+/* 战斗信息悬浮在全屏战场上；保留可触区域，非交互 HUD 不遮挡操作。 */
+.battle-screen{display:block;padding:0;overflow:hidden}
+.battle-field{position:absolute;inset:0;display:block}
+.battle-hud{position:absolute;z-index:2;top:0;left:0;right:0;padding:max(8px,env(safe-area-inset-top)) 10px 6px;border:0;background:none;pointer-events:none}
+.battle-hud .hud-row strong,.battle-hud .hud-row span,.battle-hud .distance-hud{background:#eeebdfdc;border-radius:5px;padding:1px 4px}
+.battle-hud .hud-row{line-height:1.3}
+.battle-hud .distance-hud b{font-size:24px}
+.battle-hud progress{height:5px;margin-top:3px}
+.encounter-route{display:flex;align-items:center;gap:2px;margin-top:3px;white-space:nowrap}
+.route-node{font-size:14px;line-height:20px;padding:0 2px;border-radius:3px;background:#eeebdfe8;color:#34362c}
+.route-node.passed{color:#666c5f}.route-node.current{background:#343c2c;color:#fff;font-weight:700}
+.route-link{height:2px;min-width:3px;flex:1;background:#85897b}
+.battle-controls{position:absolute;z-index:2;bottom:0;left:0;right:0;padding:12px 10px max(8px,env(safe-area-inset-bottom));border:0;background:none;pointer-events:none}
+.battle-controls .hud-row strong,.battle-controls .hud-row span{background:#eeebdfd9;border-radius:5px;padding:1px 4px}
+.battle-controls>*{pointer-events:auto}
+.battle-controls .hud-row{line-height:1.3}
+.battle-controls progress{height:6px;margin-top:3px}
+.battle-controls .operations{margin-top:5px;grid-template-columns:44px 44px 1fr;gap:6px}
+.battle-controls .operations button{min-height:48px}
+.battle-controls .operations button:not(.sprint-button){font-size:11px;padding:2px}
+.battle-controls .operations button{background:#eeebdfde}
+.battle-controls .operations .sprint-button{background:#30372ae8}
+.battle-controls .operations .sprint-button:disabled{background:#d8d7ccdc}
+/* 战斗中只保留决策信息；详细账目由暂停态承载。 */
+.battle-vitals{display:grid;justify-items:start;gap:1px}
+.battle-vitals strong{font-size:14px}
+.battle-vitals progress{width:108px;height:5px;margin:0}
+.battle-vitals small{font-size:11px;background:#eeebdfdc;border-radius:4px;padding:0 4px}
+.battle-details{position:absolute;z-index:4;left:12px;right:12px;top:50%;transform:translateY(-50%);padding:16px;background:#eeebdff2;border:2px solid #34362c;border-radius:7px;box-shadow:0 5px 18px #24252055}
+.battle-details h2{font-size:18px;margin:0 0 8px}.battle-details p{font-size:13px;line-height:1.5;margin:5px 0}
+/* 关卡只保留一个右下角手动冲刺入口；充能直接画在按钮内部。 */
+.battle-controls{left:auto;right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));padding:0}
+.battle-controls .sprint-button{position:relative;width:clamp(112px,34vw,132px);min-height:64px;padding:9px 8px 17px;border:2px solid #30372a;border-radius:8px;background:#30372a;color:#fff;font-size:16px;font-weight:700;overflow:hidden;touch-action:manipulation}
+.battle-controls .sprint-button>*{pointer-events:none}
+.battle-controls .sprint-button[data-state=charging],.battle-controls .sprint-button[data-state=locked],.battle-controls .sprint-button[data-state=choosing]{background:#eeebdfee;color:#30372a}
+.battle-controls .sprint-button[data-state=active]{background:#30372a;color:#fff}
+.sprint-meter{position:absolute;left:8px;right:8px;bottom:7px;height:6px;background:#aaa99b;border-radius:4px;overflow:hidden}
+.sprint-meter::after{content:"";display:block;width:var(--charge);height:100%;background:#58785e;transition:width 120ms linear}
+.battle-controls .sprint-button[data-state=ready] .sprint-meter::after{background:#b9d1b8}
+.battle-controls .sprint-button{padding-left:31px}
+.battle-controls .sprint-button::before{content:"";position:absolute;left:7px;top:50%;width:20px;height:20px;transform:translateY(-60%);background:url('assets/battle-state/sprint-ready-v1.svg') center/contain no-repeat;opacity:.45}
+.battle-controls .sprint-button[data-state=ready]::before,.battle-controls .sprint-button[data-state=active]::before{opacity:1}
+.battle-controls .sprint-button[data-state=locked]::before{background-image:url('assets/battle-state/sprint-locked-v1.svg');opacity:1}
+.boss-hud{text-align:right;min-width:128px}.boss-hud strong{font-size:14px}.boss-hud progress{height:5px;margin:1px 0 0}
+.build-hud{position:absolute;right:max(8px,env(safe-area-inset-right));top:150px;display:flex;flex-direction:column;gap:6px;z-index:4;pointer-events:none}
+.build-group{position:relative;pointer-events:auto}
+.build-group summary{list-style:none;cursor:pointer;width:44px;height:44px;box-sizing:border-box;padding:7px;background:#e5dfd1ed;border:1px solid #666d5e;border-radius:6px;position:relative}
+.build-group summary::-webkit-details-marker{display:none}
+.build-group summary:focus-visible{outline:3px solid #648f91;outline-offset:2px}
+.build-group summary img{width:28px;height:28px}
+.build-group summary span{position:absolute;right:2px;bottom:1px;font-size:11px;background:#384037;color:#fff;padding:0 3px;border-radius:3px}
+.build-details{position:absolute;right:50px;top:0;width:min(220px,calc(100vw - 86px));max-height:240px;overflow:auto;background:#eee9dc;border:1px solid #69705e;border-radius:6px;padding:10px;box-sizing:border-box;color:#30372a;box-shadow:0 3px 9px #0003}
+.build-details b{display:block;font-size:12px;margin-top:8px}.build-details p{font-size:12px;margin:3px 0 8px;line-height:1.5}
+.approved-hud .battle-radar{width:90px;height:80px;display:block}.approved-hud .hud-row{display:none}
+.approved-hud .encounter-route{max-width:190px;font-size:8px;margin-top:4px}.approved-hud .route-node{font-size:8px}
+.resource-hud{position:absolute;right:0;top:0;color:#eee9da}.resource-hud>div{display:flex;align-items:center;gap:5px;min-width:80px;height:24px;background:#303831dd;margin-bottom:4px;padding:0 5px}
+.resource-hud img{width:16px;height:22px;object-fit:contain}.resource-hud span{font-size:12px}

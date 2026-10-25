@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {createSprint,sprintConfig} from './src/game/sprint.mjs';
+import {sceneTravel,sceneSpeed,sceneUnitsPerMetre,decelerationSeconds} from './src/game/scene-distance.mjs';
+
+const sprint=createSprint();
+const dashSeconds=sprint.snapshot().distance/sprintConfig.speed;
+assert.equal(dashSeconds,1.92);
+assert.equal(sceneSpeed.sprint,500);
+assert.equal(sceneSpeed.cruise,120);
+assert.equal(sceneUnitsPerMetre,3.2);
+assert.ok(Math.abs(sceneTravel(dashSeconds,[0],dashSeconds)-960)<1e-8);
+
+sprint.step(dashSeconds);
+assert.equal(sprint.snapshot().phase,'decelerating');
+assert.equal(sprint.snapshot().active,true,'deceleration remains invincible');
+assert.equal(sprint.snapshot().energy,0,'charge must not start during deceleration');
+sprint.step(decelerationSeconds-.01);
+assert.equal(sprint.snapshot().active,true);
+sprint.step(.01);
+assert.equal(sprint.snapshot().phase,'charging');
+assert.equal(sprint.snapshot().active,false,'invincibility ends exactly at cruise');
+assert.equal(sprint.snapshot().energy,0);
+const h=.0001;
+const speed=t=>(sceneTravel(t+h,[0],dashSeconds)-sceneTravel(t,[0],dashSeconds))/h;
+assert.ok(Math.abs(speed(dashSeconds+decelerationSeconds)-120)<.01);
+sprint.step(8);
+assert.equal(sprint.snapshot().energy,100);
+assert.equal(sprint.release(),true);
+assert.equal(sprint.snapshot().phase,'sprinting');
+console.log('PASS 3.2 SU/m, 500→120 SU/s, 1.92s dash, 1.2s invincible deceleration, one recharge');

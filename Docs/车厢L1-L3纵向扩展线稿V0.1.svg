@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}
+      .title{font-size:30px;font-weight:700}.sub{font-size:15px;fill:#52636b}
+      .head{font-size:21px;font-weight:700}.label{font-size:15px;font-weight:700}
+      .small{font-size:13px;fill:#52636b}.body{fill:#f3f1e9;stroke:#34444b;stroke-width:3}
+      .slot{fill:#fffefa;stroke:#34444b;stroke-width:2.2}.wheel{fill:#465154;stroke:#26343a;stroke-width:2}
+      .axle{stroke:#657578;stroke-width:3}.seam{stroke:#82908e;stroke-width:1.5}
+      .card{fill:#fffefa;stroke:#ccd4d0;stroke-width:2}.dimension{stroke:#258188;stroke-width:1.5;fill:none}
+    </style>
+    <g id="slot"><rect class="slot" x="-9.85" y="-6.4" width="19.7" height="12.8" rx="2.5"/><circle cx="-6.8" cy="-3.4" r=".8" fill="#82908e"/><circle cx="6.8" cy="-3.4" r=".8" fill="#82908e"/><circle cx="-6.8" cy="3.4" r=".8" fill="#82908e"/><circle cx="6.8" cy="3.4" r=".8" fill="#82908e"/></g>
+    <g id="wheelpair"><rect class="wheel" x="-4" y="-8" width="8" height="16" rx="3"/><path d="M-2 -5h4M-2 0h4M-2 5h4" stroke="#a9b0aa" stroke-width="1"/></g>
+    <g id="car-shell">
+      <path class="body" d="M-29 4-35 11v72l6 7h58l6-7V11l-6-7z"/>
+      <path class="seam" d="M-27 13v62M27 13v62"/>
+      <path class="seam" d="M-25 5h50M-25 88h50"/>
+    </g>
+  </defs>
+  <rect width="1100" height="650" fill="#f8f7f2"/>
+  <text x="44" y="50" class="title">车厢规格延展｜固定当前宽度与槽尺寸，只沿纵向加长</text>
+  <text x="44" y="80" class="sub">正俯视线稿　·　当前车厢为L1基准　·　车轮贴合车体边缘　·　武器接口保持2列对称</text>
+  <text x="550" y="112" text-anchor="middle" class="small">车头方向 ↑</text>
+  <path d="M550 121v18m-6-8 6-10 6 10" class="dimension"/>
+
+  <!-- L1: 74 × 94 battle units; slot ratio and two-row placement are the current baseline. -->
+  <g transform="translate(200 330)">
+    <rect x="-155" y="-220" width="310" height="440" rx="16" class="card"/>
+    <text y="-184" text-anchor="middle" class="head">L1｜当前车厢</text>
+    <text y="-160" text-anchor="middle" class="small">4接口 · 2列×2排</text>
+    <g transform="scale(2.5)">
+      <use href="#car-shell"/>
+      <use href="#wheelpair" transform="translate(-31 25.5)"/><use href="#wheelpair" transform="translate(31 25.5)"/>
+      <use href="#wheelpair" transform="translate(-31 68.5)"/><use href="#wheelpair" transform="translate(31 68.5)"/>
+      <use href="#slot" transform="translate(-12.3 35.5)"/><use href="#slot" transform="translate(12.3 35.5)"/>
+      <use href="#slot" transform="translate(-12.3 58.5)"/><use href="#slot" transform="translate(12.3 58.5)"/>
+    </g>
+    <text y="190" text-anchor="middle" class="label">车体宽70 × 长94 B</text>
+    <text y="211" text-anchor="middle" class="small">装配/避让基准宽74 B</text>
+  </g>
+
+  <!-- L2 adds one longitudinal slot row; width, slot footprint and row pitch are unchanged. -->
+  <g transform="translate(550 330)">
+    <rect x="-155" y="-220" width="310" height="440" rx="16" class="card"/>
+    <text y="-184" text-anchor="middle" class="head">L2｜纵向加长</text>
+    <text y="-160" text-anchor="middle" class="small">6接口 · 2列×3排</text>
+    <g transform="scale(2.5)">
+      <path class="body" d="M-29 4-35 11v95l6 7h58l6-7V11l-6-7z"/>
+      <path class="seam" d="M-27 13v91M27 13v91M-25 5h50M-25 112h50"/>
+      <use href="#wheelpair" transform="translate(-31 31.25)"/><use href="#wheelpair" transform="translate(31 31.25)"/>
+      <use href="#wheelpair" transform="translate(-31 85.75)"/><use href="#wheelpair" transform="translate(31 85.75)"/>
+      <use href="#slot" transform="translate(-12.3 35.5)"/><use href="#slot" transform="translate(12.3 35.5)"/>
+      <use href="#slot" transform="translate(-12.3 58.5)"/><use href="#slot" transform="translate(12.3 58.5)"/>
+      <use href="#slot" transform="translate(-12.3 81.5)"/><use href="#slot" transform="translate(12.3 81.5)"/>
+    </g>
+    <text y="190" text-anchor="middle" class="label">车体宽70 × 长117 B</text>
+    <text y="211" text-anchor="middle" class="small">只增加1排接口，槽体尺寸不变</text>
+  </g>
+
+  <!-- L3 adds a second longitudinal row; still no lateral widening. -->
+  <g transform="translate(900 330)">
+    <rect x="-155" y="-220" width="310" height="440" rx="16" class="card"/>
+    <text y="-184" text-anchor="middle" class="head">L3｜再次纵向加长</text>
+    <text y="-160" text-anchor="middle" class="small">8接口 · 2列×4排</text>
+    <g transform="scale(2.5)">
+      <path class="body" d="M-29 4-35 11v118l6 7h58l6-7V11l-6-7z"/>
+      <path class="seam" d="M-27 13v114M27 13v114M-25 5h50M-25 134h50"/>
+      <use href="#wheelpair" transform="translate(-31 37)"/><use href="#wheelpair" transform="translate(31 37)"/>
+      <use href="#wheelpair" transform="translate(-31 103)"/><use href="#wheelpair" transform="translate(31 103)"/>
+      <use href="#slot" transform="translate(-12.3 35.5)"/><use href="#slot" transform="translate(12.3 35.5)"/>
+      <use href="#slot" transform="translate(-12.3 58.5)"/><use href="#slot" transform="translate(12.3 58.5)"/>
+      <use href="#slot" transform="translate(-12.3 81.5)"/><use href="#slot" transform="translate(12.3 81.5)"/>
+      <use href="#slot" transform="translate(-12.3 104.5)"/><use href="#slot" transform="translate(12.3 104.5)"/>
+    </g>
+    <text y="190" text-anchor="middle" class="label">车体宽70 × 长140 B</text>
+    <text y="211" text-anchor="middle" class="small">接口、轮距与槽宽均不横向扩展</text>
+  </g>
+
+  <path d="M46 590h1008" stroke="#d3d8d3" stroke-width="2"/>
+  <text x="550" y="620" text-anchor="middle" class="small">B为战斗坐标单位；批准版车厢美术宽70 B，装配避让基准74 B；接口尺寸沿用现行比例。L2/L3只纵向加排。</text>
+</svg>

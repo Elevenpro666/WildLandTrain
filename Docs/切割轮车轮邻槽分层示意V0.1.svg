@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1480 1000" preserveAspectRatio="xMidYMid meet" style="display:block;max-width:1480px" role="img" aria-labelledby="title desc">
+<title id="title">切割轮、车轮与邻槽武器的分层关系示意</title>
+<desc id="desc">左侧显示车厢正俯视下切割轮、轮组和相邻电弧槽的投影关系；右侧概念剖面强调车轮、刀盘工作高度和车身高度尚未实测；底部说明真实碰撞与画面遮挡的分别判定方式。</desc>
+<defs>
+  <pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="8" stroke="#819096" stroke-width="2" opacity=".5"/></pattern>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#48585d"/></marker>
+  <style>
+    text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#27373d}.title{font-size:30px;font-weight:700}.sub{font-size:15px;fill:#5a6c72}.head{font-size:20px;font-weight:700}.label{font-size:15px;font-weight:600}.small{font-size:13px;fill:#52636a}.tiny{font-size:11px;fill:#596a70}.card{fill:#fffefa;stroke:#ccd3d0;stroke-width:2}.body{fill:#e8e8df;stroke:#2d3d42;stroke-width:5}.slot{fill:#faf9f4;stroke:#34464d;stroke-width:3}.unknown{fill:url(#hatch);stroke:#596a70;stroke-width:2;stroke-dasharray:6 5}.wheel{fill:#d7dcda;stroke:#42545b;stroke-width:3;stroke-dasharray:5 4}.rotor{fill:#ca554d;fill-opacity:.08;stroke:#c5524b;stroke-width:2.5;stroke-dasharray:7 5}.pass{fill:#e6f0e9;stroke:#6f9879;stroke-width:2}.caution{fill:#f6edd8;stroke:#bd963f;stroke-width:2}.line{stroke:#45565d;stroke-width:2;fill:none}
+  </style>
+</defs>
+<rect width="1480" height="1000" fill="#f4f2ec"/>
+<text x="42" y="53" class="title">切割轮 × 车轮 × 邻槽武器｜高度与遮挡关系</text>
+<text x="42" y="82" class="sub">新车厢设计线稿 · 70×70 B · 统一T槽20×20 B · 俯视投影与真实高度分开判断</text>
+
+<rect x="36" y="108" width="700" height="520" rx="16" class="card"/>
+<rect x="756" y="108" width="688" height="520" rx="16" class="card"/>
+<rect x="36" y="650" width="1408" height="306" rx="16" class="card"/>
+
+<!-- Top-down projection -->
+<text x="64" y="147" class="head">A｜正俯视投影：交叠可以接受</text>
+<text x="64" y="172" class="small">T槽按甲板中心对称排布；虚线轮廓表示外置轮组区域（尺寸未定）</text>
+<!-- legacy saw sweep projection, centered on this 70B design plate only for comparison -->
+<circle cx="247.5" cy="295.5" r="67.5" class="rotor"/>
+<circle cx="532.5" cy="295.5" r="67.5" class="rotor"/>
+<text x="75" y="229" class="tiny" fill="#a84842">红虚线圆：旧原型刀盘位置投影（r=22.5 B）；不是新车体碰撞体</text>
+<!-- wheel-group placeholders -->
+<circle cx="260" cy="278" r="16" class="wheel"/><circle cx="260" cy="382" r="16" class="wheel"/>
+<circle cx="520" cy="278" r="16" class="wheel"/><circle cx="520" cy="382" r="16" class="wheel"/>
+<circle cx="260" cy="278" r="5" fill="#7a8b8d"/><circle cx="260" cy="382" r="5" fill="#7a8b8d"/>
+<circle cx="520" cy="278" r="5" fill="#7a8b8d"/><circle cx="520" cy="382" r="5" fill="#7a8b8d"/>
+<!-- carriage and centerline -->
+<rect x="285" y="225" width="210" height="210" rx="20" class="body"/>
+<path d="M310 243H470M310 417H470" stroke="#87908c" stroke-width="2"/>
+<line x1="390" y1="225" x2="390" y2="435" stroke="#278a91" stroke-width="2" stroke-dasharray="5 5" opacity=".78"/>
+<text x="393" y="221" class="tiny" fill="#278a91">甲板中心线</text>
+<!-- one same-size T-slot array, 3px/B; x = +/-12 B, y = +/-11.5 B -->
+<rect x="324" y="265.5" width="60" height="60" rx="7" class="slot"/>
+<rect x="396" y="265.5" width="60" height="60" rx="7" class="slot"/>
+<rect x="324" y="334.5" width="60" height="60" rx="7" class="slot"/>
+<rect x="396" y="334.5" width="60" height="60" rx="7" class="slot"/>
+<!-- linked cutter hardware -->
+<circle cx="354" cy="295.5" r="8" fill="#5d7682" stroke="#243942" stroke-width="3"/>
+<circle cx="426" cy="295.5" r="8" fill="#5d7682" stroke="#243942" stroke-width="3"/>
+<path d="M354 295.5H315M426 295.5H465M315 289.5H215M315 301.5H215M465 289.5H565M465 301.5H565" stroke="#596f79" stroke-width="4" fill="none"/>
+<!-- adjacent arc emitter -->
+<circle cx="426" cy="364.5" r="20" fill="#237d91" stroke="#283e45" stroke-width="3"/>
+<circle cx="426" cy="364.5" r="8" fill="#e0ffff" stroke="#68d9e8" stroke-width="2"/>
+<path d="M446 364.5L477 348" stroke="#2ac7e6" stroke-width="2.5" stroke-dasharray="4 4"/>
+<text x="463" y="410" class="tiny" fill="#18788b">邻槽电弧</text>
+<text x="91" y="460" class="small">轮组与刀盘扫掠带发生俯视投影重叠；这一步只标出“需核对”，不判碰撞。</text>
+<text x="91" y="483" class="tiny">旧原型 74 B 车体宽配置与当前 70 B 车厢基线不一致；此图不把旧运动数值当新规格。</text>
+<line x1="285" y1="510" x2="495" y2="510" class="line" marker-start="url(#arr)" marker-end="url(#arr)"/>
+<text x="355" y="533" class="label">70 B（设计基线）</text>
+<text x="65" y="574" class="tiny">车轮中心按旧线稿的车长约25%/75%作位置示意；轮径、轴高、悬架与碰撞体均未定。</text>
+
+<!-- conceptual side / cross-section -->
+<text x="784" y="147" class="head">B｜车身高度剖面：只说明变量，不定尺寸</text>
+<text x="784" y="172" class="small">Z轴为车底至甲板的高度；虚影位置/尺寸是待填标记，不代表实测高度</text>
+<!-- Z axis -->
+<line x1="830" y1="520" x2="830" y2="230" class="line" marker-end="url(#arr)"/>
+<text x="807" y="218" class="label">Z 高</text>
+<text x="805" y="545" class="tiny">地面</text>
+<!-- sectioned vehicle hull, schematic only -->
+<rect x="930" y="272" width="290" height="215" rx="12" fill="#e8e8df" stroke="#2d3d42" stroke-width="4"/>
+<rect x="953" y="302" width="244" height="155" rx="5" fill="#f7f6ef" stroke="#69797b" stroke-width="2"/>
+<line x1="922" y1="272" x2="1228" y2="272" stroke="#258995" stroke-width="5"/>
+<text x="1021" y="256" class="label" fill="#207884">甲板 / T面槽</text>
+<text x="1044" y="391" class="small">车体截面</text>
+<text x="1040" y="413" class="tiny">底—甲板厚度：未定</text>
+<!-- cutter rail/rotor and wheel envelopes as ghosted unknown ranges -->
+<rect x="887" y="323" width="67" height="124" rx="18" class="unknown"/>
+<text x="864" y="311" class="tiny">轮组包络？</text>
+<ellipse cx="920" cy="384" rx="21" ry="36" class="wheel"/>
+<rect x="869" y="283" width="82" height="54" rx="10" fill="#f5dcd8" fill-opacity=".52" stroke="#bd5a50" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="862" y="279" class="tiny" fill="#a84842">刀盘包络？</text>
+<!-- T-slot arc emitter on deck -->
+<rect x="1047" y="229" width="56" height="34" rx="7" fill="#f9faf5" stroke="#35484f" stroke-width="2"/>
+<circle cx="1075" cy="246" r="10" fill="#268498" stroke="#243942" stroke-width="2"/>
+<text x="1114" y="250" class="tiny">邻槽武器固定在甲板上</text>
+<text x="856" y="544" class="tiny">剖面无比例；虚影交叠仅示“可能相交待核”，不代表实测Z范围或已碰撞。</text>
+<!-- Z interval logic -->
+<rect x="1250" y="222" width="164" height="140" rx="10" class="pass"/>
+<text x="1265" y="249" class="label">若Z范围错开</text>
+<text x="1265" y="277" class="small">XY投影可重叠</text>
+<text x="1265" y="300" class="small">实体可不相撞</text>
+<text x="1265" y="335" class="tiny">仍需查画面遮挡</text>
+<rect x="1250" y="377" width="164" height="140" rx="10" class="caution"/>
+<text x="1265" y="404" class="label">若XY与Z都重叠</text>
+<text x="1265" y="432" class="small">属于碰撞候选</text>
+<text x="1265" y="455" class="small">需改结构或行程</text>
+<text x="1265" y="490" class="tiny">需真实包络复核</text>
+
+<!-- Rules and rendering separation -->
+<text x="64" y="695" class="head">C｜判定规则与表现层：空间与绘制顺序分别登记</text>
+<rect x="64" y="720" width="430" height="185" rx="12" class="pass"/>
+<text x="86" y="754" class="label">物理层｜看三维占据体积</text>
+<text x="86" y="785" class="small">检查刀盘/支架、车轮/轮轴、车体边梁</text>
+<text x="86" y="810" class="small">的X/Y范围与各自Z区间。</text>
+<text x="86" y="845" class="small">只有实际体积相交才判实体冲突。</text>
+<text x="86" y="879" class="tiny">当前：轮组、刀盘、车体Z范围均未定。</text>
+<rect x="520" y="720" width="430" height="185" rx="12" fill="#e9f2f4" stroke="#7caab2" stroke-width="2"/>
+<text x="542" y="754" class="label">可读层｜看遮挡是否完全且持续</text>
+<text x="542" y="785" class="small">局部/短暂遮挡允许；关键武器不得被</text>
+<text x="542" y="810" class="small">轮组、车体或其他武器长期完全盖住。</text>
+<text x="542" y="845" class="small">必要时通过高度、轮廓、对比或动作时序调节。</text>
+<text x="542" y="879" class="tiny">当前：没有新车体实际战斗画面可验。</text>
+<rect x="976" y="720" width="438" height="185" rx="12" fill="#f5eee0" stroke="#c6aa72" stroke-width="2"/>
+<text x="998" y="754" class="label">特效层｜不与物理高度混为一谈</text>
+<text x="998" y="785" class="small">电弧/命中闪光单独登记渲染顺序；</text>
+<text x="998" y="810" class="small">不让持续光效盖住相邻发射器与刀盘。</text>
+<text x="998" y="845" class="small">游戏可读性由实际绘制层、透明度和时序决定。</text>
+<text x="998" y="879" class="tiny">当前：旧原型DOM顺序不是新规则。</text>
+<text x="64" y="934" class="tiny">设计图状态：槽位中心线与平面占位可核；真实车高、轮组尺寸、刀盘运行高度/碰撞体和最终渲染层均未验证。非运行版资产，不代表净空PASS。</text>
+</svg>

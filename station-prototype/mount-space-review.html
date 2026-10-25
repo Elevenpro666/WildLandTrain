@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#d9d0bd">
+  <title>武器装载空间 · 候选挂点核对</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root{color-scheme:light;--ink:#202722;--muted:#69736d;--paper:#f1ede3;--line:#b6b2a5;--green:#405844;--orange:#bd7139;--teal:#4baaa3}
+    *{box-sizing:border-box}
+    body{margin:0;background:#e5dfd1;color:var(--ink);font-family:Inter,"Microsoft YaHei",sans-serif}
+    main{width:min(1080px,100%);margin:0 auto;padding:24px clamp(14px,3vw,32px) 28px}
+    header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px}
+    h1{font-size:clamp(22px,3.8vw,34px);line-height:1.15;margin:0 0 7px;letter-spacing:.02em}
+    .lede{margin:0;color:#59635c;font-size:14px;line-height:1.55}
+    .candidate{flex:none;border:1px solid #96794d;background:#f5ead3;color:#71572e;padding:7px 11px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.04em}
+    .panel{border:1px solid #777b70;background:#e9e4d8;box-shadow:0 4px 16px #514b3c20}
+    .toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid #aaa99e;background:#f2eee5}
+    .toolbar-label{font-size:12px;color:#616c63;font-weight:700;margin-right:3px}
+    button{font:inherit;cursor:pointer;border:1px solid #777d72;border-radius:3px;background:#faf8f1;color:#28312b;padding:8px 11px;min-height:36px}
+    button[aria-pressed="true"]{background:#364338;color:#fff;border-color:#364338}
+    button:hover{filter:brightness(.97)}
+    button:focus-visible{outline:3px solid #33a49b;outline-offset:2px}
+    .diagram-wrap{overflow:auto;background:#d9d0bd}
+    svg{display:block;width:100%;height:auto;max-height:70vh}
+    .legend{display:flex;flex-wrap:wrap;gap:12px 18px;padding:10px 14px;border-top:1px solid #aaa99e;background:#f2eee5;font-size:12px;color:#4c574f}
+    .key{display:inline-flex;align-items:center;gap:7px}
+    .swatch{width:13px;height:13px;border-radius:50%;border:2px solid currentColor;display:inline-block}
+    .swatch.mount{color:#c17942;background:#f3ba72}.swatch.saw{color:#478f96;background:#6cb5b052}.swatch.mine{color:#b8753e;background:#edb66b80}.swatch.lane{color:#716d60;background:transparent;border-style:dashed}
+    .readout{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#b6b2a5;border-top:1px solid #aaa99e}
+    .metric{background:#f5f1e8;padding:12px 14px;min-height:73px}
+    .metric b{display:block;font-size:19px;color:#33443a;margin-bottom:3px}
+    .metric span{font-size:12px;line-height:1.45;color:#667068}
+    .footnote{padding:12px 14px;color:#626b63;font-size:12px;line-height:1.6;background:#f5f1e8}
+    @media(max-width:640px){main{padding-top:16px}header{align-items:flex-start;flex-direction:column;gap:10px}.readout{grid-template-columns:1fr}.metric{min-height:unset}.toolbar{gap:6px}button{padding:7px 9px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>挂载空间 · 真实车厢轮廓核对</h1>
+      <p class="lede">在真实车厢侧壁上切换空载挂点、拒止器和地雷投射器；设备跨出侧壁并由内侧承力板连接，尺寸仍是待审候选。</p>
+    </div>
+    <span class="candidate">候选布局，不是正式装配规则</span>
+  </header>
+  <section class="panel" aria-label="车厢挂载空间交互图">
+    <nav class="toolbar" aria-label="挂点装配状态">
+      <span class="toolbar-label">装配状态（承力板8×10B；本体可见尺寸：拒止12.4×12B／地雷13.6×12B）</span>
+      <button type="button" data-weapon="empty" aria-pressed="false">空载挂点</button>
+      <button type="button" data-weapon="repel" aria-pressed="true">拒止发射器</button>
+      <button type="button" data-weapon="mine" aria-pressed="false">地雷投射器</button>
+    </nav>
+    <nav class="toolbar" id="mine-upgrade-switch" aria-label="地雷投射器外观等级" style="display:none">
+      <span class="toolbar-label">投送升级外观对照</span>
+      <button type="button" data-mine-art="basic" aria-pressed="true">基础投射器</button>
+      <button type="button" data-mine-art="forward" aria-pressed="false">前置投雷 · 蓄射升级候选</button>
+    </nav>
+    <nav class="toolbar" aria-label="显示空间图层">
+      <span class="toolbar-label">图层</span>
+      <button type="button" data-layer="mount" aria-pressed="true">挂点底座</button>
+      <button type="button" data-layer="saw" aria-pressed="true">刀轮扫掠</button>
+      <button type="button" data-layer="mine" aria-pressed="true">地雷与投射</button>
+      <button type="button" data-layer="lane" aria-pressed="true">敌侧线</button>
+      <button type="button" id="side-toggle" aria-pressed="true">左右镜像：开</button>
+      <button type="button" id="view-toggle" aria-pressed="true">查看整体落点</button>
+    </nav>
+    <div class="diagram-wrap">
+      <svg id="space-diagram" viewBox="260 100 580 400" role="img" aria-labelledby="svg-title svg-desc">
+        <title id="svg-title">正俯视车厢挂载空间候选图</title>
+        <desc id="svg-desc">使用当前车厢艺术候选图，显示前侧壁模块、刀轮实体扫掠圆、地雷最大实体半径和敌人侧线位置。</desc>
+        <defs>
+          <pattern id="ground" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#d9d0bd"/><circle cx="7" cy="10" r="1.2" fill="#b7ac98" opacity=".45"/><circle cx="24" cy="25" r="1.8" fill="#b7ac98" opacity=".35"/></pattern>
+          <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1d211c" flood-opacity=".28"/></filter>
+          <clipPath id="body-clip"><rect x="-37" y="-47" width="74" height="94" rx="5"/></clipPath>
+        </defs>
+        <rect width="1100" height="650" fill="url(#ground)"/>
+        <g transform="translate(550 300) scale(3)">
+          <g opacity=".5" stroke="#625f55" fill="none">
+            <path d="M-10 -95V95M10 -95V95" stroke-width="1.4"/>
+            <path d="M-18 -85H18M-18 -65H18M-18 65H18M-18 85H18" stroke-width="3" opacity=".35"/>
+          </g>
+          <g id="layer-lane" fill="none" stroke="#716d60" stroke-width=".7" stroke-dasharray="2 2" opacity=".8">
+            <path d="M-110 -48V48M110 -48V48"/>
+          </g>
+          <g id="layer-saw" fill="#4da1a355" stroke="#397a83" stroke-width=".9" stroke-dasharray="2 1">
+            <circle cx="-67.5" cy="3" r="22.5"/><circle cx="67.5" cy="3" r="22.5"/>
+            <circle cx="-67.5" cy="47" r="22.5"/><circle cx="67.5" cy="47" r="22.5"/>
+          </g>
+          <g id="car-art" filter="url(#soft)">
+            <svg x="-37" y="-47" width="74" height="94" viewBox="173 180 776 1038" preserveAspectRatio="none">
+              <image id="car-image" x="0" y="0" width="1122" height="1402"/>
+            </svg>
+          </g>
+          <g id="layer-mount" filter="url(#soft)">
+            <g transform="translate(-33 -27.6)">
+              <rect x="-4" y="-5" width="8" height="10" rx="1" fill="#242b29" stroke="#111613" stroke-width=".65"/>
+              <rect x="-3.25" y="-4.25" width="6.5" height="8.5" rx=".7" fill="#7a8580" stroke="#d3cec0" stroke-width=".4"/>
+              <rect x="-2.5" y="-3.45" width="5" height="6.9" rx=".45" fill="#303936" stroke="#151a17" stroke-width=".4"/>
+              <circle cx="-2.35" cy="-3.1" r=".42" fill="#d6d0c2"/><circle cx="2.35" cy="-3.1" r=".42" fill="#d6d0c2"/>
+              <circle cx="-2.35" cy="3.1" r=".42" fill="#d6d0c2"/><circle cx="2.35" cy="3.1" r=".42" fill="#d6d0c2"/>
+              <path d="M-3.5 -1.2h.8M-3.5 1.2h.8M2.7 -1.2h.8M2.7 1.2h.8" stroke="#d6a260" stroke-width=".45"/>
+            </g>
+            <g class="right-unit" transform="translate(33 -27.6)">
+              <rect x="-4" y="-5" width="8" height="10" rx="1" fill="#242b29" stroke="#111613" stroke-width=".65"/>
+              <rect x="-3.25" y="-4.25" width="6.5" height="8.5" rx=".7" fill="#7a8580" stroke="#d3cec0" stroke-width=".4"/>
+              <rect x="-2.5" y="-3.45" width="5" height="6.9" rx=".45" fill="#303936" stroke="#151a17" stroke-width=".4"/>
+              <circle cx="-2.35" cy="-3.1" r=".42" fill="#d6d0c2"/><circle cx="2.35" cy="-3.1" r=".42" fill="#d6d0c2"/>
+              <circle cx="-2.35" cy="3.1" r=".42" fill="#d6d0c2"/><circle cx="2.35" cy="3.1" r=".42" fill="#d6d0c2"/>
+              <path d="M-3.5 -1.2h.8M-3.5 1.2h.8M2.7 -1.2h.8M2.7 1.2h.8" stroke="#d6a260" stroke-width=".45"/>
+            </g>
+          </g>
+          <g id="weapon-repel" filter="url(#soft)">\n            <g transform="translate(-37 -27.6)">\n              <image href="" x="-6.2" y="-6" width="12.4" height="12" preserveAspectRatio="xMidYMid meet"/>\n            </g>\n            <g class="right-unit" transform="translate(37 -27.6) scale(-1 1)">\n              <image href="" x="-6.2" y="-6" width="12.4" height="12" preserveAspectRatio="xMidYMid meet"/>\n            </g>\n          </g>
+          <g id="weapon-mine" filter="url(#soft)" style="display:none">\n            <g transform="translate(-37 -27.6)">\n              <image href="" x="-6.8" y="-6" width="13.6" height="12" preserveAspectRatio="xMidYMid meet"/>\n            </g>\n            <g class="right-unit" transform="translate(37 -27.6) scale(-1 1)">\n              <image href="" x="-6.8" y="-6" width="13.6" height="12" preserveAspectRatio="xMidYMid meet"/>\n            </g>\n          </g>
+          <g id="layer-mine">
+            <g class="left-throw">
+              <path d="M-44 -27.6Q-70 -36 -100 -27.6" fill="none" stroke="#c0783f" stroke-width=".8" stroke-dasharray="2 1.4"/>
+              <path d="M-43 -24.5h-57" fill="none" stroke="#c0783f" stroke-width=".45" marker-end="url(#arrow)"/>
+              <g transform="translate(-100 -27.6)" filter="url(#soft)">
+                <circle r="8" fill="#e6a95755" stroke="#b8753e" stroke-width=".85" stroke-dasharray="1.8 1"/>
+                <circle r="4.2" fill="#454b43" stroke="#151b17" stroke-width=".65"/>
+                <circle r="2.2" fill="#d48848" stroke="#f5d49a" stroke-width=".45"/>
+                <path d="M-5.6 0h1.2M4.4 0h1.2M0-5.6v1.2M0 4.4v1.2" stroke="#f1cb87" stroke-width=".65"/>
+              </g>
+            </g>
+            <g class="right-throw">
+              <path d="M44 -27.6Q70 -36 100 -27.6" fill="none" stroke="#c0783f" stroke-width=".8" stroke-dasharray="2 1.4"/>
+              <path d="M43 -24.5h57" fill="none" stroke="#c0783f" stroke-width=".45" marker-end="url(#arrow)"/>
+              <g transform="translate(100 -27.6)" filter="url(#soft)">
+                <circle r="8" fill="#e6a95755" stroke="#b8753e" stroke-width=".85" stroke-dasharray="1.8 1"/>
+                <circle r="4.2" fill="#454b43" stroke="#151b17" stroke-width=".65"/>
+                <circle r="2.2" fill="#d48848" stroke="#f5d49a" stroke-width=".45"/>
+                <path d="M-5.6 0h1.2M4.4 0h1.2M0-5.6v1.2M0 4.4v1.2" stroke="#f1cb87" stroke-width=".65"/>
+              </g>
+            </g>
+          </g>
+          <g id="dimension-labels" font-family="sans-serif" font-size="3.4" font-weight="700" fill="#27332b" paint-order="stroke" stroke="#eee9de" stroke-width="1.1" stroke-linejoin="round">
+            <text x="-110" y="-39" text-anchor="middle">敌侧线 ±110B</text>
+            <text x="-99" y="-15" text-anchor="middle" fill="#7c4d2c">落点中心 100B</text>
+            <text x="-66" y="-23" text-anchor="middle" fill="#356d73">刀轮外缘90B</text>
+            <text x="0" y="-56" text-anchor="middle" fill="#34413a">车厢正俯视 · 74×94B</text>
+          </g>
+        </g>
+        <defs><marker id="arrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto"><path d="M0 0L4 2L0 4" fill="#c0783f"/></marker></defs>
+        <g transform="translate(30 36)" font-family="sans-serif" fill="#25312a">
+          <text font-size="15" font-weight="700">局部坐标：车厢中心为 (0,0)，X 向右，Y 向下</text>
+          <text y="22" font-size="12" fill="#59635c">载体艺术：train.car.current 候选图；未改正式装配/攻击规则</text>
+        </g>
+      </svg>
+    </div>
+    <div class="legend" aria-label="图例">
+      <span class="key"><i class="swatch mount"></i>承力板8×10B，中心x=±33B；设备中心(±37,−27.6)B，本体可见尺寸：拒止12.4×12B／地雷13.6×12B</span>
+      <span class="key"><i class="swatch saw"></i>运动实体包络：圆盘半径22.5B，最大外缘90B</span>
+      <span class="key"><i class="swatch mine"></i>落地实体：最大直径16B，中心|x|=100B</span>
+      <span class="key"><i class="swatch lane"></i>敌人接近侧线：|x|≈110B</span>
+    </div>
+    <div class="readout" aria-live="polite">
+      <div class="metric"><b>2.1 B</b><span>壁挂设备纵向候选净空：前连接区与刀轮前扫掠边界，各约2.1B。</span></div>
+      <div class="metric"><b>2 B</b><span>地雷实体外缘到刀轮最大横向外缘的保守净距（不是10B）。</span></div>
+      <div class="metric"><b>≈56 B</b><span>从发射口外缘 x≈44B 到地雷中心 x=100B 的示意距离，不代表最终攻击射程。</span></div>
+    </div>
+    <div class="footnote"><strong>边界说明：</strong>壁挂设备本体高12B、跨侧方向可见宽12.4B（拒止器）或13.6B（地雷投射器），中心在车侧轮廓x=±37B处，由内侧8×10B承力板连接；在候选纵向窗口前后各留约2.1B净空。地雷实体与刀轮扫掠仍按2B边界净距核算，持续伤害区可向内覆盖攻击范围。落点与抛射线只作空间示意，不代表最终弹道或数值；左右镜像不代表最终数量或容量规则。</div>
+  </section>
+</main>
+<script type="module">
+  import { assetUrl } from './src/presentation/art-asset-registry.mjs';
+  document.querySelector('#car-image').setAttribute('href',assetUrl('train.car.current'));
+  document.querySelectorAll('#weapon-repel image').forEach(image=>image.setAttribute('href',assetUrl('repel.wall.basic')));
+  const mineImageNodes=[...document.querySelectorAll('#weapon-mine image')];
+  const mineArtButtons=[...document.querySelectorAll('[data-mine-art]')];
+  let mineArt='basic';
+  const mineArtAsset=()=>mineArt==='forward'?'mine.wall.dispenser.forwardThrow':'mine.wall.dispenser.basic';
+  const updateMineArt=()=>{
+    mineImageNodes.forEach(image=>image.setAttribute('href',assetUrl(mineArtAsset())));
+    mineArtButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mineArt===mineArt)));
+  };
+  updateMineArt();
+  const layerButtons=[...document.querySelectorAll('[data-layer]')];
+  const weaponButtons=[...document.querySelectorAll('[data-weapon]')];
+  const layerOn=new Map(layerButtons.map(button=>[button.dataset.layer,true]));
+  let mirrored=true;
+  let fullView=false;
+  let weaponChoice='repel';
+  const updateState=()=>{
+    weaponButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.weapon===weaponChoice)));
+    document.querySelector('#weapon-repel').style.display=weaponChoice==='repel'?'':'none';
+    document.querySelector('#weapon-mine').style.display=weaponChoice==='mine'?'':'none';
+    document.querySelector('#mine-upgrade-switch').style.display=weaponChoice==='mine'?'':'none';
+    document.querySelectorAll('.right-unit,.right-throw').forEach(node=>node.style.display=mirrored?'':'none');
+    document.querySelector('#layer-mine').style.display=weaponChoice==='mine'&&layerOn.get('mine')?'':'none';
+    layerButtons.forEach(button=>{
+      button.setAttribute('aria-pressed',String(layerOn.get(button.dataset.layer)));
+      button.disabled=button.dataset.layer==='mine'&&weaponChoice!=='mine';
+      document.querySelector(`#layer-${button.dataset.layer}`).style.display=layerOn.get(button.dataset.layer)&&(button.dataset.layer!=='mine'||weaponChoice==='mine')?'':'none';
+    });
+  };
+  for(const button of layerButtons){
+    button.addEventListener('click',()=>{
+      layerOn.set(button.dataset.layer,!layerOn.get(button.dataset.layer));
+      updateState();
+    });
+  }
+  for(const button of weaponButtons){
+    button.addEventListener('click',()=>{
+      weaponChoice=button.dataset.weapon;
+      updateState();
+    });
+  }
+  for(const button of mineArtButtons){
+    button.addEventListener('click',()=>{
+      mineArt=button.dataset.mineArt;
+      updateMineArt();
+    });
+  }
+  document.querySelector('#side-toggle').addEventListener('click',event=>{
+    mirrored=!mirrored;
+    event.currentTarget.setAttribute('aria-pressed',String(mirrored));
+    event.currentTarget.textContent=`左右镜像：${mirrored?'开':'关'}`;
+    updateState();
+  });
+  document.querySelector('#view-toggle').addEventListener('click',event=>{
+    fullView=!fullView;
+    document.querySelector('#space-diagram').setAttribute('viewBox',fullView?'0 0 1100 650':'260 100 580 400');
+    event.currentTarget.setAttribute('aria-pressed',String(fullView));
+    event.currentTarget.textContent=fullView?'查看车厢近景':'查看整体落点';
+  });
+  window.advanceTime=()=>{};
+  window.render_game_to_text=()=>JSON.stringify({page:'mount-space-review',carrierAsset:'train.car.current',units:'B; origin=car-center; x-right; y-down',view:fullView?'full':'carrier-close',weaponChoice,mineArt,mirrored,layers:Object.fromEntries(layerButtons.map(button=>[button.dataset.layer,layerOn.get(button.dataset.layer)]))});
+  updateState();
+</script>
+</body>
+</html>

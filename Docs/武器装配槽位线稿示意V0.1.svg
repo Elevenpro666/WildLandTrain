@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1080" role="img" aria-labelledby="title desc">
+  <title id="title">荒野列车武器装配槽位线稿示意 V0.1（历史版本）</title>
+  <desc id="desc">历史正俯视概念线稿，采用已废止的车头4槽和车厢4、6、10槽。当前设计请使用武器装配槽位线稿示意V0.2。</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfaf6}.ink{fill:none;stroke:#28333a;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+      .thin{fill:none;stroke:#68777b;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+      .body{fill:#f0eee6;stroke:#28333a;stroke-width:3.4;stroke-linejoin:round}
+      .deck{fill:#e5e4dc;stroke:#526167;stroke-width:2.2;stroke-linejoin:round}
+      .slot{fill:#f8f7f0;stroke:#34444b;stroke-width:2.6;stroke-linejoin:round}
+      .slotline{fill:none;stroke:#9aa5a1;stroke-width:1.2;stroke-dasharray:4 4}
+      .wheel{fill:#d6d8d1;stroke:#344047;stroke-width:2.5}
+      .label{font:600 19px 'Microsoft YaHei',sans-serif;fill:#26343a}
+      .small{font:15px 'Microsoft YaHei',sans-serif;fill:#46545a}
+      .tiny{font:12px 'Microsoft YaHei',sans-serif;fill:#46545a}
+      .accent{fill:#dce9e6;stroke:#287980;stroke-width:2.5;stroke-linejoin:round}
+      .accentLine{fill:none;stroke:#287980;stroke-width:2;stroke-dasharray:5 4}
+    </style>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="none" stroke="#526167" stroke-width="1.6"/></marker>
+    <g id="base-slot">
+      <path class="slot" d="M-23-33h46l10 10v46l-10 10h-46l-10-10v-46z"/>
+      <path class="slotline" d="M-28-27h56v54h-56z"/>
+      <circle cx="-23" cy="-24" r="2.3" fill="#526167"/><circle cx="23" cy="-24" r="2.3" fill="#526167"/>
+      <circle cx="-23" cy="24" r="2.3" fill="#526167"/><circle cx="23" cy="24" r="2.3" fill="#526167"/>
+    </g>
+    <g id="wheel-pair">
+      <rect class="wheel" x="-13" y="-18" width="18" height="34" rx="7"/>
+      <path class="thin" d="M-9-11h10M-9 9h10"/>
+    </g>
+    <g id="coupler">
+      <path class="body" d="M-15 0h30v18h-8v14H-7V18h-8z"/>
+      <path class="thin" d="M-7 6h14v7H-7z"/>
+    </g>
+  </defs>
+  <rect class="bg" width="1200" height="1080"/>
+  <text x="40" y="48" class="label" font-size="25">装配槽位概念线稿｜正俯视</text>
+  <rect x="640" y="22" width="520" height="38" rx="8" fill="#f8e5df" stroke="#bd4a37" stroke-width="2"/><text x="900" y="47" text-anchor="middle" class="small" fill="#8d3025">历史版本｜槽位数已废止，请看V0.2</text>
+  <text x="40" y="76" class="small">统一底座与槽距；容量升级增加纵向槽排。示意尺寸按槽位比例绘制，非最终车体造型。</text>
+  <path class="thin" d="M42 122v-22" marker-end="url(#arrow)"/>
+  <text x="58" y="116" class="small">车头方向</text>
+
+  <!-- HEAD: 2 columns x 2 rows -->
+  <g transform="translate(145 178)">
+    <text class="label" x="0" y="-29" text-anchor="middle">车头｜4槽</text>
+    <path class="body" d="M-77 0h154l14 24v142l-14 24H-77l-14-24V24z"/>
+    <path class="thin" d="M-66 35v120M66 35v120M-76 34h152M-76 156h152"/>
+    <path class="body" d="M-57 7h114l-13 17h-88z"/>
+    <path class="thin" d="M-43 12h86"/>
+    <use href="#base-slot" transform="translate(-41.25 65)"/><use href="#base-slot" transform="translate(41.25 65)"/>
+    <use href="#base-slot" transform="translate(-41.25 141)"/><use href="#base-slot" transform="translate(41.25 141)"/>
+    <use href="#coupler" transform="translate(0 190) scale(.65)"/>
+    <text class="tiny" x="0" y="225" text-anchor="middle">2列 × 2排｜同宽基准</text>
+  </g>
+
+  <!-- CARRIERS: same width, lengths vary by row count -->
+  <g transform="translate(430 178)">
+    <text class="label" x="0" y="-29" text-anchor="middle">车厢 Lv.1｜4槽</text>
+    <path class="body" d="M-77 0h154l14 22v186l-14 22H-77l-14-22V22z"/>
+    <path class="thin" d="M-66 28v184M66 28v184M-76 28h152M-76 212h152"/>
+    <use href="#wheel-pair" x="-84" y="20"/><use href="#wheel-pair" x="84" y="20"/>
+    <use href="#wheel-pair" x="-84" y="210"/><use href="#wheel-pair" x="84" y="210"/>
+    <path d="M-85 48v134M85 48v134" stroke="#287980" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-90 59h10v32h-10zM80 59h10v32H80zM-90 135h10v32h-10zM80 135h10v32H80z" fill="#dce9e6" stroke="#287980" stroke-width="2"/>
+    <use href="#base-slot" transform="translate(-41.25 75)"/><use href="#base-slot" transform="translate(41.25 75)"/>
+    <use href="#base-slot" transform="translate(-41.25 151)"/><use href="#base-slot" transform="translate(41.25 151)"/>
+    <use href="#coupler" transform="translate(0 230) scale(.65)"/>
+    <text class="tiny" x="0" y="265" text-anchor="middle">2列 × 2排</text>
+  </g>
+
+  <g transform="translate(715 178)">
+    <text class="label" x="0" y="-29" text-anchor="middle">车厢 Lv.2｜6槽</text>
+    <path class="body" d="M-77 0h154l14 22v266l-14 22H-77l-14-22V22z"/>
+    <path class="thin" d="M-66 28v264M66 28v264M-76 28h152M-76 292h152"/>
+    <use href="#wheel-pair" x="-84" y="20"/><use href="#wheel-pair" x="84" y="20"/>
+    <use href="#wheel-pair" x="-84" y="290"/><use href="#wheel-pair" x="84" y="290"/>
+    <path d="M-85 48v214M85 48v214" stroke="#287980" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-90 59h10v32h-10zM80 59h10v32H80zM-90 135h10v32h-10zM80 135h10v32H80zM-90 211h10v32h-10zM80 211h10v32H80z" fill="#dce9e6" stroke="#287980" stroke-width="2"/>
+    <use href="#base-slot" transform="translate(-41.25 75)"/><use href="#base-slot" transform="translate(41.25 75)"/>
+    <use href="#base-slot" transform="translate(-41.25 151)"/><use href="#base-slot" transform="translate(41.25 151)"/>
+    <use href="#base-slot" transform="translate(-41.25 227)"/><use href="#base-slot" transform="translate(41.25 227)"/>
+    <use href="#coupler" transform="translate(0 310) scale(.65)"/>
+    <text class="tiny" x="0" y="345" text-anchor="middle">2列 × 3排</text>
+  </g>
+
+  <g transform="translate(1000 178)">
+    <text class="label" x="0" y="-29" text-anchor="middle">车厢 Lv.3｜10槽</text>
+    <path class="body" d="M-77 0h154l14 22v426l-14 22H-77l-14-22V22z"/>
+    <path class="thin" d="M-66 28v424M66 28v424M-76 28h152M-76 452h152"/>
+    <use href="#wheel-pair" x="-84" y="20"/><use href="#wheel-pair" x="84" y="20"/>
+    <use href="#wheel-pair" x="-84" y="450"/><use href="#wheel-pair" x="84" y="450"/>
+    <path d="M-85 48v374M85 48v374" stroke="#287980" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-90 59h10v32h-10zM80 59h10v32H80zM-90 135h10v32h-10zM80 135h10v32H80zM-90 211h10v32h-10zM80 211h10v32H80zM-90 287h10v32h-10zM80 287h10v32H80zM-90 363h10v32h-10zM80 363h10v32H80z" fill="#dce9e6" stroke="#287980" stroke-width="2"/>
+    <use href="#base-slot" transform="translate(-41.25 75)"/><use href="#base-slot" transform="translate(41.25 75)"/>
+    <use href="#base-slot" transform="translate(-41.25 151)"/><use href="#base-slot" transform="translate(41.25 151)"/>
+    <use href="#base-slot" transform="translate(-41.25 227)"/><use href="#base-slot" transform="translate(41.25 227)"/>
+    <use href="#base-slot" transform="translate(-41.25 303)"/><use href="#base-slot" transform="translate(41.25 303)"/>
+    <use href="#base-slot" transform="translate(-41.25 379)"/><use href="#base-slot" transform="translate(41.25 379)"/>
+    <use href="#coupler" transform="translate(0 470) scale(.65)"/>
+    <text class="tiny" x="0" y="505" text-anchor="middle">2列 × 5排</text>
+  </g>
+
+  <path class="thin" d="M40 705h1120"/>
+  <text x="48" y="741" class="label">外壁槽层级放大｜俯视装配关系</text>
+  <text x="48" y="768" class="small">底座加宽至20×20 B；车头/车厢同步加宽约7%（外轮廓约55 B），槽数与武器本体尺寸不变。</text>
+  <g transform="translate(82 792)">
+    <text class="tiny" x="0" y="12">车厢内部</text>
+    <path d="M0 25h190v115H0z" fill="#f0eee6" stroke="#28333a" stroke-width="2.5"/>
+    <path d="M190 25h30v115h-30z" fill="#d5d6ce" stroke="#28333a" stroke-width="2.5"/>
+    <path d="M198 35v95" stroke="#68777b" stroke-width="2"/>
+    <text class="tiny" x="205" y="155" text-anchor="middle">侧壁</text>
+    <path d="M190 42h88v88h-88z" fill="#ecebe4" stroke="#287980" stroke-width="3" stroke-dasharray="7 4"/>
+    <path class="accent" d="M205 48h54l16 16v42l-16 16h-54l-12-16V64z"/>
+    <path class="ink" d="M216 58h34l12 12v30l-12 12h-34l-9-12V70z"/>
+    <circle cx="233" cy="85" r="12" fill="#f8f7f0" stroke="#28333a" stroke-width="2.6"/>
+    <circle cx="233" cy="85" r="5.5" fill="#dce9e6" stroke="#287980" stroke-width="2.2"/>
+    <path class="thin" d="M198 50v8m0 54v8m68-70v8m0 54v8"/>
+    <text class="tiny" x="284" y="66">拒止器本体</text>
+    <path class="thin" d="M262 68h16" marker-end="url(#arrow)"/>
+    <text class="tiny" x="284" y="108">承力底座</text>
+    <path class="accentLine" d="M278 104h-11" marker-end="url(#arrow)"/>
+    <text class="tiny" x="234" y="164" text-anchor="middle">本体覆盖底座主体，只露边缘锁耳</text>
+  </g>
+  <g transform="translate(462 795)">
+    <text class="tiny" x="0" y="12">外侧正视 / 单个侧壁接口</text>
+    <path d="M18 22v98" stroke="#526167" stroke-width="8"/>
+    <rect x="22" y="36" width="66" height="66" rx="7" fill="#dce9e6" stroke="#287980" stroke-width="3"/>
+    <rect x="30" y="44" width="50" height="50" rx="4" fill="#fbfaf6" stroke="#34444b" stroke-width="2"/>
+    <path d="M37 56h36M37 82h36" stroke="#68777b" stroke-width="2"/>
+    <path d="M20 110h70" stroke="#28333a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text class="tiny" x="92" y="48">侧壁承载面</text>
+    <text class="tiny" x="98" y="70">20×20 B，与T槽同规格</text>
+    <text class="tiny" x="92" y="92">贴边安装；左右各一列，按纵向槽排对齐</text>
+    <text class="tiny" x="0" y="148">俯视小标记与正视安装面是同一位置，不表示体积翻倍。</text>
+  </g>
+  <text class="tiny" x="40" y="1040">注：线稿仅表达尺寸关系、槽数与叠放层级；武器动态包络、轮组/车钩净空和车体最终长度仍需计算。</text>
+</svg>

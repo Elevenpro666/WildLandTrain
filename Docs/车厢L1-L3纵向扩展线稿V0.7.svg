@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="570" viewBox="0 0 900 570">
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}
+      .title{font-size:28px;font-weight:700}.sub{font-size:14px;fill:#52636b}.head{font-size:20px;font-weight:700}
+      .small{font-size:13px;fill:#52636b}.label{font-size:14px;font-weight:700}.card{fill:#fffefa;stroke:#ccd4d0;stroke-width:2}
+      .body{fill:#f3f1e9;stroke:#34444b;stroke-width:3}.seam{fill:none;stroke:#82908e;stroke-width:1.4}
+      .slot{fill:#fffefa;stroke:#34444b;stroke-width:2}.bolt{fill:#82908e}.bracket{fill:#8c9898;stroke:#34444b;stroke-width:1.5}
+      .wheel{fill:#465154;stroke:#26343a;stroke-width:2}.tread{stroke:#a9b0aa;stroke-width:1.2;stroke-linecap:round}
+    </style>
+    <g id="slot"><rect class="slot" x="-7.5" y="-9" width="15" height="18" rx="2.2"/><circle class="bolt" cx="-5.2" cy="-6.7" r=".8"/><circle class="bolt" cx="5.2" cy="-6.7" r=".8"/><circle class="bolt" cx="-5.2" cy="6.7" r=".8"/><circle class="bolt" cx="5.2" cy="6.7" r=".8"/></g>
+    <g id="wheel-pair">
+      <rect class="bracket" x="-38" y="-4.5" width="4" height="9" rx="1.2"/><rect class="bracket" x="34" y="-4.5" width="4" height="9" rx="1.2"/>
+      <rect class="wheel" x="-43" y="-5.5" width="8" height="11" rx="3"/><rect class="wheel" x="35" y="-5.5" width="8" height="11" rx="3"/>
+      <path class="tread" d="M-41 -2.5h4m-4 5h4M37 -2.5h4m-4 5h4"/>
+    </g>
+  </defs>
+  <rect width="900" height="570" fill="#f8f7f2"/>
+  <text x="36" y="43" class="title">车厢L1—L3｜沿用现版尺寸，取消车壁挂点</text>
+  <text x="36" y="69" class="sub">正俯视 · 车宽70 B · T面安装板约15×18 B · 仅沿纵向增排，车壁不设武器挂点</text>
+  <g transform="translate(150 310)">
+    <rect x="-132" y="-220" width="264" height="440" rx="14" class="card"/>
+    <text y="-190" text-anchor="middle" class="head">L1｜当前</text><text y="-168" text-anchor="middle" class="small">4槽 · 2列×2排</text>
+    <g transform="translate(0 -103.4) scale(2.2)">
+      <path class="body" d="M-29 0-35 8v78l6 8h58l6-8V8l-6-8h-58z"/><path class="seam" d="M-27 10v74M27 10v74M-25 4h50M-25 90h50"/>
+      <use href="#wheel-pair" transform="translate(0 23.5)"/><use href="#wheel-pair" transform="translate(0 70.5)"/>
+      <use href="#slot" transform="translate(-10 34)"/><use href="#slot" transform="translate(10 34)"/><use href="#slot" transform="translate(-10 57)"/><use href="#slot" transform="translate(10 57)"/>
+    </g>
+    <text y="173" text-anchor="middle" class="label">70×94 B｜4槽</text><text y="194" text-anchor="middle" class="small">保留现版2×2 T面安装板</text>
+  </g>
+  <g transform="translate(450 310)">
+    <rect x="-132" y="-220" width="264" height="440" rx="14" class="card"/>
+    <text y="-190" text-anchor="middle" class="head">L2｜加长一排</text><text y="-168" text-anchor="middle" class="small">6槽 · 2列×3排</text>
+    <g transform="translate(0 -128.7) scale(2.2)">
+      <path class="body" d="M-35 8v101l6 8h58l6-8V8l-6-8h-58z"/><path class="seam" d="M-27 10v97M27 10v97M-25 4h50M-25 113h50"/>
+      <use href="#wheel-pair" transform="translate(0 29.25)"/><use href="#wheel-pair" transform="translate(0 87.75)"/>
+      <use href="#slot" transform="translate(-10 34)"/><use href="#slot" transform="translate(10 34)"/><use href="#slot" transform="translate(-10 57)"/><use href="#slot" transform="translate(10 57)"/><use href="#slot" transform="translate(-10 80)"/><use href="#slot" transform="translate(10 80)"/>
+    </g>
+    <text y="173" text-anchor="middle" class="label">70×117 B｜6槽</text><text y="194" text-anchor="middle" class="small">保持23 B节距，纵向加长一排</text>
+  </g>
+  <g transform="translate(750 310)">
+    <rect x="-132" y="-220" width="264" height="440" rx="14" class="card"/>
+    <text y="-190" text-anchor="middle" class="head">L3｜再加一排</text><text y="-168" text-anchor="middle" class="small">8槽 · 2列×4排</text>
+    <g transform="translate(0 -154) scale(2.2)">
+      <path class="body" d="M-35 8v124l6 8h58l6-8V8l-6-8h-58z"/><path class="seam" d="M-27 10v120M27 10v120M-25 4h50M-25 137h50"/>
+      <use href="#wheel-pair" transform="translate(0 35)"/><use href="#wheel-pair" transform="translate(0 105)"/>
+      <use href="#slot" transform="translate(-10 34)"/><use href="#slot" transform="translate(10 34)"/><use href="#slot" transform="translate(-10 57)"/><use href="#slot" transform="translate(10 57)"/><use href="#slot" transform="translate(-10 80)"/><use href="#slot" transform="translate(10 80)"/><use href="#slot" transform="translate(-10 103)"/><use href="#slot" transform="translate(10 103)"/>
+    </g>
+    <text y="173" text-anchor="middle" class="label">70×140 B｜8槽</text><text y="194" text-anchor="middle" class="small">保持23 B节距，纵向再加一排</text>
+  </g>
+  <path d="M32 548h836" stroke="#d3d8d3" stroke-width="2"/>
+  <text x="450" y="559" text-anchor="middle" class="small">安装板约15×18 B按现版四格平台图比例取整；中心节距20×23 B；车壁武器挂点已移除，仅保留轮组，车宽不变。</text>
+</svg>

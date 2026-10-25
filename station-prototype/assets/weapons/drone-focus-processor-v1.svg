@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150">
+ <g stroke-linecap="round" stroke-linejoin="round">
+  <!-- Split gimbal ring leaves the aircraft's original center optic visible. -->
+  <circle cx="90" cy="75" r="62" fill="none" stroke="#101719" stroke-width="12"/>
+  <circle cx="90" cy="75" r="62" fill="none" stroke="#748185" stroke-width="6"/>
+  <path d="M55 24A62 62 0 0 1 125 24M55 126A62 62 0 0 0 125 126" fill="none" stroke="#c9d0c8" stroke-width="3"/>
+  <circle cx="90" cy="75" r="49" fill="none" stroke="#252d30" stroke-width="3" stroke-dasharray="9 7"/>
+
+  <!-- Shielded servo arms mechanically connect the ring to both side sensor pods. -->
+  <path d="M47 55H31V95H47M133 55H149V95H133" fill="none" stroke="#111719" stroke-width="13"/>
+  <path d="M47 55H31V95H47M133 55H149V95H133" fill="none" stroke="#9aa6a2" stroke-width="7"/>
+  <path d="M39 59V91M141 59V91" fill="none" stroke="#d4c8ae" stroke-width="2"/>
+
+  <path d="M5 51H30L39 60V90L30 99H5L1 94V56Z" fill="#222c30" stroke="#101719" stroke-width="5"/>
+  <path d="M8 57H28L33 62V88L28 93H8Z" fill="#49636a" stroke="#c4c8bc" stroke-width="2.5"/>
+  <path d="M12 66H26V84H12Z" fill="#152124" stroke="#202d30" stroke-width="2"/>
+  <path d="M15 70H23V80H15Z" fill="#44dcf3" stroke="#e7ffff" stroke-width="1.8"/>
+  <path d="M17 72H21V74H17Z" fill="#fff"/>
+
+  <path d="M175 51H150L141 60V90L150 99H175L179 94V56Z" fill="#222c30" stroke="#101719" stroke-width="5"/>
+  <path d="M172 57H152L147 62V88L152 93H172Z" fill="#49636a" stroke="#c4c8bc" stroke-width="2.5"/>
+  <path d="M168 66H154V84H168Z" fill="#152124" stroke="#202d30" stroke-width="2"/>
+  <path d="M165 70H157V80H165Z" fill="#44dcf3" stroke="#e7ffff" stroke-width="1.8"/>
+  <path d="M163 72H159V74H163Z" fill="#fff"/>
+
+  <circle cx="40" cy="55" r="3" fill="#c57945" stroke="#20272a" stroke-width="1.5"/>
+  <circle cx="40" cy="95" r="3" fill="#c57945" stroke="#20272a" stroke-width="1.5"/>
+  <circle cx="140" cy="55" r="3" fill="#c57945" stroke="#20272a" stroke-width="1.5"/>
+  <circle cx="140" cy="95" r="3" fill="#c57945" stroke="#20272a" stroke-width="1.5"/>
+ </g>
+</svg>

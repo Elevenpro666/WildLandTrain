@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc">
+  <title id="title">车头加4节Lv.3满列竖屏战斗构图 B方案 V0.2</title>
+  <desc id="desc">以当前极简战斗界面为基础，顶部只保留耐久等级和遭遇进度，右下角保留单一冲刺按钮；不预留上下HUD带，列车居中并在两侧留出战斗空间。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}.title{font-size:30px;font-weight:700}.subtitle{font-size:15px;fill:#52636b}.panelTitle{font-size:20px;font-weight:700}.label{font-size:14px;font-weight:700}.body{font-size:15px}.small{font-size:13px;fill:#52636b}.tiny{font-size:11px;fill:#52636b}.phone{fill:#fffefa;stroke:#26343a;stroke-width:3}.car{fill:#f0eee6;stroke:#34444b;stroke-width:3}.slot{fill:#fffefa;stroke:#34444b;stroke-width:2}.tire{fill:#465154;stroke:#26343a;stroke-width:2}.tread{stroke:#b4bbb3;stroke-width:1.5;stroke-linecap:round}.axle{stroke:#657578;stroke-width:3}.keep{fill:#dbd8cd;fill-opacity:.45;stroke:#8c7b50;stroke-width:1.5;stroke-dasharray:4 3}.coupler{fill:#d7dad3;stroke:#34444b;stroke-width:2}.card{fill:#fffefa;stroke:#ccd4d0;stroke-width:2}.accent{fill:#e7efec;stroke:#aabdb6;stroke-width:1.5}.button{fill:#30392e;stroke:#273128;stroke-width:2}.buttonText{fill:#fffefa;font-size:18px;font-weight:700}.buttonHint{fill:#dfe8dc;font-size:10px}.enemy{fill:#76634d;stroke:#352e27;stroke-width:2}.limb{fill:none;stroke:#352e27;stroke-width:2;stroke-linecap:round}.energy{fill:none;stroke:#36a9bb;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <g id="wheelpair"><path class="axle" d="M-78 0h156"/><rect class="keep" x="-91" y="-21" width="26" height="42" rx="5"/><rect class="keep" x="65" y="-21" width="26" height="42" rx="5"/><rect class="tire" x="-85" y="-15" width="14" height="30" rx="4"/><path class="tread" d="M-83 -8h10M-83 0h10M-83 8h10"/><rect class="tire" x="71" y="-15" width="14" height="30" rx="4"/><path class="tread" d="M73 -8h10M73 0h10M73 8h10"/></g>
+    <g id="head3"><use href="#wheelpair" transform="translate(0 34)"/><use href="#wheelpair" transform="translate(0 154)"/><path class="car" d="M-58 0h116l13 20v156l-13 20H-58l-13-20V20z"/><path d="M-12 197h24v15h-6v13h-12v-13h-6z" class="coupler"/><g><rect class="slot" x="-51" y="27" width="40" height="26" rx="4"/><rect class="slot" x="11" y="27" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="83" width="40" height="26" rx="4"/><rect class="slot" x="11" y="83" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="139" width="40" height="26" rx="4"/><rect class="slot" x="11" y="139" width="40" height="26" rx="4"/></g></g>
+    <g id="wagon3"><use href="#wheelpair" transform="translate(0 36) scale(1 .72)"/><use href="#wheelpair" transform="translate(0 100) scale(1 .72)"/><path class="car" d="M-63 4h126l8 12v126l-8 12h-126l-8-12V16z"/><path d="M-60 20v122M60 20v122" fill="none" stroke="#82908e" stroke-width="1.5"/><rect class="slot" x="-51" y="15" width="40" height="26" rx="4"/><rect class="slot" x="11" y="15" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="47" width="40" height="26" rx="4"/><rect class="slot" x="11" y="47" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="79" width="40" height="26" rx="4"/><rect class="slot" x="11" y="79" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="111" width="40" height="26" rx="4"/><rect class="slot" x="11" y="111" width="40" height="26" rx="4"/></g>
+    <g id="fullTrain"><use href="#head3"/><use href="#wagon3" transform="translate(0 221)"/><rect class="coupler" x="-12" y="375" width="24" height="12" rx="2"/><use href="#wagon3" transform="translate(0 383)"/><rect class="coupler" x="-12" y="537" width="24" height="12" rx="2"/><use href="#wagon3" transform="translate(0 545)"/><rect class="coupler" x="-12" y="699" width="24" height="12" rx="2"/><use href="#wagon3" transform="translate(0 707)"/></g>
+    <g id="scavenger"><ellipse cx="0" cy="7" rx="14" ry="5" fill="#c6c0ae"/><path class="enemy" d="M-11 0l5-7h12l6 7-2 10H-8z"/><path class="limb" d="M-9 2l-9-5m8 10l-9 4m26-9l9-5m-8 10l9 4M-3-7l-4-7m13 7l5-7"/><circle cx="-3" cy="0" r="1.5" fill="#d38a56"/><circle cx="4" cy="0" r="1.5" fill="#d38a56"/></g>
+  </defs>
+  <rect width="1440" height="1080" fill="#f4f2eb"/>
+  <text x="54" y="54" class="title">车头 + 4 节 Lv.3｜满列竖屏战斗构图 B方案 V0.2</text>
+  <text x="56" y="84" class="subtitle">撤掉上下整块HUD预留带；沿用当前极简战斗UI，把必要信息压到顶部，把冲刺收成右下单一操作按钮。</text>
+
+  <rect x="53" y="112" width="414" height="870" rx="24" fill="#263136"/>
+  <rect x="65" y="123" width="390" height="844" rx="14" class="phone"/>
+  <g opacity=".34" stroke="#857d6a" stroke-width="5"><path d="M238 124v842M272 124v842"/><path d="M228 148h54M228 192h54M228 236h54M228 280h54M228 324h54M228 368h54M228 412h54M228 456h54M228 500h54M228 544h54M228 588h54M228 632h54M228 676h54M228 720h54M228 764h54M228 808h54M228 852h54M228 896h54M228 940h54"/></g>
+  <g fill="#d2ccbb" opacity=".65"><circle cx="95" cy="282" r="5"/><circle cx="416" cy="306" r="4"/><circle cx="117" cy="510" r="3"/><circle cx="391" cy="620" r="6"/><circle cx="91" cy="747" r="4"/><circle cx="415" cy="815" r="3"/><circle cx="104" cy="890" r="5"/></g>
+  <!-- Current minimal product HUD -->
+  <rect x="74" y="133" width="137" height="37" rx="8" fill="#fffefa" fill-opacity=".94" stroke="#647168" stroke-width="1.5"/>
+  <text x="82" y="149" class="tiny" font-weight="700">耐久 228 / 300</text><rect x="82" y="155" width="119" height="6" rx="3" fill="#d2d3c5"/><rect x="82" y="155" width="91" height="6" rx="3" fill="#728b64"/>
+  <rect x="218" y="133" width="46" height="37" rx="8" fill="#fffefa" fill-opacity=".94" stroke="#647168" stroke-width="1.5"/><text x="227" y="156" class="small" font-weight="700">Lv.3</text>
+  <g font-size="10" text-anchor="middle"><text x="91" y="183">小怪</text><text x="173" y="183">小怪</text><text x="255" y="183">精英</text><text x="337" y="183">小怪</text><text x="429" y="183">BOSS</text></g>
+  <path d="M91 193H429" stroke="#8b9285" stroke-width="2"/><path d="M91 193H173" stroke="#344037" stroke-width="4"/>
+  <g stroke="#344037" stroke-width="2"><circle cx="91" cy="193" r="7" fill="#344037"/><circle cx="173" cy="193" r="6" fill="#fffefa"/><circle cx="255" cy="193" r="6" fill="#fffefa"/><circle cx="337" cy="193" r="6" fill="#fffefa"/><circle cx="429" cy="193" r="6" fill="#fffefa"/></g>
+  <!-- Full consist: 0.80 px per schematic unit; 78/77 px open scene margins -->
+  <g transform="translate(260 201) scale(.8)"><use href="#fullTrain"/></g>
+  <!-- Side-lane battle activity outside the wagon bodies -->
+  <use href="#scavenger" transform="translate(115 348) scale(1.15)"/><use href="#scavenger" transform="translate(406 401) scale(1.25)"/><use href="#scavenger" transform="translate(104 606) scale(1.15)"/><use href="#scavenger" transform="translate(408 692) scale(1.1)"/>
+  <path class="energy" d="M321 337q28-15 55 3l-9 7 12 5-18 3"/><path class="energy" d="M198 594q-26-13-53 2l8 7-13 6 18 2"/>
+  <g transform="translate(421 535)"><path d="M0-9l7 9-7 9-7-9z" fill="#40b8bd" stroke="#286e72" stroke-width="1.5"/><path d="M0 9l7 9-7 9-7-9z" fill="#d7ad58" stroke="#8d7137" stroke-width="1.5"/></g>
+  <rect x="324" y="877" width="124" height="80" rx="12" class="button"/><text x="386" y="912" text-anchor="middle" class="buttonText">冲刺 ↑</text><rect x="336" y="927" width="100" height="8" rx="4" fill="#9ca693"/><rect x="336" y="927" width="63" height="8" rx="4" fill="#b9d5b9"/><text x="386" y="949" text-anchor="middle" class="buttonHint">充能嵌在按钮内</text>
+
+  <rect x="500" y="112" width="886" height="870" rx="20" class="card"/>
+  <text x="540" y="162" class="panelTitle">B方案：用当前产品UI替代上下HUD占位区</text>
+  <text x="540" y="194" class="body">不是把HUD移走，而是把它缩成角落控件，让列车和战斗场景共用整块画面。</text><path d="M540 218h806" stroke="#d9dfda" stroke-width="2"/>
+  <text x="540" y="257" class="label">构图中保留的现行战斗UI</text>
+  <circle cx="552" cy="292" r="5" fill="#728b64"/><text x="570" y="297" class="body">左上：列车耐久 + 当前等级，紧凑状态条</text>
+  <circle cx="552" cy="330" r="5" fill="#728b64"/><text x="570" y="335" class="body">顶部：五节点遭遇进度线，不铺满不透明横带</text>
+  <circle cx="552" cy="368" r="5" fill="#728b64"/><text x="570" y="373" class="body">右下：唯一“冲刺 ↑”操作按钮，充能条收在按钮内部</text>
+  <circle cx="552" cy="406" r="5" fill="#728b64"/><text x="570" y="411" class="body">经验/废料：战场掉落图标短暂飞向资源区，不固定占行</text>
+  <text x="570" y="442" class="small">未放暂停/返回按钮、到站距离文字、底部操作栏或顶部资源横幅。</text>
+  <rect x="540" y="472" width="806" height="204" rx="14" class="accent"/>
+  <text x="566" y="513" class="panelTitle">满列缩放与实际可视尺寸</text>
+  <text x="566" y="550" class="body">屏幕：390 × 844 px　｜　满列：861示意单位　｜　缩放：0.80 px/单位</text>
+  <text x="566" y="583" class="body">列车纵向约689px；顶部留78px、底部留77px给战场活动与边缘安全区。</text>
+  <text x="566" y="616" class="body">车体宽约114px，轮胎外缘约136px；槽约32 × 21px，优于旧B的29 × 19px。</text>
+  <text x="566" y="649" class="small">轮组避让框外缘约146px；两侧仍各有约120px横向战斗走廊，图中已示意敌人与攻击反馈。</text>
+  <text x="540" y="725" class="panelTitle">判断</text>
+  <text x="540" y="759" class="body">依照当前极简UI，不必固定扣除顶部80px + 底部140px。满列可按0.80比例</text>
+  <text x="540" y="785" class="body">完整出现；控件只覆盖边缘小区域，列车、敌人和攻击效果可留在同一战斗画面。</text>
+  <text x="540" y="827" class="small">比V0.1保留更多纵向战斗画面，但满列仍占屏高约82%；主要交战空间在列车两侧。</text>
+  <rect x="540" y="856" width="806" height="87" rx="12" fill="#fff2df" stroke="#d7a24c" stroke-width="1.5"/>
+  <text x="565" y="889" class="label" fill="#805438">未验证：武器细节在32×21px槽面的实际辨识、列车与怪群/特效遮挡、</text>
+  <text x="565" y="916" class="label" fill="#805438">真实相机裁切与微信安全区。本图不代表已改运行版镜头或HUD代码。</text>
+  <text x="67" y="1018" class="small">线稿结构按已确认的 1 头 + 4 节 Lv.3、车头6槽 + 车厢各8槽绘制；共38个T槽。</text>
+  <text x="67" y="1045" class="small">UI依据：Docs/关卡HUD极简交互V2.md 与现有极简HUD战斗截图；末节尾钩未计，861单位估算略偏乐观。</text>
+</svg>

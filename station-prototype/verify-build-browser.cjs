@@ -1,0 +1,8 @@
+const {chromium}=require('C:/Users/11/.codex/skills/develop-web-game/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch();try{for(const width of [320,390]){const p=await b.newPage({viewport:{width,height:844}});await p.goto('http://127.0.0.1:4191/station-prototype/');
+await p.evaluate(async()=>{const [{createBattle},{createTrain},{config},{battleView}]=await Promise.all([import('./src/game/battle.mjs'),import('./src/game/train.mjs'),import('./config.mjs'),import('./src/presentation/battle.mjs')]);const battle=createBattle(createTrain(config).snapshot(),1,{growth:{level:4,nextUpgrade:100,levelStartExperience:0,experience:0,upgrades:{sawReach:1,arcDamage:1,droneCount:1,supply:3}}});document.querySelector('#app').innerHTML=battleView(battle.snapshot());document.querySelector('#app').classList.add('battle-mode');document.body.classList.add('battle-mode');});
+assert.equal(await p.locator('.build-group').count(),4);assert.equal(await p.locator('.build-hud img').evaluateAll(imgs=>imgs.every(i=>i.complete&&i.naturalWidth>0)),true);
+await p.locator('.build-group summary').last().click();assert.equal(await p.locator('.build-group').last().getAttribute('open'),'');assert.ok((await p.locator('.build-details').last().innerText()).includes('×3'));
+await p.screenshot({path:__dirname+`/build-open-${width}.png`});await p.locator('.build-group summary').last().press('Enter');assert.equal(await p.locator('.build-group').last().getAttribute('open'),null);
+await p.screenshot({path:__dirname+`/build-closed-${width}.png`});await p.close();}console.log('PASS build 320/390 icons/details/collapse/keyboard');}finally{await b.close();}})();

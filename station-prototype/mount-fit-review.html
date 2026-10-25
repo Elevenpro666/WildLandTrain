@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>挂载极限装载同屏验证</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #review-control{position:fixed;z-index:20;left:50%;bottom:70px;transform:translateX(-50%);display:flex;gap:4px;padding:4px;border:1px solid #353c37;border-radius:5px;background:#f4f0e8ed;box-shadow:0 2px 8px #0004;max-width:390px;width:calc(100% - 24px);overflow:auto}
+    #review-control button{flex:1 0 auto;min-height:30px;padding:2px 5px;font-size:11px;white-space:nowrap}
+    #review-control button[aria-current="true"]{background:#30372a;color:#fff}
+    body.capture #review-control{display:none}
+  </style>
+</head>
+<body class="battle-mode">
+  <main id="app" class="battle-mode"></main>
+  <nav id="review-control" aria-label="极限装载场景"></nav>
+  <script type="module" src="mount-fit-review.mjs?v=arc-count-body1"></script>
+</body>
+</html>

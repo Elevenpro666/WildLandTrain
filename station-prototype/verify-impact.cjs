@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict');
+const {chromium}=require('C:/Users/11/.codex/skills/develop-web-game/node_modules/playwright');
+(async()=>{
+ const {createBattle}=await import('./src/game/battle.mjs');
+ const {battleView}=await import('./src/presentation/battle.mjs');
+ const battle=createBattle({carriers:[{id:'head'}],equipment:[]});
+ assert.equal(battle.snapshot().enemies.length,36);
+ for(let i=0;i<30;i++)battle.step(1/60);
+ let s=battle.snapshot();assert.ok(s.knocked>0);assert.equal(s.hp,300);assert.equal(s.kills,0);
+ const flying=s.enemies.find(e=>e.knock);assert.ok(flying);battle.step(.1);
+ const moved=battle.snapshot().enemies.find(e=>e.id===flying.id);assert.ok(Math.abs(moved.x-210)>Math.abs(flying.x-210));
+ battle.toggle();s=battle.snapshot();battle.step(1);assert.deepEqual(battle.snapshot(),s);battle.toggle();
+ for(let i=0;i<660;i++)battle.step(1/60);
+ assert.equal(battle.snapshot().invincible,false);assert.ok(!battleView(battle.snapshot()).includes('data-effect="shield"'));
+ const defended=createBattle({carriers:[{id:'head'}],equipment:Array.from({length:4},()=>({carrier:'head',key:'arc'}))});
+ for(let i=0;i<720;i++)defended.step(1/60);
+ assert.equal(defended.release(),true);assert.ok(battleView(defended.snapshot()).includes('data-effect="shield"'));
+ const b=await chromium.launch();const p=await b.newPage({viewport:{width:420,height:850}});const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.goto('http://127.0.0.1:4186');await p.screenshot({path:'output/crowd-station.png',fullPage:true});
+ await p.locator('[data-action="depart"]').click();await p.evaluate(()=>advanceTime(500));
+ await p.locator('[data-action="pauseBattle"]').click();await p.evaluate(()=>window.scrollTo(0,0));
+ await p.screenshot({path:'output/crowd-impact.png',fullPage:true});
+ assert.ok(JSON.parse(await p.evaluate(()=>render_game_to_text())).knocked>0);
+ assert.equal(await p.locator('[data-effect="shield"]').count(),1);assert.deepEqual(errors,[]);
+ await b.close();console.log('PASS crowd, knockback displacement, no damage/reward, pause, shield exit/manual reuse, browser errors');
+})().catch(e=>{console.error(e);process.exit(1)});

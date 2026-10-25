@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1130" role="img" aria-labelledby="title desc">
+  <title id="title">荒野列车整列同屏与武器槽位比例对照</title>
+  <desc id="desc">390乘844竖屏中的1车头加5节十槽车厢。左侧现行2列5排，车宽55B、厢长142B；右侧候选3-4-3错列，统一宽105B、厢长86B。整列都完整显示，比较槽位和车体的屏幕尺度。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4f1e8}.panel{fill:#fbfaf6;stroke:#c9c4b7;stroke-width:2}.phone{fill:#e8e4d9;stroke:#27343a;stroke-width:3}.safe{fill:none;stroke:#a8a292;stroke-width:1.5;stroke-dasharray:7 6}
+      .track{fill:none;stroke:#877f70;stroke-width:4}.tie{stroke:#998f7c;stroke-width:10;stroke-linecap:round;opacity:.6}
+      .hull{fill:#526a7b;stroke:#1e2930;stroke-width:2.3;stroke-linejoin:round}.armor{fill:#397eae;stroke:#1e2930;stroke-width:1.8;stroke-linejoin:round}.trim{fill:#c5c3b9;stroke:#29353a;stroke-width:1.5}
+      .slot{fill:#dde0d8;stroke:#243139;stroke-width:1.5}.slot-in{fill:none;stroke:#6e8386;stroke-width:.9;stroke-dasharray:2 1.7}.wheel{fill:#333c40;stroke:#111a1f;stroke-width:1.4}.coupler{fill:#9ca29c;stroke:#27343a;stroke-width:1.5}
+      .txt{font:500 20px 'Microsoft YaHei',sans-serif;fill:#26343a}.small{font:400 16px 'Microsoft YaHei',sans-serif;fill:#46545a}.tiny{font:400 14px 'Microsoft YaHei',sans-serif;fill:#536166}.metric{font:500 27px 'Microsoft YaHei',sans-serif;fill:#26343a}
+      .cyan{fill:#42d8dc;stroke:#1d4c58;stroke-width:1.2}.orange{fill:#e5a347;stroke:#493821;stroke-width:1.2}.white{fill:#f7f4ea;stroke:#26343a;stroke-width:1.4}
+    </style>
+    <g id="slot">
+      <rect class="slot" x="-10" y="-10" width="20" height="20" rx="2.5"/>
+      <rect class="slot-in" x="-7" y="-7" width="14" height="14" rx="1.5"/>
+      <circle cx="-7" cy="-7" r=".8" fill="#35434a"/><circle cx="7" cy="7" r=".8" fill="#35434a"/>
+    </g>
+    <g id="arc"><circle class="cyan" r="6"/><circle fill="#f8ffff" r="2"/><path d="M-8 0h-2m20 0h-2" stroke="#49d8df" stroke-width="2"/></g>
+    <g id="drone"><path d="M-5-5L5 5M5-5L-5 5" stroke="#27343a" stroke-width="1.5"/><circle class="cyan" r="2.5"/><circle class="white" cx="-6" cy="-6" r="2"/><circle class="white" cx="6" cy="-6" r="2"/><circle class="white" cx="-6" cy="6" r="2"/><circle class="white" cx="6" cy="6" r="2"/></g>
+    <g id="saw"><circle class="orange" r="7"/><circle fill="#46545a" stroke="#1d2529" stroke-width="1.4" r="3.2"/><path d="M0-10v3m0 14v3m-10-10h3m14 0h3m-10-7 2 2m6 6 2 2m2-10-2 2m-6 6-2 2" stroke="#29343a" stroke-width="1.5"/></g>
+    <g id="mine"><path class="orange" d="M0-8 8 6H-8z"/><circle fill="#fff1cf" cy="1" r="1.8"/></g>
+    <g id="impact"><path class="white" d="M-8-4h9l7 4-7 4h-9z"/><path d="M-11 0h12" stroke="#27343a" stroke-width="2"/></g>
+    <g id="car-long">
+      <path class="hull" d="M-24-71H24L27.5-63V63L24 71H-24L-27.5 63V-63z"/>
+      <path class="armor" d="M-24-59H-20V59H-24M20-59H24V59H20"/>
+      <path class="trim" d="M-18-66h36v4h-36zM-18 62h36v4h-36z"/>
+      <rect class="wheel" x="-27" y="-54" width="4" height="13" rx="2"/><rect class="wheel" x="23" y="-54" width="4" height="13" rx="2"/>
+      <rect class="wheel" x="-27" y="41" width="4" height="13" rx="2"/><rect class="wheel" x="23" y="41" width="4" height="13" rx="2"/>
+      <use href="#slot" x="-12.5" y="-46"/><use href="#slot" x="12.5" y="-46"/>
+      <use href="#slot" x="-12.5" y="-23"/><use href="#slot" x="12.5" y="-23"/>
+      <use href="#slot" x="-12.5"/><use href="#slot" x="12.5"/>
+      <use href="#slot" x="-12.5" y="23"/><use href="#slot" x="12.5" y="23"/>
+      <use href="#slot" x="-12.5" y="46"/><use href="#slot" x="12.5" y="46"/>
+    </g>
+    <g id="car-compact">
+      <path class="hull" d="M-48-43H48L52.5-35V35L48 43H-48L-52.5 35V-35z"/>
+      <path class="armor" d="M-49-35H-45V35H-49M45-35H49V35H45"/>
+      <path class="trim" d="M-42-40h84v3h-84zM-42 37h84v3h-84z"/>
+      <rect class="wheel" x="-52" y="-29" width="4" height="12" rx="2"/><rect class="wheel" x="48" y="-29" width="4" height="12" rx="2"/>
+      <rect class="wheel" x="-52" y="17" width="4" height="12" rx="2"/><rect class="wheel" x="48" y="17" width="4" height="12" rx="2"/>
+      <use href="#slot" x="-25" y="-23"/><use href="#slot" y="-23"/><use href="#slot" x="25" y="-23"/>
+      <use href="#slot" x="-37.5"/><use href="#slot" x="-12.5"/><use href="#slot" x="12.5"/><use href="#slot" x="37.5"/>
+      <use href="#slot" x="-25" y="23"/><use href="#slot" y="23"/><use href="#slot" x="25" y="23"/>
+    </g>
+    <g id="head-long">
+      <path class="hull" d="M-23-28H23L27.5-19V20L21 28H-21L-27.5 20V-19z"/>
+      <path class="armor" d="M-20-24H20L16-17H-16z"/>
+      <use href="#slot" x="-12.5" y="-10"/><use href="#slot" x="12.5" y="-10"/><use href="#slot" x="-12.5" y="13"/><use href="#slot" x="12.5" y="13"/>
+    </g>
+    <g id="head-wide">
+      <path class="hull" d="M-48-40H48L52.5-27V27L46 40H-46L-52.5 27V-27z"/>
+      <path class="armor" d="M-44-36H44L49-29H-49z"/>
+      <use href="#slot" x="-37.5"/><use href="#slot" x="-12.5"/><use href="#slot" x="12.5"/><use href="#slot" x="37.5"/>
+    </g>
+    <g id="rail">
+      <path class="track" d="M-18 0v800M18 0v800"/>
+      <path class="tie" d="M-31 20h62M-31 70h62M-31 120h62M-31 170h62M-31 220h62M-31 270h62M-31 320h62M-31 370h62M-31 420h62M-31 470h62M-31 520h62M-31 570h62M-31 620h62M-31 670h62M-31 720h62M-31 770h62"/>
+    </g>
+  </defs>
+  <rect class="bg" width="1760" height="1130"/>
+  <text x="40" y="52" class="txt" style="font-weight:700;font-size:28px">1车头 + 5节十槽车厢｜全列同屏比例对照</text>
+  <text x="40" y="84" class="small">同一390×844竖屏；虚线内为800px整列高度预算。全列按10槽满级计算，底座20×20B；车钩/HUD及动态包络仍待核实。</text>
+  <rect class="panel" x="25" y="110" width="835" height="980" rx="18"/>
+  <rect class="panel" x="880" y="110" width="855" height="980" rx="18"/>
+  <text x="50" y="148" class="txt" style="font-weight:700">现行纵长排布｜2列 × 5排</text>
+  <text x="905" y="148" class="txt" style="font-weight:700">紧凑候选｜3-4-3横向错列</text>
+
+  <!-- Both phone frames are drawn at the exact 390x844 reference scale. -->
+  <rect class="phone" x="55" y="170" width="390" height="844" rx="14"/>
+  <rect class="safe" x="77" y="192" width="346" height="800" rx="4"/>
+  <g transform="translate(250 192)"><use href="#rail"/></g>
+  <use href="#head-long" x="250" y="220.5"/>
+  <rect class="coupler" x="243" y="248.5" width="14" height="6.3" rx="2"/>
+  <use href="#car-long" x="250" y="325.8"/>
+  <use href="#arc" x="237.5" y="279.8"/>
+  <use href="#drone" x="262.5" y="302.8"/>
+  <use href="#saw" x="237.5" y="325.8"/>
+  <use href="#mine" x="262.5" y="348.8"/>
+  <use href="#impact" x="237.5" y="371.8"/>
+  <rect class="coupler" x="243" y="396.8" width="14" height="6.3" rx="2"/>
+  <use href="#car-long" x="250" y="474.1"/>
+  <rect class="coupler" x="243" y="545.1" width="14" height="6.3" rx="2"/>
+  <use href="#car-long" x="250" y="622.4"/>
+  <rect class="coupler" x="243" y="693.4" width="14" height="6.3" rx="2"/>
+  <use href="#car-long" x="250" y="770.7"/>
+  <rect class="coupler" x="243" y="841.7" width="14" height="6.3" rx="2"/>
+  <use href="#car-long" x="250" y="919"/>
+
+  <rect class="phone" x="910" y="170" width="390" height="844" rx="14"/>
+  <rect class="safe" x="932" y="192" width="346" height="800" rx="4"/>
+  <g transform="translate(1105 192) scale(1.477)"><use href="#rail" transform="scale(1 .68)"/></g>
+  <g transform="translate(1105 251.1) scale(1.477)">
+    <use href="#head-wide"/>
+    <use href="#arc" x="-37.5"/>
+  </g>
+  <rect class="coupler" x="1095" y="310.2" width="20" height="9.3" rx="2.5"/>
+  <g transform="translate(1105 382.9) scale(1.477)"><use href="#car-compact"/><use href="#arc" x="-25" y="-23"/><use href="#drone" x="-12.5"/><use href="#saw" x="12.5"/><use href="#mine" x="25" y="23"/><use href="#impact" y="23"/></g>
+  <rect class="coupler" x="1095" y="446.4" width="20" height="9.3" rx="2.5"/>
+  <g transform="translate(1105 519.2) scale(1.477)"><use href="#car-compact"/></g>
+  <rect class="coupler" x="1095" y="573.4" width="20" height="9.3" rx="2.5"/>
+  <g transform="translate(1105 655.5) scale(1.477)"><use href="#car-compact"/></g>
+  <rect class="coupler" x="1095" y="709.7" width="20" height="9.3" rx="2.5"/>
+  <g transform="translate(1105 791.8) scale(1.477)"><use href="#car-compact"/></g>
+  <rect class="coupler" x="1095" y="846" width="20" height="9.3" rx="2.5"/>
+  <g transform="translate(1105 928.1) scale(1.477)"><use href="#car-compact"/></g>
+
+  <text x="475" y="212" class="metric">55×142 B</text>
+  <text x="475" y="242" class="small">10槽车厢最大包络</text>
+  <text x="475" y="305" class="metric">约55 px</text>
+  <text x="475" y="334" class="small">800px高整列画面宽度</text>
+  <text x="475" y="397" class="metric">约20 px</text>
+  <text x="475" y="426" class="small">单个20×20 B底座</text>
+  <text x="475" y="505" class="small">车身：窄而长</text>
+  <text x="475" y="535" class="small">槽位：设备沿车长排5行</text>
+  <text x="475" y="565" class="small">全列轮廓完整，</text>
+  <text x="475" y="593" class="small">但武器细节难辨。</text>
+  <text x="475" y="681" class="tiny">650px HUD安全高度时：</text>
+  <text x="475" y="705" class="tiny">整列宽约45px，槽约16px。</text>
+
+  <text x="1330" y="212" class="metric">105×86 B</text>
+  <text x="1330" y="242" class="small">10槽车厢最大包络</text>
+  <text x="1330" y="305" class="metric">约155 px</text>
+  <text x="1330" y="334" class="small">800px高整列画面宽度</text>
+  <text x="1330" y="397" class="metric">约30 px</text>
+  <text x="1330" y="426" class="small">单个20×20 B底座</text>
+  <text x="1330" y="505" class="small">车身：宽短，头厢同宽</text>
+  <text x="1330" y="535" class="small">槽位：3-4-3横向错列</text>
+  <text x="1330" y="565" class="small">全列仍完整入屏，</text>
+  <text x="1330" y="593" class="small">槽位辨识度有提升。</text>
+  <text x="1330" y="681" class="tiny">650px HUD安全高度时：</text>
+  <text x="1330" y="705" class="tiny">整列宽约126px，槽约24px。</text>
+
+  <rect x="470" y="760" width="350" height="177" rx="12" fill="#e7e3d9" stroke="#bcb6a7" stroke-width="1.5"/>
+  <text x="492" y="795" class="small">本图内的装备符号</text>
+  <use href="#arc" x="502" y="832"/><text x="518" y="838" class="tiny">电弧</text>
+  <use href="#drone" x="590" y="832"/><text x="606" y="838" class="tiny">无人机舱</text>
+  <use href="#saw" x="502" y="877"/><text x="518" y="883" class="tiny">切割</text>
+  <use href="#mine" x="590" y="877"/><text x="606" y="883" class="tiny">拒止/地雷</text>
+  <use href="#impact" x="502" y="917"/><text x="518" y="923" class="tiny">穿透冲击</text>
+
+  <rect x="1325" y="760" width="350" height="177" rx="12" fill="#e7e3d9" stroke="#bcb6a7" stroke-width="1.5"/>
+  <text x="1347" y="795" class="small">候选的主要代价</text>
+  <text x="1347" y="835" class="tiny">车宽从约55B增至约105B</text>
+  <text x="1347" y="865" class="tiny">5列车厢由窄长转为宽短平台</text>
+  <text x="1347" y="895" class="tiny">需核对轨道、敌人和武器运行空间</text>
+  <text x="1347" y="923" class="tiny">仅为尺寸线稿，不是最终美术</text>
+
+</svg>

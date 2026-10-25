@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">4×3车厢的列车轮廓识别风险对照 V0.1</title>
+  <desc id="desc">三个相同的车头和一加五编组，在无武器黑色剪影条件下对照：宽短整块车厢、加长纵向壳体、中央车架加两侧肩台。用于识别风险评估，不是最终车体美术。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f2efe6}.panel{fill:#fbfaf6;stroke:#c8c3b6;stroke-width:2}.screen{fill:#e8e4d9;stroke:#26343a;stroke-width:3}.safe{fill:none;stroke:#aba596;stroke-width:1.3;stroke-dasharray:6 5}
+      .rail{stroke:#776f62;stroke-width:4}.tie{stroke:#978d7b;stroke-width:9;stroke-linecap:round;opacity:.55}.sil{fill:#414a4e;stroke:#171e21;stroke-width:2;stroke-linejoin:round}.sil2{fill:#586267;stroke:#171e21;stroke-width:1.8;stroke-linejoin:round}.wheel{fill:#222b2f;stroke:#111719;stroke-width:1.4}.hub{fill:#abb0aa;stroke:#1a2226;stroke-width:1.2}.coupler{fill:#a7aca5;stroke:#202a2f;stroke-width:1.6}
+      .title{font:700 28px 'Microsoft YaHei',sans-serif;fill:#25343a}.sub{font:400 16px 'Microsoft YaHei',sans-serif;fill:#4f5d62}.head{font:700 20px 'Microsoft YaHei',sans-serif;fill:#27363b}.lab{font:600 16px 'Microsoft YaHei',sans-serif;fill:#29383e}.body{font:400 14px 'Microsoft YaHei',sans-serif;fill:#506066}.riskHigh{fill:#a74234}.riskMid{fill:#aa761e}.riskLow{fill:#27744e}.tag{font:700 13px 'Microsoft YaHei',sans-serif;fill:white}.note{font:400 13px 'Microsoft YaHei',sans-serif;fill:#59676b}
+    </style>
+    <g id="engine">
+      <path class="sil" d="M-50-36-40-42H40L50-36V26L42 38H-42L-50 26z"/>
+      <path class="sil2" d="M-38-34H38L43-27V-14H-43V-27z"/>
+      <path d="M-25-27H25V-20H-25z" fill="#9ca5a2" stroke="#20282c" stroke-width="1.5"/>
+      <path class="sil2" d="M-39-6H39V25L33 32H-33L-39 25z"/>
+      <rect class="coupler" x="-8" y="37" width="16" height="11" rx="3"/>
+      <circle class="wheel" cx="-11" cy="-29" r="5"/><circle class="hub" cx="-11" cy="-29" r="2"/><circle class="wheel" cx="11" cy="-29" r="5"/><circle class="hub" cx="11" cy="-29" r="2"/>
+      <circle class="wheel" cx="-11" cy="24" r="5"/><circle class="hub" cx="-11" cy="24" r="2"/><circle class="wheel" cx="11" cy="24" r="5"/><circle class="hub" cx="11" cy="24" r="2"/>
+    </g>
+    <g id="wagonA">
+      <path class="sil" d="M-52-43H52L53-34V34L48 43H-48L-53 34V-34z"/>
+      <path class="sil2" d="M-43-36H43V36H-43z"/>
+      <path class="coupler" d="M-8 43H8V51H-8z"/>
+      <path d="M-15-42V42M15-42V42" stroke="#303a3f" stroke-width="2"/>
+      <circle class="wheel" cx="-11" cy="-25" r="5"/><circle class="wheel" cx="11" cy="-25" r="5"/><circle class="wheel" cx="-11" cy="25" r="5"/><circle class="wheel" cx="11" cy="25" r="5"/>
+    </g>
+    <g id="wagonB">
+      <path class="sil" d="M-52-55H52L53-47V47L48 55H-48L-53 47V-47z"/>
+      <path class="sil2" d="M-43-48H43V48H-43z"/>
+      <path class="coupler" d="M-8 55H8V63H-8z"/>
+      <path d="M-15-53V53M15-53V53" stroke="#303a3f" stroke-width="2"/>
+      <circle class="wheel" cx="-11" cy="-37" r="5"/><circle class="wheel" cx="11" cy="-37" r="5"/><circle class="wheel" cx="-11" cy="37" r="5"/><circle class="wheel" cx="11" cy="37" r="5"/>
+    </g>
+    <g id="wagonC">
+      <path class="sil" d="M-52-43H52L53-34V34L48 43H-48L-53 34V-34z"/>
+      <path class="sil2" d="M-27-40H27V40H-27z"/>
+      <path d="M-50-34H-28V34H-50zM28-34H50V34H28z" fill="#626d71" stroke="#20282c" stroke-width="1.7"/>
+      <path d="M-27-22H27M-27 0H27M-27 22H27" stroke="#899397" stroke-width="1.6"/>
+      <path class="coupler" d="M-8 43H8V51H-8z"/>
+      <circle class="wheel" cx="-11" cy="-25" r="5"/><circle class="wheel" cx="11" cy="-25" r="5"/><circle class="wheel" cx="-11" cy="25" r="5"/><circle class="wheel" cx="11" cy="25" r="5"/>
+    </g>
+    <g id="trainA">
+      <g transform="translate(0 39) scale(.94)"><use href="#engine"/></g>
+      <g transform="translate(0 127) scale(.94)"><use href="#wagonA"/></g><g transform="translate(0 220) scale(.94)"><use href="#wagonA"/></g><g transform="translate(0 313) scale(.94)"><use href="#wagonA"/></g><g transform="translate(0 406) scale(.94)"><use href="#wagonA"/></g><g transform="translate(0 499) scale(.94)"><use href="#wagonA"/></g>
+    </g>
+    <g id="trainB">
+      <g transform="translate(0 39) scale(.94)"><use href="#engine"/></g>
+      <g transform="translate(0 151) scale(.94)"><use href="#wagonB"/></g><g transform="translate(0 268) scale(.94)"><use href="#wagonB"/></g><g transform="translate(0 385) scale(.94)"><use href="#wagonB"/></g><g transform="translate(0 502) scale(.94)"><use href="#wagonB"/></g><g transform="translate(0 619) scale(.94)"><use href="#wagonB"/></g>
+    </g>
+    <g id="trainC">
+      <g transform="translate(0 39) scale(.94)"><use href="#engine"/></g>
+      <g transform="translate(0 127) scale(.94)"><use href="#wagonC"/></g><g transform="translate(0 220) scale(.94)"><use href="#wagonC"/></g><g transform="translate(0 313) scale(.94)"><use href="#wagonC"/></g><g transform="translate(0 406) scale(.94)"><use href="#wagonC"/></g><g transform="translate(0 499) scale(.94)"><use href="#wagonC"/></g>
+    </g>
+    <g id="miniScreen">
+      <rect class="screen" x="0" y="0" width="390" height="844" rx="22"/><rect class="safe" x="12" y="12" width="366" height="820" rx="15"/>
+    </g>
+  </defs>
+  <rect class="bg" width="1600" height="1040"/>
+  <text class="title" x="42" y="48">宽体车厢会不会不像列车？轮廓风险对照</text>
+  <text class="sub" x="44" y="76">同一正俯视、同一轨距与车头。上排只看单节黑色剪影；下排看1车头＋5车厢完整编组，不显示槽位和武器。</text>
+
+  <g transform="translate(30 96)">
+    <rect class="panel" width="495" height="344" rx="16"/>
+    <text class="head" x="22" y="35">A　宽短整块甲板</text><rect x="346" y="14" width="126" height="28" rx="14" fill="#a74234"/><text class="tag" x="409" y="33" text-anchor="middle">轮廓风险：高</text>
+    <path class="rail" d="M239 70V225M275 70V225"/><path class="tie" d="M234 88H280M234 116H280M234 144H280M234 172H280M234 200H280"/>
+    <g transform="translate(257 147) scale(1.65)"><use href="#wagonA"/></g>
+    <text class="lab" x="22" y="262">105×86 B · 宽长比 1.22</text><text class="body" x="22" y="288">甲板宽过车厢自身长度，车钩/轮组易被宽轮廓吞掉。</text><text class="body" x="22" y="314">满载时最像“带连接头的武器平台”。</text>
+  </g>
+  <g transform="translate(552 96)">
+    <rect class="panel" width="495" height="344" rx="16"/>
+    <text class="head" x="22" y="35">B　纵向车厢壳体</text><rect x="346" y="14" width="126" height="28" rx="14" fill="#27744e"/><text class="tag" x="409" y="33" text-anchor="middle">轮廓风险：低</text>
+    <path class="rail" d="M242.7 62V232M271.3 62V232"/><path class="tie" d="M238 78H276M238 108H276M238 138H276M238 168H276M238 198H276M238 228H276"/>
+    <g transform="translate(257 146) scale(1.3)"><use href="#wagonB"/></g>
+    <text class="lab" x="22" y="262">105×110 B · 宽长比 0.95</text><text class="body" x="22" y="288">车体纵向更长，能留出端梁、轮组和车钩的分节节奏。</text><text class="body" x="22" y="314">代价：全列缩小，650 px预算下接口约20 px。</text>
+  </g>
+  <g transform="translate(1074 96)">
+    <rect class="panel" width="495" height="344" rx="16"/>
+    <text class="head" x="22" y="35">C　中央车架＋两侧肩台</text><rect x="346" y="14" width="126" height="28" rx="14" fill="#aa761e"/><text class="tag" x="409" y="33" text-anchor="middle">轮廓风险：中</text>
+    <path class="rail" d="M239 70V225M275 70V225"/><path class="tie" d="M234 88H280M234 116H280M234 144H280M234 172H280M234 200H280"/>
+    <g transform="translate(257 147) scale(1.65)"><use href="#wagonC"/></g>
+    <text class="lab" x="22" y="262">总包络仍105×86 B · 接口仍4×3</text><text class="body" x="22" y="288">中间55 B主车架保持纵向连续；外两列在承载肩台。</text><text class="body" x="22" y="314">轮组、车钩必须露出；否则仍会像宽平台。</text>
+  </g>
+
+  <text class="head" x="42" y="480">放回同一条轨道看整列轮廓（全列1＋5，统一390×844框）</text>
+  <g transform="translate(110 500) scale(.37)"><use href="#miniScreen"/><path class="rail" d="M180.5 0V844M209.5 0V844"/><path class="tie" d="M177 40H213M177 100H213M177 160H213M177 220H213M177 280H213M177 340H213M177 400H213M177 460H213M177 520H213M177 580H213M177 640H213M177 700H213M177 760H213M177 820H213"/><g transform="translate(195 27) scale(1.4)"><use href="#trainA"/></g></g>
+  <g transform="translate(620 500) scale(.37)"><use href="#miniScreen"/><path class="rail" d="M183 0V844M207 0V844"/><path class="tie" d="M180 40H210M180 100H210M180 160H210M180 220H210M180 280H210M180 340H210M180 400H210M180 460H210M180 520H210M180 580H210M180 640H210M180 700H210M180 760H210M180 820H210"/><g transform="translate(195 15) scale(1.16)"><use href="#trainB"/></g></g>
+  <g transform="translate(1130 500) scale(.37)"><use href="#miniScreen"/><path class="rail" d="M180.5 0V844M209.5 0V844"/><path class="tie" d="M177 40H213M177 100H213M177 160H213M177 220H213M177 280H213M177 340H213M177 400H213M177 460H213M177 520H213M177 580H213M177 640H213M177 700H213M177 760H213M177 820H213"/><g transform="translate(195 27) scale(1.4)"><use href="#trainC"/></g></g>
+  <text class="lab" x="180" y="830">A：连接关系可见，但每节横向扩张最抢眼</text>
+  <text class="lab" x="690" y="830">B：最像连续车列，武器和整列同屏取舍最大</text>
+  <text class="lab" x="1200" y="830">C：宽度不变，用中央车架/轮组维持列车感</text>
+  <rect class="panel" x="30" y="864" width="1540" height="132" rx="16"/>
+  <text class="head" x="56" y="900">真正的评估：做一次“无武器黑剪影盲测”</text>
+  <text class="body" x="56" y="929">隐藏接口、武器、文字和颜色；随机顺序、每案约1秒，让8–12名测试者判断“列车 / 车厢 / 武器平台”并指出车头方向。</text>
+  <text class="body" x="56" y="958">筛选门槛建议：至少80%第一眼认作列车/车厢，误认孤立平台≤15%；通过后再叠武器，检查轮组、车钩和端面是否被遮。</text>
+  <text class="note" x="56" y="982">本图为结构剪影研究，不代表最终美术；样本只用于方向筛选，不构成统计结论。</text>
+</svg>

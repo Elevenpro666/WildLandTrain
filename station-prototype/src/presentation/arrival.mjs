@@ -1,0 +1,9 @@
+export function arrivalView(s){
+ const p=Math.min(1,s.progress/.85),ease=1-(1-p)**3;
+ const head=-60+405*ease;
+ const cars=s.cars.map((c,i)=>{
+  const x=head-i*62;
+  return `<g data-arrival-car="${c.id}" transform="translate(${x},330)"><path d="M-34 39h-15" stroke="#343c2c" stroke-width="3"/><rect x="-30" y="-14" width="54" height="45" rx="5" fill="#faf8ee" stroke="#343c2c" stroke-width="3"/>${i===0?'<path d="M24 -14l17 45H24Z" fill="#d2d5c5" stroke="#343c2c" stroke-width="3"/><rect x="-20" y="-5" width="20" height="16" fill="#a5ad98"/>':`<text x="-3" y="14" text-anchor="middle" font-size="14" fill="#343c2c">Lv.${c.level||1}</text>`}<circle cx="-18" cy="35" r="8" fill="#343c2c"/><circle cx="14" cy="35" r="8" fill="#343c2c"/></g>`;
+ }).reverse().join('');
+ return `<div class="battle-screen"><header class="battle-hud"><div class="hud-row"><strong>${s.paused?'进站已暂停':p<1?'抵达整备站':'停靠完成'}</strong><span>安全区域</span></div><p>坚持到站 · 免费修复</p></header><div class="battle-field"><svg viewBox="0 0 420 640" aria-label="列车从左向右驶入整备站"><rect width="420" height="640" fill="#e7e5d7"/><path d="M45 285V180l165-65 165 65v105Z" fill="#d9dbcd" stroke="#616853" stroke-width="3"/><rect x="130" y="160" width="160" height="40" fill="#eeebdf" stroke="#616853" stroke-width="2"/><text x="210" y="187" text-anchor="middle" font-size="22" fill="#343c2c">荒野整备站</text><path d="M75 215h65v60H75Zm205 0h65v60h-65Z" fill="#eeebdf" stroke="#616853" stroke-width="2"/><path d="M0 290h420M0 375h420M0 391h420" stroke="#616853" stroke-width="4"/>${Array.from({length:18},(_,i)=>`<path d="M${i*25} 370v26" stroke="#a4a792" stroke-width="4"/>`).join('')}${cars}<text x="210" y="460" text-anchor="middle" fill="#616853" font-size="17">${p<1?'减速靠站 →':'已脱离战斗 · 准备整备'}</text></svg></div><div class="battle-controls"><button style="width:100%" data-action="pauseArrival">${s.paused?'继续进站':'暂停'}</button></div></div>`;
+}

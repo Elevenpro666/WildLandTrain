@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#efffff"/><stop offset=".28" stop-color="#6df1ff"/><stop offset=".68" stop-color="#149cc2"/><stop offset="1" stop-color="#123849"/>
+    </radialGradient>
+  </defs>
+  <g stroke="#17252b" stroke-linejoin="round">
+    <path d="M44 25h92l19 19v92l-19 19H44l-19-19V44z" fill="#263a43" stroke-width="10"/>
+    <path d="M51 37h78l14 14v78l-14 14H51l-14-14V51z" fill="#506875" stroke-width="5"/>
+    <path d="M68 42h44l8 19-12 12H72L60 61z" fill="#315c76" stroke-width="5"/>
+    <path d="M68 138h44l8-19-12-12H72l-12 12z" fill="#315c76" stroke-width="5"/>
+    <path d="M42 68v44l19 8 12-12V72L61 60z" fill="#344c58" stroke-width="5"/>
+    <path d="M138 68v44l-19 8-12-12V72l12-12z" fill="#344c58" stroke-width="5"/>
+    <circle cx="90" cy="90" r="43" fill="#202f36" stroke-width="7"/>
+    <circle cx="90" cy="90" r="31" fill="#1e6177" stroke="#84aeb3" stroke-width="5"/>
+    <circle cx="90" cy="90" r="21" fill="url(#core)" stroke="#b7f8f6" stroke-width="4"/>
+    <path d="M90 51v13M90 116v13M51 90h13M116 90h13" stroke="#d18b4d" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="49" cy="49" r="5" fill="#c8c6ad" stroke-width="3"/><circle cx="131" cy="49" r="5" fill="#c8c6ad" stroke-width="3"/>
+    <circle cx="49" cy="131" r="5" fill="#c8c6ad" stroke-width="3"/><circle cx="131" cy="131" r="5" fill="#c8c6ad" stroke-width="3"/>
+  </g>
+</svg>

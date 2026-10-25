@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 400" fill="none">
+  <!-- Three separated, thick induction collars wrap the original paired conductors.
+       The left core and right fork tips remain uncovered; overall display envelope stays 18 x 12.63 SU. -->
+  <g data-art-part="arcCount-induction-ring-stack" stroke-linecap="round">
+    <g data-induction-ring="1">
+      <ellipse cx="246" cy="200" rx="21" ry="70" stroke="#10171b" stroke-width="38"/>
+      <ellipse cx="246" cy="200" rx="21" ry="70" stroke="#65747a" stroke-width="30"/>
+      <ellipse cx="246" cy="200" rx="21" ry="70" stroke="#a8582c" stroke-width="22"/>
+      <ellipse cx="246" cy="200" rx="21" ry="70" stroke="#f0a95d" stroke-width="12"/>
+      <path d="M230 145C226 165 226 235 230 255" stroke="#ffe3a9" stroke-width="3.5"/>
+      <path d="M262 145C266 165 266 235 262 255" stroke="#47352c" stroke-width="3"/>
+    </g>
+    <g data-induction-ring="2">
+      <ellipse cx="330" cy="200" rx="21" ry="70" stroke="#10171b" stroke-width="38"/>
+      <ellipse cx="330" cy="200" rx="21" ry="70" stroke="#718087" stroke-width="30"/>
+      <ellipse cx="330" cy="200" rx="21" ry="70" stroke="#bd6a31" stroke-width="22"/>
+      <ellipse cx="330" cy="200" rx="21" ry="70" stroke="#ffd082" stroke-width="12"/>
+      <path d="M314 145C310 165 310 235 314 255" stroke="#fff1c2" stroke-width="3.5"/>
+      <path d="M346 145C350 165 350 235 346 255" stroke="#514034" stroke-width="3"/>
+    </g>
+    <g data-induction-ring="3">
+      <ellipse cx="414" cy="200" rx="21" ry="70" stroke="#10171b" stroke-width="38"/>
+      <ellipse cx="414" cy="200" rx="21" ry="70" stroke="#65747a" stroke-width="30"/>
+      <ellipse cx="414" cy="200" rx="21" ry="70" stroke="#a8582c" stroke-width="22"/>
+      <ellipse cx="414" cy="200" rx="21" ry="70" stroke="#f0a95d" stroke-width="12"/>
+      <path d="M398 145C394 165 394 235 398 255" stroke="#ffe3a9" stroke-width="3.5"/>
+      <path d="M430 145C434 165 434 235 430 255" stroke="#47352c" stroke-width="3"/>
+    </g>
+    <path d="M220 131V269M456 131V269" stroke="#11191d" stroke-width="26"/>
+    <path d="M220 131V269M456 131V269" stroke="#879398" stroke-width="17"/>
+    <path d="M220 137V263M456 137V263" stroke="#d8d9cf" stroke-width="3.5" opacity=".9"/>
+    <circle cx="220" cy="131" r="5" fill="#c5ccc6" stroke="#11191d" stroke-width="3"/>
+    <circle cx="220" cy="269" r="5" fill="#c5ccc6" stroke="#11191d" stroke-width="3"/>
+    <circle cx="456" cy="131" r="5" fill="#c5ccc6" stroke="#11191d" stroke-width="3"/>
+    <circle cx="456" cy="269" r="5" fill="#c5ccc6" stroke="#11191d" stroke-width="3"/>
+  </g>
+</svg>

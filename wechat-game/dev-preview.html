@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>荒野列车 · 微信版预览</title><style>html,body{margin:0;background:#222721;height:100%;overflow:hidden}canvas{display:block;touch-action:none}#frame{height:100%;display:grid;place-items:center}</style></head><body><div id="frame"><canvas id="game"></canvas></div><script>
+const canvas=document.getElementById('game');const callbacks={touchEnd:[],hide:[],show:[],resize:[]};
+function size(){let w,h;if(innerHeight>innerWidth*1.3){w=innerWidth;h=innerHeight;}else{const scale=Math.min(1,innerWidth/390,innerHeight/844);w=Math.round(390*scale);h=Math.round(844*scale);}canvas.style.width=w+'px';canvas.style.height=h+'px';return {windowWidth:w,windowHeight:h,pixelRatio:devicePixelRatio||1};}
+window.wx={createCanvas:()=>canvas,createImage:()=>new Image(),getSystemInfoSync:size,onTouchEnd:fn=>callbacks.touchEnd.push(fn),onHide:fn=>callbacks.hide.push(fn),onShow:fn=>callbacks.show.push(fn),onWindowResize:fn=>callbacks.resize.push(fn)};
+canvas.addEventListener('pointerup',e=>{const r=canvas.getBoundingClientRect();callbacks.touchEnd.forEach(fn=>fn({changedTouches:[{clientX:e.clientX-r.left,clientY:e.clientY-r.top}]}));});
+window.addEventListener('resize',()=>callbacks.resize.forEach(fn=>fn()));document.addEventListener('visibilitychange',()=>callbacks[document.hidden?'hide':'show'].forEach(fn=>fn()));
+window.render_game_to_text=()=>JSON.stringify(globalThis.__ER_CHECK__?.()||{});
+window.advanceTime=ms=>{const n=Math.ceil(ms/(1000/60));for(let i=0;i<n;i++)globalThis.__ER_STEP__?.(1/60);globalThis.__ER_RENDER__?.();};
+</script><script src="game.js"></script></body></html>

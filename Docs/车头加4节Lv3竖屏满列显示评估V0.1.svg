@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="980" viewBox="0 0 1440 980" role="img" aria-labelledby="title desc">
+  <title id="title">车头加4节Lv.3列车竖屏满列适配评估 V0.1</title>
+  <desc id="desc">以390乘844竖屏对比满列无UI遮挡和扣除HUD操作区后的适配，标出38个T面槽、满列长度及缩放结果。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}.title{font-size:30px;font-weight:700}.subtitle{font-size:15px;fill:#52636b}.panelTitle{font-size:19px;font-weight:700}.label{font-size:13px;font-weight:700}.body{font-size:14px}.small{font-size:12px;fill:#52636b}.phone{fill:#fffefa;stroke:#26343a;stroke-width:3}.hud{fill:#d9ddd7;stroke:#788582;stroke-width:1.4}.car{fill:#f0eee6;stroke:#34444b;stroke-width:3}.slot{fill:#fffefa;stroke:#34444b;stroke-width:2}.tire{fill:#465154;stroke:#26343a;stroke-width:2}.tread{stroke:#b4bbb3;stroke-width:1.5;stroke-linecap:round}.axle{stroke:#657578;stroke-width:3}.keep{fill:#dbd8cd;fill-opacity:.55;stroke:#8c7b50;stroke-width:1.5;stroke-dasharray:4 3}.coupler{fill:#d7dad3;stroke:#34444b;stroke-width:2}.card{fill:#fffefa;stroke:#ccd4d0;stroke-width:2}.accent{fill:#e7efec;stroke:#aabdb6;stroke-width:1.5}.warning{fill:#fff2df;stroke:#d7a24c;stroke-width:1.5}.red{fill:#9a573b;font-weight:700}
+    </style>
+    <g id="wheelpair"><path class="axle" d="M-78 0h156"/><rect class="keep" x="-91" y="-21" width="26" height="42" rx="5"/><rect class="keep" x="65" y="-21" width="26" height="42" rx="5"/><rect class="tire" x="-85" y="-15" width="14" height="30" rx="4"/><path class="tread" d="M-83 -8h10M-83 0h10M-83 8h10"/><rect class="tire" x="71" y="-15" width="14" height="30" rx="4"/><path class="tread" d="M73 -8h10M73 0h10M73 8h10"/></g>
+    <g id="head3"><use href="#wheelpair" transform="translate(0 34)"/><use href="#wheelpair" transform="translate(0 154)"/><path class="car" d="M-58 0h116l13 20v156l-13 20H-58l-13-20V20z"/><path d="M-12 197h24v15h-6v13h-12v-13h-6z" class="coupler"/><g><rect class="slot" x="-51" y="27" width="40" height="26" rx="4"/><rect class="slot" x="11" y="27" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="83" width="40" height="26" rx="4"/><rect class="slot" x="11" y="83" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="139" width="40" height="26" rx="4"/><rect class="slot" x="11" y="139" width="40" height="26" rx="4"/></g></g>
+    <g id="wagon3"><use href="#wheelpair" transform="translate(0 36) scale(1 .72)"/><use href="#wheelpair" transform="translate(0 100) scale(1 .72)"/><path class="car" d="M-63 4h126l8 12v126l-8 12h-126l-8-12V16z"/><path d="M-60 20v122M60 20v122" fill="none" stroke="#82908e" stroke-width="1.5"/><rect class="slot" x="-51" y="15" width="40" height="26" rx="4"/><rect class="slot" x="11" y="15" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="47" width="40" height="26" rx="4"/><rect class="slot" x="11" y="47" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="79" width="40" height="26" rx="4"/><rect class="slot" x="11" y="79" width="40" height="26" rx="4"/><rect class="slot" x="-51" y="111" width="40" height="26" rx="4"/><rect class="slot" x="11" y="111" width="40" height="26" rx="4"/></g>
+    <g id="fullTrain"><use href="#head3"/><use href="#wagon3" transform="translate(0 221)"/><rect class="coupler" x="-12" y="375" width="24" height="12" rx="2"/><use href="#wagon3" transform="translate(0 383)"/><rect class="coupler" x="-12" y="537" width="24" height="12" rx="2"/><use href="#wagon3" transform="translate(0 545)"/><rect class="coupler" x="-12" y="699" width="24" height="12" rx="2"/><use href="#wagon3" transform="translate(0 707)"/></g>
+  </defs>
+  <rect width="1440" height="980" fill="#f4f2eb"/>
+  <text x="54" y="54" class="title">车头 + 4 节 Lv.3｜390 × 844 竖屏满列适配</text>
+  <text x="56" y="84" class="subtitle">按当前确认的2列矩阵、统一车宽与纯T面槽绘制；同一基准视口对照“整屏缩放”与“预留HUD/操作区”。</text>
+
+  <text x="60" y="137" class="panelTitle">A｜全屏几何适配</text>
+  <text x="355" y="137" class="panelTitle">B｜保留HUD与操作区</text>
+  <rect x="60" y="155" width="244" height="524" rx="18" fill="#252d30"/>
+  <rect x="65" y="160" width="234" height="506" rx="11" class="phone"/>
+  <rect x="350" y="155" width="244" height="524" rx="18" fill="#252d30"/>
+  <rect x="355" y="160" width="234" height="506" rx="11" class="phone"/>
+
+  <!-- A: scale 844/861, then display at 60% -->
+  <g transform="translate(182 160) scale(.5882)"><use href="#fullTrain"/></g>
+  <rect x="65" y="160" width="234" height="48" class="hud" opacity=".93"/>
+  <text x="76" y="188" class="small">顶部HUD示意</text>
+  <rect x="65" y="582" width="234" height="84" class="hud" opacity=".93"/>
+  <text x="76" y="628" class="small">底部操作区示意</text>
+  <text x="65" y="704" class="small">列车约139px车体宽 / 167px含轮组宽；槽约39×25px</text>
+  <text x="65" y="724" class="small red">几何能塞入；HUD遮挡列车两端，纵向余量≈0</text>
+
+  <!-- B: usable camera height 624px, scale 624/861, display at 60% -->
+  <rect x="355" y="160" width="234" height="48" class="hud"/>
+  <text x="366" y="188" class="small">顶部HUD 80px</text>
+  <g transform="translate(472 208) scale(.4348)"><use href="#fullTrain"/></g>
+  <rect x="355" y="582" width="234" height="84" class="hud"/>
+  <text x="366" y="628" class="small">底部操作区 140px</text>
+  <text x="355" y="704" class="small">车体约103px宽 / 123px含轮组；单槽约29×19px</text>
+  <text x="355" y="724" class="small red">整列占满可视高；无纵向战斗场景余量</text>
+
+  <rect x="635" y="115" width="750" height="620" rx="18" class="card"/>
+  <text x="670" y="160" class="panelTitle">按当前槽位方案计算</text>
+  <rect x="670" y="185" width="680" height="72" rx="10" class="accent"/>
+  <text x="694" y="215" class="body">1 个 Lv.3 车头（6槽） + 4 个 Lv.3 车厢（每节8槽）</text>
+  <text x="694" y="241" class="label">整列共 38 个T面槽；车头和车厢等宽 142 示意单位</text>
+  <text x="670" y="302" class="body">纵向包络估算</text>
+  <text x="670" y="332" class="label">车头225 + 4×车厢150 + 3×车厢连接间隔12 = 861单位</text>
+  <text x="670" y="358" class="small">连接间隔为线稿候选；头车尾钩已计入，末节尾钩未计，因此估算偏乐观。</text>
+  <path d="M670 385h680" stroke="#d8dfda" stroke-width="2"/>
+  <text x="670" y="425" class="body">A 全屏硬适配：844 ÷ 861 = 0.980 px/单位</text>
+  <text x="700" y="453" class="small">T槽约39×25px；列车含轮组约167px宽。屏幕高度几乎被列车占满。</text>
+  <text x="670" y="497" class="body">B 示例战斗安全区：844 − HUD 80 − 操作区 140 = 624px</text>
+  <text x="700" y="525" class="small">T槽约29×19px；列车含轮组约123px宽。624px全部用于展示整列。</text>
+  <text x="670" y="569" class="small">HUD/操作区高度为评估假设，尚非运行版实测；图面只比较视口比例，不表示战斗镜头通过。</text>
+  <rect x="670" y="600" width="680" height="88" rx="10" class="warning"/>
+  <text x="694" y="635" class="label red">结论：整列可以在竖屏中“缩放到看见”，但不能同时保证满列清晰、</text>
+  <text x="694" y="662" class="label red">HUD不遮挡和充足的战斗纵向视野。建议满列用于整备总览，战斗镜头聚焦。</text>
+
+  <rect x="60" y="775" width="1325" height="135" rx="16" class="card"/>
+  <text x="88" y="817" class="panelTitle">设计判断</text>
+  <text x="88" y="850" class="body">如果“完整展示成长”是整备/检查需求：可做单独的全列总览视图；如果要求战斗中持续显示全部5节并观察攻击，</text>
+  <text x="88" y="878" class="body">当前比例会让列车过窄或占满画面。运行版HUD、敌人空间、武器游戏尺度辨识和微信真机仍需单独验证。</text>
+</svg>

@@ -1,0 +1,12 @@
+const {chromium}=require('C:/Users/11/.codex/skills/develop-web-game/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:420,height:850}});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:4186');const click=async a=>p.locator(a).click();const state=async()=>JSON.parse(await p.evaluate(()=>render_game_to_text()));
+await click('[data-action="buyModule"][data-key="saw"]');assert.equal((await state()).cash,90);
+await click('[data-action="mergeSelect"]');await click('[data-action="select"][data-id="c2"]');await click('[data-action="confirm"]');let s=await state();assert.equal(s.carriers.length,2);assert.equal(s.equipment.length,5);assert.equal(s.equipment.filter(e=>e.carrier===null).length,4);
+await click('[data-action="depart"]');assert.equal((await state()).mode,'station');
+await click('[data-action="buyCart"]');assert.equal((await state()).cash,60);
+await click('[data-action="move"][data-id="e2"]');await click('[data-action="move"][data-id="e3"]');
+await click('[data-action="select"][data-id="head"]');await click('[data-action="move"][data-id="e4"]');await click('[data-action="select"][data-id="c1"]');await click('[data-action="move"][data-id="e5"]');
+await click('[data-action="buyModule"][data-key="arc"]');assert.equal((await state()).cash,48);
+await click('[data-action="select"][data-id="head"]');await click('[data-action="discard"][data-id="e1"]');await click('[data-action="cancel"]');assert.equal((await state()).equipment.length,6);
+await p.screenshot({path:'output/station-verified.png',fullPage:true});await click('[data-action="depart"]');assert.equal((await state()).mode,'battle');await p.evaluate(()=>advanceTime(10000));assert.ok((await state()).kills>0);await click('[data-action="pauseBattle"]');const t=(await state()).t;await p.evaluate(()=>advanceTime(2000));assert.equal((await state()).t,t);await p.screenshot({path:'output/battle-verified.png',fullPage:true});await click('[data-action="returnStation"]');assert.equal((await state()).mode,'station');assert.equal((await state()).cash,48);assert.equal((await state()).equipment.length,6);assert.deepEqual(errors,[]);console.log('PASS station flow, battle kills, pause, return preserves equipment and cash; no page errors');await b.close();})().catch(e=>{console.error(e);process.exit(1)});

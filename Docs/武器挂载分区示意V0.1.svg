@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="650" viewBox="0 0 1080 650" role="img" aria-label="车头与车厢武器挂载分区草案">
+  <rect width="1080" height="650" fill="#f2efe6"/>
+  <text x="44" y="49" font-size="27" font-family="Microsoft YaHei, sans-serif" font-weight="700" fill="#243138">武器挂载分区草案 · 正俯视</text>
+  <text x="44" y="77" font-size="15" font-family="Microsoft YaHei, sans-serif" fill="#5a6565">蓝：车顶核心位 T　橙：成对侧挂位 L/R　绿：后向推进位 P　灰：不可安装/需避让</text>
+  <text x="44" y="102" font-size="14" font-family="Microsoft YaHei, sans-serif" fill="#7b5a4d">示意不等于正式装配上限；尺寸范围与冲突见配套规划文档</text>
+  <text x="263" y="145" text-anchor="middle" font-size="23" font-family="Microsoft YaHei, sans-serif" font-weight="700" fill="#243138">车头</text>
+  <text x="768" y="145" text-anchor="middle" font-size="23" font-family="Microsoft YaHei, sans-serif" font-weight="700" fill="#243138">通用车厢</text>
+  <text x="263" y="174" text-anchor="middle" font-size="17" font-family="Microsoft YaHei, sans-serif" fill="#53646b">↑ 行驶方向</text>
+  <text x="768" y="174" text-anchor="middle" font-size="17" font-family="Microsoft YaHei, sans-serif" fill="#53646b">↑ 行驶方向</text>
+
+  <!-- Train head: front plow and rear coupling are excluded. -->
+  <path d="M186 222 L204 195 H322 L340 222 V535 H186 Z" fill="#c8c9c2" stroke="#39444a" stroke-width="4"/>
+  <path d="M204 195 H322 L340 222 V267 H186 V222 Z" fill="#9a9d99" stroke="#39444a" stroke-width="2"/>
+  <text x="263" y="242" text-anchor="middle" font-size="16" font-family="Microsoft YaHei, sans-serif" fill="#243138">车首铲刀禁区</text>
+  <rect x="209" y="284" width="108" height="89" rx="8" fill="#5d91a6" stroke="#213d4a" stroke-width="3"/>
+  <text x="263" y="337" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="white">T1</text>
+  <rect x="209" y="385" width="108" height="76" rx="8" fill="#5d91a6" stroke="#213d4a" stroke-width="3"/>
+  <text x="263" y="431" text-anchor="middle" font-size="26" font-family="Arial, sans-serif" font-weight="700" fill="white">T2</text>
+  <rect x="149" y="295" width="31" height="69" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <rect x="346" y="295" width="31" height="69" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <rect x="149" y="391" width="31" height="67" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <rect x="346" y="391" width="31" height="67" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <text x="164" y="337" text-anchor="middle" font-size="18" fill="#3b2e28">L1</text>
+  <text x="361" y="337" text-anchor="middle" font-size="18" fill="#3b2e28">R1</text>
+  <text x="164" y="432" text-anchor="middle" font-size="18" fill="#3b2e28">L2</text>
+  <text x="361" y="432" text-anchor="middle" font-size="18" fill="#3b2e28">R2</text>
+  <rect x="211" y="476" width="104" height="39" rx="6" fill="#7faf78" stroke="#3c6540" stroke-width="3"/>
+  <text x="263" y="502" text-anchor="middle" font-size="22" font-weight="700" fill="#193b27">P</text>
+  <rect x="244" y="535" width="38" height="19" rx="4" fill="#8d918e" stroke="#39444a" stroke-width="2"/>
+  <text x="263" y="585" text-anchor="middle" font-size="15" font-family="Microsoft YaHei, sans-serif" fill="#596067">挂钩/联接禁区</text>
+
+  <!-- Generic car: shorter but the same mounting language. -->
+  <rect x="696" y="253" width="144" height="267" rx="10" fill="#c8c9c2" stroke="#39444a" stroke-width="4"/>
+  <rect x="696" y="253" width="144" height="27" rx="8" fill="#9a9d99"/>
+  <rect x="696" y="495" width="144" height="25" rx="8" fill="#9a9d99"/>
+  <text x="768" y="245" text-anchor="middle" font-size="15" font-family="Microsoft YaHei, sans-serif" fill="#596067">前端联接避让</text>
+  <rect x="717" y="291" width="102" height="81" rx="7" fill="#5d91a6" stroke="#213d4a" stroke-width="3"/>
+  <text x="768" y="341" text-anchor="middle" font-size="25" font-weight="700" fill="white">T1</text>
+  <rect x="717" y="380" width="102" height="73" rx="7" fill="#5d91a6" stroke="#213d4a" stroke-width="3"/>
+  <text x="768" y="425" text-anchor="middle" font-size="25" font-weight="700" fill="white">T2</text>
+  <rect x="660" y="296" width="30" height="70" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <rect x="846" y="296" width="30" height="70" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <rect x="660" y="387" width="30" height="61" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <rect x="846" y="387" width="30" height="61" rx="5" fill="#d89458" stroke="#754626" stroke-width="3"/>
+  <text x="675" y="338" text-anchor="middle" font-size="17" fill="#3b2e28">L1</text>
+  <text x="861" y="338" text-anchor="middle" font-size="17" fill="#3b2e28">R1</text>
+  <text x="675" y="426" text-anchor="middle" font-size="17" fill="#3b2e28">L2</text>
+  <text x="861" y="426" text-anchor="middle" font-size="17" fill="#3b2e28">R2</text>
+  <rect x="721" y="460" width="94" height="31" rx="5" fill="#7faf78" stroke="#3c6540" stroke-width="3"/>
+  <text x="768" y="482" text-anchor="middle" font-size="19" font-weight="700" fill="#193b27">P</text>
+  <text x="768" y="548" text-anchor="middle" font-size="15" font-family="Microsoft YaHei, sans-serif" fill="#596067">尾端联接避让</text>
+
+  <line x1="507" y1="185" x2="507" y2="557" stroke="#abb3b2" stroke-width="2" stroke-dasharray="6 7"/>
+  <rect x="41" y="605" width="998" height="28" rx="5" fill="#e4e1d8"/>
+  <text x="540" y="624" text-anchor="middle" font-size="15" font-family="Microsoft YaHei, sans-serif" fill="#414e51">T：核心/机舱　L/R：左右侧挂及外伸　P：独立助推器；同排冲突需在极限装载测试中确认</text>
+</svg>

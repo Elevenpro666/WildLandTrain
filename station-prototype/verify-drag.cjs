@@ -1,0 +1,12 @@
+const {chromium}=require('C:/Users/11/.codex/skills/develop-web-game/node_modules/playwright');const assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:844}});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:4186');const state=async()=>JSON.parse(await p.evaluate(()=>render_game_to_text()));
+const drag=async(from,to)=>{const a=await p.locator(from).first().boundingBox(),z=await p.locator(to).first().boundingBox();await p.mouse.move(a.x+a.width/2,a.y+a.height/2);await p.mouse.down();await p.mouse.move(z.x+z.width/2,z.y+z.height/2,{steps:12});await p.mouse.up();};
+await drag('[data-key=boost]','.equipped-zone');assert.equal((await state()).cash,70);assert.equal((await state()).equipment.at(-1).carrier,null);
+await drag('[data-key=boost]','[data-action=select][data-id=head]');assert.equal((await state()).cash,50);assert.equal((await state()).equipment.length,7);
+await drag('.capacity-grid [data-id=e1]','.turnover-zone');assert.equal((await state()).equipment.find(e=>e.id==='e1').carrier,null);
+await drag('.turnover-icons [data-id=e1]','.equipped-zone');assert.equal((await state()).equipment.find(e=>e.id==='e1').carrier,'head');
+await drag('[data-key=saw]','.station-header');assert.equal((await state()).cash,50);
+assert.equal(await p.locator('.shade').count(),0);assert.equal(await p.locator('.drag-ghost').count(),0);
+await p.locator('.capacity-grid [data-id=e1]').click();assert.equal(await p.locator('.shade').count(),1);await p.locator('[data-action=closeItem]').click();
+const a=await p.locator('[data-key=boost]').boundingBox();await p.mouse.move(a.x+10,a.y+10);await p.mouse.down();await p.mouse.move(a.x+30,a.y-30,{steps:5});await p.screenshot({path:'output/drag-preview.png'});await p.evaluate(()=>window.dispatchEvent(new Event('blur')));await p.mouse.up();assert.equal((await state()).cash,50);assert.equal(await p.locator('.drag-ghost').count(),0);
+assert.deepEqual(errors,[]);await b.close();console.log('PASS rejected capacity, shop drop, unload/reinstall, invalid drop, click fallback, blur cleanup');})().catch(e=>{console.error(e);process.exit(1)});

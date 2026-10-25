@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1600 1160">
+  <defs>
+    <style>
+      .bg{fill:#f4f0e6}.ink{fill:#28343a}.muted{fill:#68777b}.line{stroke:#28343a;stroke-width:3;fill:none}.thin{stroke:#728187;stroke-width:2;fill:none}.blue{fill:#3e82ad}.blue2{fill:#a8cde0}.slot{fill:#ebe5d8;stroke:#35434a;stroke-width:2}.green{fill:#dceadf}.warn{fill:#f6e6c9}.phone{fill:#fffdf8;stroke:#39464a;stroke-width:4}.battle{fill:#e6eee5}.train{fill:#557f91;stroke:#253139;stroke-width:2}.wheel{fill:#333c40;stroke:#11181b;stroke-width:1}.text{font:24px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#28343a}.small{font:18px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#526166}.tiny{font:15px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#526166}.title{font: bold 34px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#26353c}.head{fill:#3b6d8b;stroke:#202c32;stroke-width:2}.rail{stroke:#9da8a4;stroke-width:3}.coupler{fill:#d0c7b4;stroke:#263238;stroke-width:1.5}
+    </style>
+    <g id="phoneShell">
+      <rect x="0" y="0" width="235" height="510" rx="24" class="phone"/>
+      <rect x="7" y="7" width="221" height="496" rx="19" fill="#ece8dd"/>
+      <rect x="7" y="7" width="221" height="496" rx="19" fill="none" stroke="#aab0a7" stroke-width="1.5"/>
+    </g>
+    <g id="wagon">
+      <rect x="-52.5" y="0" width="105" height="110" rx="10" class="train"/>
+      <path d="M-43 9V101 M43 9V101" class="rail"/>
+      <rect x="-52" y="17" width="8" height="15" rx="3" class="wheel"/><rect x="44" y="17" width="8" height="15" rx="3" class="wheel"/>
+      <rect x="-52" y="77" width="8" height="15" rx="3" class="wheel"/><rect x="44" y="77" width="8" height="15" rx="3" class="wheel"/>
+      <path d="M-39 5H39 M-39 105H39" stroke="#d5c8ad" stroke-width="2"/>
+      <rect x="-10" y="-3" width="20" height="6" rx="2" class="coupler"/><rect x="-10" y="107" width="20" height="6" rx="2" class="coupler"/>
+      <g class="slots">
+        <rect x="-22.5" y="12" width="20" height="20" rx="3" class="slot"/><rect x="2.5" y="12" width="20" height="20" rx="3" class="slot"/>
+        <rect x="-22.5" y="35" width="20" height="20" rx="3" class="slot"/><rect x="2.5" y="35" width="20" height="20" rx="3" class="slot"/>
+        <rect x="-22.5" y="58" width="20" height="20" rx="3" class="slot"/><rect x="2.5" y="58" width="20" height="20" rx="3" class="slot"/>
+        <rect x="-22.5" y="81" width="20" height="20" rx="3" class="slot"/><rect x="2.5" y="81" width="20" height="20" rx="3" class="slot"/>
+      </g>
+    </g>
+    <g id="head">
+      <rect x="-52.5" y="0" width="105" height="80" rx="14" class="head"/>
+      <path d="M-43 8V72 M43 8V72" class="rail"/><path d="M-35 13H35" stroke="#b7d1db" stroke-width="4"/>
+      <path d="M-25 70H25" stroke="#d6c8ad" stroke-width="3"/>
+      <rect x="-52" y="17" width="8" height="15" rx="3" class="wheel"/><rect x="44" y="17" width="8" height="15" rx="3" class="wheel"/>
+      <rect x="-10" y="77" width="20" height="6" rx="2" class="coupler"/>
+      <rect x="-22.5" y="20" width="20" height="20" rx="3" class="slot"/><rect x="2.5" y="20" width="20" height="20" rx="3" class="slot"/>
+      <rect x="-22.5" y="43" width="20" height="20" rx="3" class="slot"/><rect x="2.5" y="43" width="20" height="20" rx="3" class="slot"/>
+    </g>
+  </defs>
+  <rect width="1600" height="1160" class="bg"/>
+  <text x="64" y="68" class="title">车厢 4／6／8 接口：满列同屏与战斗视野核算</text>
+  <text x="64" y="105" class="small">统一390×844竖屏；车头/车厢外宽105 B；Lv.3接口采用左右成对的2列×4排。图中尺寸是比例模型，不是最终车体美术。</text>
+
+  <rect x="55" y="132" width="1490" height="274" rx="18" fill="#fffdf8" stroke="#d2ccbe" stroke-width="2"/>
+  <text x="82" y="169" class="text" font-weight="bold">接口成长：始终两列镜像，逐级只增加纵向一排</text>
+  <g transform="translate(265 215)">
+    <path d="M-80 0H80L85 13V86L80 99H-80L-85 86V13Z" class="train"/>
+    <path d="M-69 8V91 M69 8V91" class="rail"/>
+    <rect x="-20" y="-7" width="40" height="7" class="coupler"/><rect x="-20" y="99" width="40" height="7" class="coupler"/>
+    <rect x="-33.75" y="17.25" width="30" height="30" class="slot"/><rect x="3.75" y="17.25" width="30" height="30" class="slot"/><rect x="-33.75" y="51.75" width="30" height="30" class="slot"/><rect x="3.75" y="51.75" width="30" height="30" class="slot"/>
+  </g>
+  <text x="265" y="335" text-anchor="middle" class="small">Lv.1｜2×2｜4接口</text><text x="265" y="359" text-anchor="middle" class="tiny">105×66 B外壳候选</text>
+  <g transform="translate(770 185)">
+    <path d="M-80 0H80L85 13V115L80 128H-80L-85 115V13Z" class="train"/>
+    <path d="M-69 8V120 M69 8V120" class="rail"/>
+    <rect x="-20" y="-7" width="40" height="7" class="coupler"/><rect x="-20" y="128" width="40" height="7" class="coupler"/>
+    <rect x="-33.75" y="15" width="30" height="30" class="slot"/><rect x="3.75" y="15" width="30" height="30" class="slot"/><rect x="-33.75" y="49.5" width="30" height="30" class="slot"/><rect x="3.75" y="49.5" width="30" height="30" class="slot"/><rect x="-33.75" y="84" width="30" height="30" class="slot"/><rect x="3.75" y="84" width="30" height="30" class="slot"/>
+  </g>
+  <text x="770" y="335" text-anchor="middle" class="small">Lv.2｜2×3｜6接口</text><text x="770" y="359" text-anchor="middle" class="tiny">105×86 B外壳候选</text>
+  <g transform="translate(1275 149)">
+    <path d="M-80 0H80L85 13V152L80 165H-80L-85 152V13Z" class="train"/>
+    <path d="M-69 8V157 M69 8V157" class="rail"/>
+    <rect x="-20" y="-7" width="40" height="7" class="coupler"/><rect x="-20" y="165" width="40" height="7" class="coupler"/>
+    <rect x="-33.75" y="15.75" width="30" height="30" class="slot"/><rect x="3.75" y="15.75" width="30" height="30" class="slot"/><rect x="-33.75" y="50.25" width="30" height="30" class="slot"/><rect x="3.75" y="50.25" width="30" height="30" class="slot"/><rect x="-33.75" y="84.75" width="30" height="30" class="slot"/><rect x="3.75" y="84.75" width="30" height="30" class="slot"/><rect x="-33.75" y="119.25" width="30" height="30" class="slot"/><rect x="3.75" y="119.25" width="30" height="30" class="slot"/>
+  </g>
+  <text x="1275" y="335" text-anchor="middle" class="small">Lv.3｜2×4｜8接口</text><text x="1275" y="359" text-anchor="middle" class="tiny">105×110 B外壳候选</text>
+  <text x="82" y="390" class="tiny">20×20 B接口；横向中心距25 B、纵向23 B。Lv.3四排接口包络89 B，车长110 B，前后各余约10.5 B。</text>
+
+  <text x="64" y="430" class="text" font-weight="bold">同一650 px列车镜头比例：车头+5厢是最不利情况；+4厢多出的空间可回给战场</text>
+  <text x="64" y="460" class="small">手机画面按真实390×844等比缩绘。浅绿区=列车外可用屏高的几何余量，尚未拆分HUD、战斗区和安全边距。</text>
+
+  <g transform="translate(100 490)">
+    <text x="117" y="-10" text-anchor="middle" class="small" font-weight="bold">1头＋5厢｜列车预算650 px</text>
+    <use href="#phoneShell"/>
+    <rect x="7" y="7" width="221" height="117" rx="18" class="battle"/>
+    <text x="117" y="65" text-anchor="middle" class="tiny">余量194 px</text><text x="117" y="87" text-anchor="middle" class="tiny">战斗区＋HUD</text>
+    <g transform="translate(117 121.1) scale(0.5776)">
+      <use href="#head"/>
+      <g transform="translate(0 86.3)"><use href="#wagon"/></g><g transform="translate(0 202.6)"><use href="#wagon"/></g><g transform="translate(0 318.9)"><use href="#wagon"/></g><g transform="translate(0 435.2)"><use href="#wagon"/></g><g transform="translate(0 551.5)"><use href="#wagon"/></g>
+    </g>
+    <text x="117" y="536" text-anchor="middle" class="tiny">全列661.5 B｜车宽103 px</text>
+    <text x="117" y="559" text-anchor="middle" class="tiny">接口约19.7 px</text>
+  </g>
+
+  <g transform="translate(475 490)">
+    <text x="117" y="-10" text-anchor="middle" class="small" font-weight="bold">1头＋4厢｜沿用同一镜头</text>
+    <use href="#phoneShell"/>
+    <rect x="7" y="7" width="221" height="185" rx="18" class="battle"/>
+    <text x="117" y="85" text-anchor="middle" class="tiny">余量308 px</text><text x="117" y="107" text-anchor="middle" class="tiny">比+5厢多约114 px</text>
+    <g transform="translate(117 188) scale(0.5776)">
+      <use href="#head"/>
+      <g transform="translate(0 86.3)"><use href="#wagon"/></g><g transform="translate(0 202.6)"><use href="#wagon"/></g><g transform="translate(0 318.9)"><use href="#wagon"/></g><g transform="translate(0 435.2)"><use href="#wagon"/></g>
+    </g>
+    <text x="117" y="536" text-anchor="middle" class="tiny">全列545.2 B｜车宽103 px</text>
+    <text x="117" y="559" text-anchor="middle" class="tiny">接口约19.7 px</text>
+  </g>
+
+  <g transform="translate(850 490)">
+    <text x="117" y="-10" text-anchor="middle" class="small" font-weight="bold">1头＋4厢｜独立放大至650 px</text>
+    <use href="#phoneShell"/>
+    <rect x="7" y="7" width="221" height="117" rx="18" class="battle"/>
+    <text x="117" y="65" text-anchor="middle" class="tiny">余量194 px</text><text x="117" y="87" text-anchor="middle" class="tiny">但装备随镜头放大</text>
+    <g transform="translate(117 121.1) scale(0.701)">
+      <use href="#head"/>
+      <g transform="translate(0 86.3)"><use href="#wagon"/></g><g transform="translate(0 202.6)"><use href="#wagon"/></g><g transform="translate(0 318.9)"><use href="#wagon"/></g><g transform="translate(0 435.2)"><use href="#wagon"/></g>
+    </g>
+    <text x="117" y="536" text-anchor="middle" class="tiny">车宽125 px｜接口约23.8 px</text>
+    <text x="117" y="559" text-anchor="middle" class="tiny">比同镜头更醒目，但余量不变</text>
+  </g>
+
+  <g transform="translate(1225 490)">
+    <text x="117" y="-10" text-anchor="middle" class="small" font-weight="bold">1头＋5厢｜列车预算800 px</text>
+    <use href="#phoneShell"/>
+    <rect x="7" y="7" width="221" height="27" rx="18" class="warn"/>
+    <text x="117" y="26" text-anchor="middle" class="tiny">余量仅44 px</text>
+    <g transform="translate(117 32.9) scale(0.711)">
+      <use href="#head"/>
+      <g transform="translate(0 86.3)"><use href="#wagon"/></g><g transform="translate(0 202.6)"><use href="#wagon"/></g><g transform="translate(0 318.9)"><use href="#wagon"/></g><g transform="translate(0 435.2)"><use href="#wagon"/></g><g transform="translate(0 551.5)"><use href="#wagon"/></g>
+    </g>
+    <text x="117" y="536" text-anchor="middle" class="tiny">车宽127 px｜接口约24.2 px</text>
+    <text x="117" y="559" text-anchor="middle" class="tiny">装备清晰，但战场余量几乎没有</text>
+  </g>
+
+  <rect x="55" y="1080" width="1490" height="55" rx="12" fill="#e2e9e4"/>
+  <text x="80" y="1115" class="small">结论：+5厢在650 px预算下约20 px/接口，处于可辨识下限且仍挤压战场；+4厢同镜头可把约114 px还给战斗观察。实际HUD、怪物横向空间、武器叠装和微信真机尚未验证。</text>
+</svg>

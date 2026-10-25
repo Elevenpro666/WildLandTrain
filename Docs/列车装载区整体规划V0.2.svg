@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-label="车头和车厢共用装载界面规划">
+ <rect width="1000" height="650" fill="#f0eee7"/>
+ <text x="40" y="48" font-size="27" font-family="Microsoft YaHei,sans-serif" font-weight="700" fill="#25333a">车头 + 车厢：先有安装界面，再设计武器</text>
+ <text x="40" y="76" font-size="15" font-family="Microsoft YaHei,sans-serif" fill="#55616a">候选结构 · 正俯视 · 390×844游戏画面单位B · 不是已生效的装备数量限制</text>
+ <g font-family="Microsoft YaHei,sans-serif" font-weight="700" text-anchor="middle">
+  <text x="258" y="132" font-size="24" fill="#25333a">车头 74 B × 139 B</text>
+  <text x="718" y="132" font-size="24" fill="#25333a">车厢 70 B × 94 B</text>
+  <text x="258" y="160" font-size="17" fill="#53717b">↑ 行驶方向</text>
+  <text x="718" y="160" font-size="17" fill="#53717b">↑ 行驶方向</text>
+ </g>
+ <g stroke="#27363d" stroke-width="4">
+  <path d="M210 208H306L326 240V523H190V240Z" fill="#677888"/>
+  <rect x="660" y="245" width="116" height="278" rx="12" fill="#677888"/>
+ </g>
+ <g fill="#a0a49f" stroke="#344047" stroke-width="2">
+  <path d="M210 208H306L326 240V276H190V240Z"/>
+  <rect x="203" y="497" width="110" height="26"/>
+  <rect x="660" y="245" width="116" height="28"/>
+  <rect x="660" y="495" width="116" height="28"/>
+ </g>
+ <g font-family="Microsoft YaHei,sans-serif" text-anchor="middle" font-size="14" fill="#213137">
+  <text x="258" y="255">铲刀禁区</text><text x="258" y="516">车钩禁区</text>
+  <text x="718" y="263">前联接禁区</text><text x="718" y="513">后联接禁区</text>
+ </g>
+ <g fill="#5e9ab1" stroke="#173a4b" stroke-width="3">
+  <rect x="217" y="290" width="82" height="75" rx="8"/>
+  <rect x="217" y="387" width="82" height="78" rx="8"/>
+  <rect x="676" y="291" width="84" height="77" rx="8"/>
+  <rect x="676" y="393" width="84" height="77" rx="8"/>
+ </g>
+ <g fill="#d6955e" stroke="#704525" stroke-width="3">
+  <rect x="160" y="299" width="25" height="58" rx="5"/><rect x="331" y="299" width="25" height="58" rx="5"/>
+  <rect x="160" y="397" width="25" height="58" rx="5"/><rect x="331" y="397" width="25" height="58" rx="5"/>
+  <rect x="625" y="300" width="26" height="59" rx="5"/><rect x="785" y="300" width="26" height="59" rx="5"/>
+  <rect x="625" y="401" width="26" height="59" rx="5"/><rect x="785" y="401" width="26" height="59" rx="5"/>
+ </g>
+ <g stroke="#43545c" stroke-width="6"><path d="M185 327H217M299 327H331M185 426H217M299 426H331M651 330H676M760 330H785M651 430H676M760 430H785"/></g>
+ <g font-family="Arial,sans-serif" font-weight="700" text-anchor="middle">
+  <g fill="white" font-size="23"><text x="258" y="337">T1</text><text x="258" y="434">T2</text><text x="718" y="338">T1</text><text x="718" y="441">T2</text></g>
+  <g fill="#352b26" font-size="17"><text x="172" y="334">L1</text><text x="344" y="334">R1</text><text x="172" y="432">L2</text><text x="344" y="432">R2</text><text x="638" y="335">L1</text><text x="798" y="335">R1</text><text x="638" y="436">L2</text><text x="798" y="436">R2</text></g>
+ </g>
+ <g fill="#79a875" stroke="#365f43" stroke-width="3"><rect x="602" y="372" width="18" height="31" rx="4"/><rect x="816" y="372" width="18" height="31" rx="4"/><rect x="602" y="455" width="18" height="31" rx="4"/><rect x="816" y="455" width="18" height="31" rx="4"/></g>
+ <g font-family="Microsoft YaHei,sans-serif" fill="#263d31" font-size="16" font-weight="700"><text x="575" y="393">P</text><text x="839" y="393">P</text><text x="575" y="477">P</text><text x="839" y="477">P</text></g>
+ <line x1="495" y1="185" x2="495" y2="550" stroke="#bbc2c0" stroke-width="2" stroke-dasharray="7 6"/>
+ <rect x="39" y="563" width="922" height="63" rx="7" fill="#e1e0d9"/>
+ <text x="54" y="588" font-size="17" font-family="Microsoft YaHei,sans-serif" fill="#2c424c">蓝 T：车顶完整基座　橙 L/R：有侧梁的成对挂点　绿 P：独立助推器小座</text>
+ <text x="54" y="613" font-size="15" font-family="Microsoft YaHei,sans-serif" fill="#76503f">完整横向电弧一件占一整排T＋L/R；4件不能仅凭4格容量挤进两排，须先决定挂点或扩展架规则。</text>
+</svg>

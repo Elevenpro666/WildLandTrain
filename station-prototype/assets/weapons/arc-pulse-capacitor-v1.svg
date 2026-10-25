@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 18" width="16" height="18">
+  <path d="M3 0h10l3 3v12l-3 3H3l-3-3V3Z" fill="#0d1519"/>
+  <path d="M3 2h10l1 2v10l-2 2H4l-2-2V4Z" fill="#456d84" stroke="#19262c" stroke-width="1"/>
+  <path d="M0 4h3.5v10H0ZM12.5 4H16v10h-3.5Z" fill="#7b3e27" stroke="#21191a" stroke-width=".8"/>
+  <path d="M.6 5h2.3M.6 7h2.3M.6 9h2.3M.6 11h2.3M13.1 5h2.3M13.1 7h2.3M13.1 9h2.3M13.1 11h2.3" stroke="#e08b48" stroke-width="1"/>
+  <path d="M4 3h8l1.5 2.2v7.6L11 15H5l-2.5-2.2V5.2Z" fill="#172c33" stroke="#0b1519" stroke-width="1.2"/>
+  <path d="M4.7 5h2.7l.8 1v5.3l-.8 1H4.7l-.7-1V6Z" fill="#45cbd0"/>
+  <path d="M8.6 5h2.7l.7 1v5.3l-.7 1H8.6l-.8-1V6Z" fill="#45cbd0"/>
+  <path d="M5.2 6h.8v5.3h-.8ZM9.1 6h.8v5.3h-.8Z" fill="#ddfff4" opacity=".85"/>
+  <path d="M7.3 8.3h1.4v1.4H7.3Z" fill="#f2bd65" stroke="#31251e" stroke-width=".5"/>
+  <path d="M7.5 13.1 8 14l.5-.9M4 1h8l-1.2 1.5H5.2Z" fill="#b3b9b3" stroke="#182126" stroke-width=".8"/>
+</svg>

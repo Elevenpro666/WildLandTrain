@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {createEnemyCatalog} from './src/game/enemy-pools.mjs';
+import {enemyCatalogConfig} from './configs/enemies.mjs';
+const copy=()=>structuredClone(enemyCatalogConfig);
+const source=copy(),c=createEnemyCatalog(source);
+assert.equal(c.pick('groundWave',1,()=>0).enemy.id,'walker');
+assert.equal(c.pick('groundWave',1,()=>.899).enemy.id,'walker');
+assert.equal(c.pick('groundWave',1,()=>.9).enemy.id,'flyer');
+assert.equal(c.pick('groundWave',1,()=>.999).enemy.id,'flyer');
+assert.equal(c.pick('bossEncounter',1,()=>{throw Error('must not sample');}).enemy.name,'持铁者');
+source.enemies[0].hp=999;assert.equal(c.getEnemy('walker').hp,24);
+assert.throws(()=>{c.getEnemy('walker').hp=999;});
+const locked=copy();locked.enemies.forEach(e=>e.minChapter=2);const l=createEnemyCatalog(locked);
+assert.equal(l.pick('groundWave',1).reason,'EMPTY_POOL');assert.equal(l.pick('bossEncounter',1).reason,'LOCKED');
+assert.equal(l.pick('groundWave',2,()=>0).ok,true);
+assert.equal(c.pick('missing',1).reason,'UNKNOWN_ENCOUNTER');
+for(const value of [-1,1,NaN,Infinity])assert.throws(()=>c.pick('groundWave',1,()=>value));
+for(const mutate of [x=>x.enemies.push(x.enemies[0]),x=>x.pools[0].entries[0].enemyId='missing',x=>x.pools[0].entries[0].weight=0,x=>x.pools[0].entries=[],x=>x.encounters[0].source.id='missing',x=>x.encounters[0].count=1.5,x=>x.enemies[0].hp=NaN]){const x=copy();mutate(x);assert.throws(()=>createEnemyCatalog(x));}
+const sample=()=>{let seed=17;return Array.from({length:30},()=>c.pick('mixedWave',1,()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;}).enemy.id);};
+assert.deepEqual(sample(),sample());
+console.log('PASS weighted boundaries, chapter filtering, fixed picks, invalid config, immutable copies, deterministic RNG');

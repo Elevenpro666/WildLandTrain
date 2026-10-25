@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {createBattle} from './src/game/battle.mjs';
+import {createTrain} from './src/game/train.mjs';
+import {config} from './config.mjs';
+import {healthView} from './src/presentation/health-view.mjs';
+import {battleView} from './src/presentation/battle.mjs';
+const s=createBattle(createTrain(config).snapshot(),1).snapshot();
+assert.match(healthView(s),/height="60"/);
+assert.match(healthView({...s,hp:150}),/height="30"/);
+assert.match(healthView({...s,hp:0}),/height="0"/);
+assert.match(healthView({...s,hp:150,maxHp:600}),/height="15"/);
+assert.equal(healthView({...s,maxHp:0}),'');
+assert.equal((battleView(s).match(/data-train-health/g)||[]).length,1);
+assert.ok(!battleView(s).includes('耐久 300 / 300'));
+console.log('PASS health full/half/zero/custom maximum/invalid/single bar');

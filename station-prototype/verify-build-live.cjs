@@ -1,0 +1,20 @@
+const {chromium}=require('C:/Users/11/.codex/skills/develop-web-game/node_modules/playwright');
+const assert=require('node:assert/strict');
+(async()=>{const browser=await chromium.launch();try{const page=await browser.newPage();await page.route('**/build-test-shell',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><body></body>'}));await page.goto('http://127.0.0.1:4191/build-test-shell');
+const result=await page.evaluate(async()=>{
+ document.body.innerHTML='<main id="app"></main>';
+ const {mount}=await import('/station-prototype/src/adapters/browser.mjs');
+ const {buildView}=await import('/station-prototype/src/presentation/build-view.mjs');
+ let state={upgrades:{arcDamage:1,supply:1}},frames=0;
+ const adapter=mount(()=>`<div class="battle-screen">${buildView(state)}</div>`,()=>{},()=>{frames++;return true;});
+ const frame=()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+ adapter.draw();const group=key=>document.querySelector(`[data-build-group="${key}"]`);
+ group('supply').open=true;const original=group('supply');await frame();
+ const stable=group('supply')===original&&group('supply').open;
+ state={upgrades:{sawReach:1,arcDamage:1,supply:2}};await frame();
+ const changed=group('supply').open&&!group('saw').open&&group('supply').textContent.includes('×2');
+ adapter.draw();const redraw=group('supply').open;
+ state={upgrades:{}};adapter.draw();const cleared=!document.querySelector('[data-build-group]');
+ adapter.stop();const n=frames;await frame();const stopped=frames===n;
+ return {stable,changed,redraw,cleared,stopped};
+});assert.deepEqual(result,{stable:true,changed:true,redraw:true,cleared:true,stopped:true});console.log('PASS',result);}finally{await browser.close();}})();

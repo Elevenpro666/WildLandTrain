@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1020" viewBox="0 0 1440 1020" role="img" aria-labelledby="title desc">
+  <title id="title">单车头加四车厢：五武器系列与升品融合规划</title>
+  <desc id="desc">展示三个等级的列车槽位总量、五个武器系列的基础接口与升品路线，以及三个优先跨系融合候选。</desc>
+  <defs>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#26343a}.title{font-size:32px;font-weight:700}.sub{font-size:16px;fill:#52636b}.h{font-size:20px;font-weight:700}.label{font-size:15px;font-weight:700}.body{font-size:14px}.small{font-size:12px;fill:#52636b}.total{font-size:26px;font-weight:700}.card{fill:#fffefa;stroke:#c9d2d0;stroke-width:2}.pill{fill:#e8efed;stroke:#bacbc7}.wire{stroke:#8ba8a2;stroke-width:2;fill:none}.cut{fill:#b45d42}.arc{fill:#3984a0}.drone{fill:#678a5a}.deny{fill:#bd8c36}.pierce{fill:#675f9d}.fusion{fill:#fff8dc;stroke:#d6b451;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1440" height="1020" fill="#f4f2eb"/>
+  <text x="48" y="58" class="title">单车头 + 4 车厢｜五武器系列、升品与融合空间</text>
+  <text x="50" y="88" class="sub">新规划基线：槽位总数只表示容量；升品与融合留在原接口内，不等于新增武器格。</text>
+
+  <rect x="42" y="112" width="1356" height="178" rx="18" class="card"/>
+  <text x="68" y="148" class="h">整列接口容量</text>
+  <text x="68" y="178" class="small">车头 + 4 节同等级车厢</text>
+  <g transform="translate(355,130)">
+    <rect x="0" y="0" width="300" height="128" rx="14" fill="#eef2ed"/>
+    <text x="20" y="34" class="label">Lv.1</text><text x="20" y="60" class="body">车头 2 + 车厢 4×4</text><text x="20" y="102" class="total">18 槽</text>
+    <rect x="320" y="0" width="300" height="128" rx="14" fill="#edf2f4"/>
+    <text x="340" y="34" class="label">Lv.2</text><text x="340" y="60" class="body">车头 4 + 车厢 4×6</text><text x="340" y="102" class="total">28 槽</text>
+    <rect x="640" y="0" width="300" height="128" rx="14" fill="#f4eee4"/>
+    <text x="660" y="34" class="label">Lv.3</text><text x="660" y="60" class="body">车头 6 + 车厢 4×8</text><text x="660" y="102" class="total">38 槽</text>
+  </g>
+  <text x="1320" y="174" text-anchor="end" class="small">建议左右对称</text><text x="1320" y="198" text-anchor="end" class="small">先纵向扩排</text>
+
+  <text x="48" y="337" class="h">五个系列｜每族两条路线，每条最多两步</text>
+  <g>
+    <rect x="42" y="360" width="1356" height="106" rx="15" class="card"/>
+    <circle cx="78" cy="397" r="14" class="cut"/><text x="106" y="394" class="label">机械切割</text><text x="106" y="423" class="small">侧壁左右成对｜2 槽</text>
+    <text x="390" y="394" class="body">覆盖：横移导轨 → 联动往复</text><text x="390" y="425" class="body">动力：强化齿盘 → 高速传动</text><text x="1035" y="406" class="small">本体延续；升级真实改变行程/传动</text>
+
+    <rect x="42" y="476" width="1356" height="106" rx="15" class="card"/>
+    <circle cx="78" cy="513" r="14" class="arc"/><text x="106" y="510" class="label">电磁传导</text><text x="106" y="539" class="small">T 区｜1 槽</text>
+    <text x="390" y="510" class="body">传导：延伸电弧 → 多级放电</text><text x="390" y="541" class="body">强化：高压电容 → 脉冲复击</text><text x="1035" y="522" class="small">升级分叉必须从真实命中终点传导</text>
+
+    <rect x="42" y="592" width="1356" height="106" rx="15" class="card"/>
+    <circle cx="78" cy="629" r="14" class="drone"/><text x="106" y="626" class="label">无人机作业</text><text x="106" y="655" class="small">T 区机舱｜1 槽</text>
+    <text x="390" y="626" class="body">巡防：双机编组 → 分区巡防</text><text x="390" y="657" class="body">火力：强化电极 → 集中索敌</text><text x="1035" y="638" class="small">双机从同一机舱出动，不重复占槽</text>
+
+    <rect x="42" y="708" width="1356" height="106" rx="15" class="card"/>
+    <circle cx="78" cy="745" r="14" class="deny"/><text x="106" y="742" class="label">壁挂拒止 / 辐射地雷</text><text x="106" y="771" class="small">侧壁挂载｜各占 1 槽</text>
+    <text x="390" y="742" class="body">拒止：稳压拒止器 → 接触增压</text><text x="390" y="773" class="body">投送：前置投雷 → 扇区或纵列（二选一）</text><text x="1035" y="754" class="small">推拒与持续辐射伤害是不同构型</text>
+
+    <rect x="42" y="824" width="1356" height="106" rx="15" class="card"/>
+    <circle cx="78" cy="861" r="14" class="pierce"/><text x="106" y="858" class="label">T 区穿透冲击</text><text x="106" y="887" class="small">T 区紧凑发射器｜1 槽</text>
+    <text x="390" y="858" class="body">贯穿：贯穿芯 → 深孔弹芯</text><text x="390" y="889" class="body">储能：环式蓄能 → 稳定线圈</text><text x="1035" y="870" class="small">保持单线前向攻击，不扩成散射</text>
+  </g>
+
+  <rect x="42" y="948" width="1356" height="52" rx="14" class="fusion"/>
+  <text x="62" y="980" class="label">优先融合候选（3/10 对）</text>
+  <text x="330" y="980" class="body">切割 × 拒止：推入刀盘区</text>
+  <text x="650" y="980" class="body">电弧 × 无人机：空中标记接力传导</text>
+  <text x="1060" y="980" class="body">无人机 × 穿透：猎标贯穿</text>
+</svg>
